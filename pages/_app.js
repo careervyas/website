@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
 
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+          url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
         </style>
       </Head>
       <Component {...pageProps} />
