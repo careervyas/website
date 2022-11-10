@@ -145,7 +145,7 @@ export default function Navbar() {
               Join Us
             </div>
           </Link>
-          <Link href="/">
+          <Link href="https://adityagupta1625.github.io/quizApp/">
             <div className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1">
               {" "}
               CAT Test{" "}

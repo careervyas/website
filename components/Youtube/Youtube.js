@@ -2,7 +2,7 @@ import Image from "next/image";
 import Arrow from "./ELements/Arrow";
 import Ellipse from "./ELements/Ellipse";
 import youtube from "./images/youtube.svg";
-
+import Link from "next/link";
 export default function Youtube() {
   return (
     <div className=" w-full h-96 flex flex-row mb-20">
@@ -13,12 +13,14 @@ export default function Youtube() {
           <h1 className="text-xl lg:text-4xl w-4/5 text-white font-bold leading-snug">
             Explore the Well Curated Information on our Youtube Channel
           </h1>
-          <button
-            className="bg-white w-44 my-5 h-12 text-[#6776FF] font-semibold rounded-md shadow-lg hover:shadow-lg hover:shadow-slate-600 
+          <Link href="https://www.youtube.com/c/CareerVyas">
+            <button
+              className="bg-white w-44 my-5 h-12 text-[#6776FF] font-semibold rounded-md shadow-lg hover:shadow-lg hover:shadow-slate-600 
          "
-          >
-            Check Out Now!
-          </button>
+            >
+              Check Out Now!
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -7,7 +7,7 @@ export default function Dairies() {
       className="flex items-center flex-col my-4 bg-[#6776FF80]
     w-full"
     >
-      <h2 className="font-bold text-4xl my-4">College Dairies</h2>
+      <h2 className="font-bold text-4xl my-4">College Diaries</h2>
       <p className="font-semibold text-lg text-white my-3 mx-1 md:mx-0">
         Get the Proper Package of Information about each and every College 🔥
       </p>

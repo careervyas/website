@@ -32,6 +32,7 @@ export default function Main() {
       email:Email,
     });
 
+    alert("keep your eye on the inbox, your surprise is on the way");
     setEmail("");
   };
 

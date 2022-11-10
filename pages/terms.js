@@ -7,7 +7,7 @@ export default function Terms() {
           conditions, which you should carefully read. www.careervyas.com reserves
           the right to change these terms and conditions at any time without prior
           notice. By continuing to use and access this app, you agree to be bound
-          by the most recent version of the app&#39s terms and conditions.
+          by the most recent version of the app terms and conditions.
         </p>
         <h5 className="font-bold">Disclaimer</h5>
         <p>
@@ -110,7 +110,7 @@ export default function Terms() {
         <p>
           These terms and conditions will be governed and construed following
           Indian law. All disputes are resolved through the courts of New Delhi,
-          India. At careervyas.com&#39s sole discretion, it reserves the right to
+          India. At careervyas.com sole discretion, it reserves the right to
           disclose any information as necessary to satisfy any applicable law,
           regulation, legal process, or governmental request, or to edit, refuse
           to post, or remove any information or materials, in whole or in part.

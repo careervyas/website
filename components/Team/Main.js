@@ -1,8 +1,26 @@
 import Card from "./Card";
 import Arrow from "./Elements/Arrow";
 import Lines from "./Elements/Lines";
+import data from "./data";
+import { useEffect,useState } from "react";
 
 export default function Main() {
+  const [team, setTeam] = useState([]);
+  const [teamEnd, setTeamEnd] = useState([]);
+  useEffect(()=>{
+    let temp = [];
+
+    for(let i=0;i<data.length-3;i++){
+      temp.push(data[i]);
+    }
+    setTeam(temp);
+    
+    temp=[];
+    for(let i=data.length-3;i<data.length;i++){
+      temp.push(data[i]);
+    }
+    setTeamEnd(temp);
+  })
   return (
     <div
       className="flex flex-col  items-center w-full h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FLanding%20Page.png?alt=media&token=212d4b73-59ba-4131-8c3c-02fc082dbe20')]
@@ -117,7 +135,18 @@ export default function Main() {
           />
           <circle cx="73" cy="73" r="72" stroke="#6776FF" stroke-width="2" />
         </svg>
-
+        
+        {
+          team.map((item,index)=>{
+            return <Card key={index} 
+            Name={item.Name}
+            Position={item.Position}
+            Image={item.Image}
+            LinkedIn={item.LinkedIn}
+            Email={item.Email}
+            />
+          })
+        }
         <svg
           className="absolute top-1/2 right-0"
           width="55"
@@ -152,10 +181,6 @@ export default function Main() {
           />
         </svg>
 
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
-          <Card key={item} />
-        ))}
-
         <svg
           className="absolute top-2/3 left-10"
           width="20"
@@ -182,9 +207,17 @@ export default function Main() {
         className="col-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-full gap-4 relative bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FLanding%20Page1.png?alt=media&token=2e40acd9-c89e-48e3-9393-68f160c24a01')]
       bg-cover bg-no-repeat"
       >
-        {[1, 2, 3,4,5,6].map((item) => (
-          <Card key={item} />
-        ))}
+        {
+          teamEnd.map((item,index)=>{
+            return <Card key={index} 
+            Name={item.Name}
+            Position={item.Position}
+            Image={item.Image}
+            LinkedIn={item.LinkedIn}
+            Email={item.Email}
+            />
+          })
+        }
       </div>
     </div>
   );

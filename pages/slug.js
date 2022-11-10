@@ -31,8 +31,8 @@ export default function SinglePost() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="flex flex-row h-full mx-24">
-        <div className="flex flex-col m-2 p-4 w-8/12 border-2 border-black space-y-5">
+      <div className="flex flex-row h-full mx-4 md:mx-24">
+        <div className="flex flex-col m-2 p-4 w-full md:w-8/12 border-2 border-black space-y-5">
           <h2 className="m-2 text-4xl font-bold">{postData.title}</h2>
 
           <img
@@ -53,6 +53,7 @@ export default function SinglePost() {
                     display: "flex",
                     flexDirection: "column",
                     wordSpacing: "2px",
+                  
                   }}
                   {...props}
                 />
@@ -169,7 +170,9 @@ export default function SinglePost() {
             projectId={sanityClient.config().projectId}
             dataset={sanityClient.config().dataset}
           />
-          <iframe src={postData.youtubeVideo} width="100%" height="500px"
+          <iframe
+          className="w-full h-full sm:h-[500px]" 
+          src={postData.youtubeVideo} 
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         
