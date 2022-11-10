@@ -5,9 +5,9 @@ export default function Card({ Name, Position, Image,LinkedIn,Email }) {
   return (
     <div className="flex flex-col  items-center m-5">
       <img
-        className="w-[200px] h-[200px]"
+        className="w-[250px] h-[250px] rounded-full"
         src={Image}
-       
+        alt="career vyas team"
       />
 
       <h5 className="text-center text-black text-lg mx-5">
