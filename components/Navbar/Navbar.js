@@ -57,14 +57,14 @@ export default function Navbar() {
               Blog{" "}
             </a>
           </Link>
-          <Link href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true ">
-            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4">
+          <Link href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true " legacyBehavior>
+            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4" target="_blank">
               {" "}
               Join Us
             </a>
           </Link>
-          <Link href="https://adityagupta1625.github.io/quizApp/">
-            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4">
+          <Link href="https://adityagupta1625.github.io/quizApp/" legacyBehavior>
+            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4" target="_blank">
               {" "}
               CAT Test{" "}
             </a>
@@ -139,17 +139,27 @@ export default function Navbar() {
               Blog{" "}
             </div>
           </Link>
-          <Link href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true ">
-            <div className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1">
+          <Link
+            href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true " legacyBehavior>
+            <a
+              target="_blank"
+              className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"
+            >
               {" "}
               Join Us
-            </div>
+            </a>
           </Link>
-          <Link href="https://adityagupta1625.github.io/quizApp/">
-            <div className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1">
+          <Link
+            href="https://adityagupta1625.github.io/quizApp/"
+            legacyBehavior
+          >
+            <a
+              target="_blank"
+              className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"
+            >
               {" "}
               CAT Test{" "}
-            </div>
+            </a>
           </Link>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function card({ title, counter, icon }) {
             className="text-blue-700 font-medium text-3xl mb-2"
           >
             <div className="flex flex-row">
-            <CountUp end={counter} duration={2} 
+            <CountUp end={counter} duration={7} 
             enableScrollSpy={true}/>
             +
             </div>

@@ -1,7 +1,43 @@
 import Card from "./Card";
 import Link from "next/link";
+import groq from "groq";
+import client from "../client";
+import { useEffect } from "react";
+import { useState } from "react";
+
+async function getPosts() {
+  const posts = await client.fetch(groq`
+    *[_type == "post"]
+  `);
+  return posts;
+}
 
 export default function Dairies() {
+  const [postData, setpostData] = useState([]);
+
+  useEffect(() => {
+    getPosts().then((posts) => {
+      posts.forEach(async (post) => {
+        if (post.categories[0] !== undefined) {
+          const cat = await client.fetch(groq`
+            *[_type == "category" && _id == "${post.categories[0]._ref}"]
+          `);
+          
+          setpostData([]);
+
+          cat.forEach((c) => {
+            if(c.title=="College Diaries"){
+              setpostData((prev) => [...prev, post]);
+            }
+          })
+        
+        }
+      });
+    });
+    console.log(postData);
+
+  }, []);
+
   return (
     <div
       className="flex items-center flex-col my-4 bg-[#6776FF80]
@@ -13,10 +49,10 @@ export default function Dairies() {
       </p>
       <div
         className="grid grid-cols-1 lg:grid-cols-3  gap-4 mb-4
-        w-4/5"
+        w-11/12"
       >
-        {[1, 2, 3, 4, 5, 6].map((item) => (
-          <Card key={item} />
+        {postData.map((post) => (
+          <Card key={post._id} post={post} />
         ))}
       </div>
 

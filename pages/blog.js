@@ -16,8 +16,9 @@ const Blog = ({ posts }) => {
 }
 
 export async function getStaticProps() {
+ 
   const posts = await client.fetch(groq`
-    *[_type == "post"]|order(publishedAt desc)
+    *[_type == "post"]
   `)
   return {
     props: {

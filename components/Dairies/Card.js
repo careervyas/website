@@ -1,22 +1,25 @@
-
 import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../client";
 
-export default function Card() {
+export default function Card({ post }) {
+  const imageProps = useNextSanityImage(client, post.mainImage);
+
   return (
-    <div className="w-full h-full md:h-[200px]  rounded-lg ring-2 ring-blue-300 my-2 flex flex-row items-center bg-white hover:shadow-md hover:shadow-blue-600 hover:ring-blue-500
-    cursor-pointer shadow-sm shadow-white p-2">
-     
-        <img src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%2Fblog.svg?alt=media&token=40c907f9-6542-4efc-b0df-c05a53b4a2be" alt="blog" className="w-1/2 h-full object-cover rounded-lg"/>
+    <div
+      className="w-full h-full  rounded-lg ring-2 ring-blue-300 my-2 flex flex-row items-center bg-white hover:shadow-md hover:shadow-blue-600 hover:ring-blue-500
+    cursor-pointer shadow-sm shadow-white p-2"
+    >
+      <img
+        src={imageProps.src}
+        alt="Career Vyas Blogs"
+        className="w-1/2 h-full rounded-md"
+      />
 
       <div className="w-1/2 h-full mx-2">
-        <div className="font-bold text-lg mb-1 my-1">The Coldest Sunset</div>
-        <p className="text-gray-700 text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia.
-        </p>
-       
+        <div className="font-bold text-sm mb-1 my-1">{post.title}</div>
+        <p className="text-gray-700 text-xs">{post.excerpt}</p>
       </div>
-
     </div>
   );
 }

@@ -13,19 +13,19 @@ export default function Youtube() {
           <h1 className="text-xl lg:text-4xl w-4/5 text-white font-bold leading-snug">
             Explore the Well Curated Information on our Youtube Channel
           </h1>
-          <Link href="https://www.youtube.com/c/CareerVyas">
-            <button
-              className="bg-white w-44 my-5 h-12 text-[#6776FF] font-semibold rounded-md shadow-lg hover:shadow-lg hover:shadow-slate-600 
+          <Link href="https://www.youtube.com/c/CareerVyas" legacyBehavior>
+            <a target="_blank">
+              <button
+                className="bg-white w-44 my-5 h-12 text-[#6776FF] font-semibold rounded-md shadow-lg hover:shadow-lg hover:shadow-slate-600 
          "
-            >
-              Check Out Now!
-            </button>
+              >
+                Check Out Now!
+              </button>
+            </a>
           </Link>
         </div>
       </div>
 
-      {/* <img src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Bannner%2FRectangle%20103.svg?alt=media&token=e5c68035-ba52-4bca-bc9b-9e494281cad9" alt="youtube"
-      className="h-full w-5/12 object-cover"  /> */}
       <div className="h-full w-5/12 object-cover relative">
         <Image
           src={youtube}

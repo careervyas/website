@@ -1,10 +1,9 @@
-
-let data=[
+let data = [
   {
     Name: "Shivam Mishra",
     Email: "mailto:shivam.careervyas@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/00shivamishra",
-    Image: "https://drive.google.com/uc?id=16_f4etSsXuHsFYXp8kawF1F0YbbowkTm",
+    Image: "https://drive.google.com/uc?id=1MnKUwyWRtsrcTmXoi9KxSUs6Lug6HFEF",
 
     Position: "Co-Founder",
   },
@@ -12,7 +11,7 @@ let data=[
     Name: "Gaurav Pathak",
     Email: "mailto:gauravpathak@servonsolution.com",
     LinkedIn: "https://www.linkedin.com/in/gaurav-pathak-675971192/",
-    Image: "https://drive.google.com/uc?id=1LEXx4fzwSTAGgW7Lvb6LUG3zqxEPRMIt",
+    Image: "https://drive.google.com/uc?id=1U_KgGHVXvYbl92_W7b9R6Bt8XBcP4BqM",
 
     Position: "Co-Founder",
   },
@@ -20,7 +19,7 @@ let data=[
     Name: "Garvit Gupta",
     Email: "mailto:garvitgupta292@gmail.com",
     LinkedIn: "http://www.linkedin.com/in/garvitguptanitj",
-    Image: "https://drive.google.com/uc?id=1r146WJZKNzepzcpL2xjkjMfwrvlBeoLH",
+    Image: "https://drive.google.com/uc?id=1TmxNU2XEUGVy0GTILwGK9pHP3wZRclXI",
 
     Position: "Co-Founder",
   },
@@ -28,7 +27,7 @@ let data=[
     Name: "Vaibhav Gupta",
     Email: "mailto:vaibhavgupta.etawah@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/vaibhav-gupta-033b571b9/",
-    Image: "https://drive.google.com/uc?id=1FFL3omA0xF3RSmU3quKGmlhTc4XTczQ4",
+    Image: "https://drive.google.com/uc?id=1jXg3Sk2zcV8yAebWOjMHw75jq9Dsn6AP",
 
     Position: "Product Manager",
   },
@@ -36,7 +35,7 @@ let data=[
     Name: "Vishal Kumar",
     Email: "mailto:vishal@careervyas.com",
     LinkedIn: "https://www.linkedin.com/in/er-vishal-kumar-78b328117",
-    Image: "https://drive.google.com/uc?id=118DF2M0wWlbJreR-nq3aEYRLep4SPCE1",
+    Image: "https://drive.google.com/uc?id=1ZNz03yK7flPwgUPF0kGSt45uieZC1Gwl",
 
     Position: "Chief Career Advisor",
   },
@@ -44,15 +43,14 @@ let data=[
     Name: "Tarana Khan",
     Email: "mailto:khantarana262@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/tarana-khan-578462216",
-    Image: "https://drive.google.com/uc?id=1MZ2fdr_KEB6tWZ3qzL1A2X5uG5Q17RCb",
-
+    Image: "https://drive.google.com/uc?id=1ZiFZ8RaLgftl-6h2VobAPWo1EdKXczKy",
     Position: "Head of Content",
   },
   {
     Name: "Bhaskar Raj",
     Email: "mailto:bhaskargeeta2001@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/bhaskar-raj-565883206/",
-    Image: "https://drive.google.com/uc?id=1CBHSLuzIvbY0IKfS-Z0hRcOcrLy6gi-s",
+    Image: "https://drive.google.com/uc?id=1vnzzOu27fXMdBVJHYQDj2GBa4-cy6tqW",
 
     Position: "Head-Social Media",
   },
@@ -60,7 +58,7 @@ let data=[
     Name: "Surinder Kaur Chawla",
     Email: "mailto:inderchawla649@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/surinder-kaur-chawla",
-    Image: "https://drive.google.com/uc?id=1I2QPc2HtHmXFmhMriM00Tw4PYfXnIQC3",
+    Image: "https://drive.google.com/uc?id=1mqHHAIJUm5SBYHhNm1cOVabACfHrOCvE",
 
     Position: "Head- Community",
   },
@@ -68,7 +66,7 @@ let data=[
     Name: "Agniva Dutta Banik",
     Email: "mailto:agniva.5star@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/agniva-dutta-banik-801636201",
-    Image: "https://drive.google.com/uc?id=1pXoZ4CK8jpaAFnsIcyR_0--LsfnRTE6Y",
+    Image: "https://drive.google.com/uc?id=1gsbwSCZ1YMODSckc4lkhO3fSigPRw-oX",
 
     Position: "Community Manager",
   },
@@ -76,7 +74,7 @@ let data=[
     Name: "Chirag Jain",
     Email: "mailto:cj21042001@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/chirag-jain-203327230",
-    Image: "https://drive.google.com/uc?id=1MZmDYXg0Vz6O6K6cgwysHF-PGT-OOrpi",
+    Image: "https://drive.google.com/uc?id=1tilyzEWBPQ13I59iWJzeERS2vcAGYP-x",
 
     Position: "Youtube Manager",
   },
@@ -84,7 +82,7 @@ let data=[
     Name: "Bhavya",
     Email: "mailto:bdhawan1414@gamil.com",
     LinkedIn: "https://www.linkedin.com/in/bhavya-dhawan-a98251225/",
-    Image: "https://drive.google.com/uc?id=18m7wTT579Y2dWX30ADclAVgo-460FArp",
+    Image: "https://drive.google.com/uc?id=1OCYyRqkDcQ5qMbC7IXYTpuRYUip2sT6m",
 
     Position: "Content Strategist",
   },
@@ -92,7 +90,7 @@ let data=[
     Name: "Pratham srivastava",
     Email: "mailto:Prathamsrivastava36@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/pratham-srivastava-0b77bb22a/",
-    Image: "https://drive.google.com/uc?id=1bK8qroxCaAgIzi3H2pydiMmvSXIIlEro",
+    Image: "https://drive.google.com/uc?id=11uiak7JrAemZsZEeatHfWBCBLyCWkNtD",
 
     Position: "Video Anchor",
   },
@@ -100,16 +98,14 @@ let data=[
     Name: "Ashish Rawat",
     Email: "mailto:Ar0859811@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/ashish-rawat-bb442b251",
-    Image: "https://drive.google.com/uc?id=13DaMTFThCEnSAWJOaLZS1_DwDDGgV4y8",
-
+    Image: "https://drive.google.com/uc?id=1NSPYaQxb7gVfC8PWY4WHO_hHZmtoqb4v",
     Position: "SEO Manager",
   },
   {
     Name: "Ishita Sehgal",
     Email: "mailto:sehgalishi14@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/ishita-sehgal-56052023a/",
-    Image: "https://drive.google.com/uc?id=1WfU-MxZg93lWImvylW-8_1pxK_zIM0Ta",
-
+    Image: "https://drive.google.com/uc?id=1Xzm5m-lpdE3DM8Bu_zBMwOHjB4Ik0-gm",
     Position: "Script Writer",
   },
   {

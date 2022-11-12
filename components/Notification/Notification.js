@@ -6,8 +6,9 @@ import client from '../client'
 import React from 'react'
 
 async function getPosts() {
+
   const posts = await client.fetch(groq`
-    *[_type == "latestNotification"]|order(publishedAt desc)
+    *[_type == "latestNotification"]
   `)
   return posts
 }
@@ -34,7 +35,6 @@ export default function Notification() {
     });
 
   }, []);
-  
 
   return (
     
