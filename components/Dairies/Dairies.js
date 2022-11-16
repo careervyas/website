@@ -16,25 +16,25 @@ export default function Dairies() {
   const [postData, setpostData] = useState([]);
 
   useEffect(() => {
+    let postarr = [];
     getPosts().then((posts) => {
       posts.forEach(async (post) => {
         if (post.categories[0] !== undefined) {
           const cat = await client.fetch(groq`
             *[_type == "category" && _id == "${post.categories[0]._ref}"]
           `);
-          
-          setpostData([]);
 
           cat.forEach((c) => {
-            if(c.title=="College Diaries"){
-              setpostData((prev) => [...prev, post]);
+            if (c.title == "College Diaries") {
+              postarr.push(post);
             }
-          })
-        
+          });
+          console.log(postarr);
+
+          setpostData(postarr);
         }
       });
     });
-    console.log(postData);
 
   }, []);
 

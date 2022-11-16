@@ -112,8 +112,7 @@ let data = [
     Name: "Sanket Dewangan",
     Email: "mailto:sanketdewangan79@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/sanket79/",
-    Image: "https://drive.google.com/uc?id=1u2DvAyrglwsdRP2VIkGdsNxWfB1sSFV0",
-
+    Image: "https://drive.google.com/uc?id=1nul25yvKTrVosBaKQVlWYobBKSMlnEK1",
     Position: "Video Editor",
   },
 ];

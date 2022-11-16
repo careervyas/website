@@ -1,16 +1,16 @@
 import Card from "./Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import groq from 'groq'
-import client from '../client'
-import React from 'react'
+import groq from "groq";
+import client from "../client";
+import React from "react";
+
 
 async function getPosts() {
-
   const posts = await client.fetch(groq`
     *[_type == "latestNotification"]
-  `)
-  return posts
+  `);
+  return posts;
 }
 
 export default function Notification() {
@@ -20,24 +20,22 @@ export default function Notification() {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 564 },
+      breakpoint: { max: 1024, min: 675 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 564, min: 0 },
+      breakpoint: { max: 675, min: 0 },
       items: 1,
     },
   };
   const [posts, setPosts] = React.useState([]);
   React.useEffect(() => {
     getPosts().then((posts) => {
-      setPosts(posts)
+      setPosts(posts);
     });
-
   }, []);
 
   return (
-    
     <>
       <div
         className="flex flex-col items-center justify-between my-3
@@ -50,16 +48,12 @@ export default function Notification() {
 
       <Carousel
         responsive={responsive}
-        arrows={false}
         infinite={true}
         focusOnSelect={true}
-        autoPlay={true}
-        autoPlaySpeed={2000}
         keyBoardControl={true}
       >
         {posts.map((post) => (
           <Card key={post._id} post={post} />
-          
         ))}
       </Carousel>
     </>

@@ -20,7 +20,7 @@ export default function Stat() {
         className="flex items-center flex-col my-4 
         w-full"
       >
-        <h2 className="text-3xl font-semibold w-2/3 lg:w-1/3 text-center
+        <h2 className="text-xl md:text-3xl font-semibold w-2/3 md:w-1/3 text-center
         mt-10 mb-5">
           Numbers never matter to us,but your Support Does ❣️
         </h2>

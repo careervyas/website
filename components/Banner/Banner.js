@@ -11,12 +11,12 @@ export default function Banner() {
       <Bolt className={"absolute top-0 left-0 translate-x-full translate-y-full lg:block hidden"}/>
       <div className="flex items-center flex-col w-1/2 relative">
         
-        <h1 className="text-slate-700 m-2 font-bold text-lg
+        <h1 className="text-slate-700 m-2 font-bold text-md
         lg:text-6xl md:text-4xl 
         text-center">
           Get the Best Career Guidance App soon !!
         </h1>
-        <p className="m-4 font-semibold text-xl text-center">
+        <p className="m-4 font-semibold text-sm md:text-xl text-center">
           Make sure you keep the eye on our App Launch 👀 👀
         </p>
         <div className="flex flex-row items-center justify-center">

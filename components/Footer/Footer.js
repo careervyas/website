@@ -62,7 +62,9 @@ export default function Footer() {
               <Link href="/about">About us</Link>
             </span>
             <span className="text-sm cursor-pointer tracking-tight">
-              Reach Out
+              <Link href="/reachout">
+                Reach Out
+                </Link>
             </span>
             <span className="text-sm cursor-pointer tracking-tight">
               <Link href="/terms">Terms</Link>

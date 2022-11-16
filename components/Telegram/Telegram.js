@@ -7,25 +7,25 @@ export default function Telegram() {
     <div
       className="flex flex-col justify-center items-center
     bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Footer%2FRectangle%20106.svg?alt=media&token=7288d83b-afea-42a3-bc3c-11f9e54698df')]
-    bg-no-repeat bg-cover h-full sm:h-96 w-full p-10"
+    bg-no-repeat bg-cover h-full sm:h-96 w-full p-2 md:p-10"
     >
       <h1
         className="text-white font-bold text-center
-            text-2xl md:text-6xl align-middle m-4"
+            text-xl md:text-6xl align-middle m-4"
       >
         {" "}
         Join Our Community to get Better EveryDay!!
       </h1>
       <p
         className="text-white font-semibold text-center
-            text-lg md:text-4xl align-middle m-4"
+            text-sm md:text-4xl align-middle m-4"
       >
         FIND PEERS | STAY UPDATED | KEEP LEARNING
       </p>
 
       <Link href="https://t.me/careervyasops" legacyBehavior>
         <a target="_blank">
-          <div className="m-10 cursor-pointer">
+          <div className="m-5 md:m-10 cursor-pointer">
             <Image
               src={tele}
               alt="CareerVyas Telegram"

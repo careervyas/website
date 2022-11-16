@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Card from "./Card";
 import Bolt from "./Elements/Bolt";
 import Ellipse from "./Elements/Ellipse";
 import Lines from "./Elements/Lines";
-import side from "./images/aboutside.svg";
+import { motion } from "framer-motion";
+
 export default function About() {
   return (
     <div className=" w-full h-full flex flex-col relative">
@@ -45,7 +45,9 @@ export default function About() {
           </div>
         </div>
 
-        <div
+        <motion.div
+          whileInView={{ y: ["-20vh", "0vh"] }}
+          transition={{ duration: 2 }}
           className="block md:absolute top-1/2 right-1/4 ring-2 ring-white bg-white 
         rounded-lg m-3 md:m-0"
         >
@@ -56,7 +58,7 @@ export default function About() {
             width="300px"
             height="300px"
           />
-        </div>
+        </motion.div>
       </div>
       <div className="flex flex-col lg:flex-row w-full h-full items-center relative">
         <Ellipse />
@@ -65,16 +67,24 @@ export default function About() {
           className="flex flex-col w-1/2 h-full items-center justify-center
         relative"
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/About%2FRectangle%2016.svg?alt=media&token=f32a2fd7-c99b-41f8-bfb3-15da631179e3"
-            height="500"
-            width="300"
-            className="border-8 border-blue-400 rounded-md"
-          />
-          
+          <motion.div
+           whileInView={{ y: ["-30vh", "0vh"] }}
+           transition={{ duration: 2 }}
+          >
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/About%2FRectangle%2016.svg?alt=media&token=f32a2fd7-c99b-41f8-bfb3-15da631179e3"
+              height="500"
+              width="300"
+              className="border-8 border-blue-400 rounded-md"
+            />
+          </motion.div>
+
           <Bolt />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full  gap-4 lg:gap-8 m-2">
+        <motion.div 
+        whileInView={{y:["-30vh","0vh"]}}
+        transition={{duration:2}}
+        className="grid grid-cols-1 md:grid-cols-2 h-full  gap-4 lg:gap-8 m-2">
           <Card
             title={"Mission"}
             content={
@@ -99,7 +109,7 @@ export default function About() {
               "We match students with the best and most renowned mentors in the country, one Stop Solution to all Admission Related Quries and organized information for 200+ courses, 300+ Indian Colleges, and 400+ career profiles."
             }
           />
-        </div>
+        </motion.div>
       </div>
       <div
         className="flex flex-col w-full h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FBackground%20(1).svg?alt=media&token=8caf9e7c-b9dc-4deb-8efe-487b71ecc568')]

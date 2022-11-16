@@ -3,7 +3,15 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import logo from "./images/logo.svg";
 
-export default function Navbar() {
+export default function Navbar({ background }) {
+  const [navback, setNavback] = useState("#E2FBF5");
+
+  useEffect(() => {
+    if (background != undefined) {
+      setNavback("#FFFFFF");
+    }
+  }, []);
+
   const handleClick = () => {
     let menubar = document.getElementById("menubar");
 
@@ -13,11 +21,12 @@ export default function Navbar() {
       menubar.style.display = "none";
     }
   };
+
   return (
     <>
       <nav
-        className="flex h-28 justify-between flex-row items-center 
-      bg-[#E2FBF5]"
+        className="flex h-28 justify-between flex-row items-center"
+        style={{ background: navback }}
       >
         <div className="relative h-[150px] w-[100px]">
           <Image
@@ -57,14 +66,26 @@ export default function Navbar() {
               Blog{" "}
             </a>
           </Link>
-          <Link href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true " legacyBehavior>
-            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4" target="_blank">
+          <Link
+            href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true "
+            legacyBehavior
+          >
+            <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
+              target="_blank"
+            >
               {" "}
               Join Us
             </a>
           </Link>
-          <Link href="https://adityagupta1625.github.io/quizApp/" legacyBehavior>
-            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4" target="_blank">
+          <Link
+            href="https://adityagupta1625.github.io/quizApp/"
+            legacyBehavior
+          >
+            <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
+              target="_blank"
+            >
               {" "}
               CAT Test{" "}
             </a>
@@ -140,7 +161,9 @@ export default function Navbar() {
             </div>
           </Link>
           <Link
-            href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true " legacyBehavior>
+            href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true "
+            legacyBehavior
+          >
             <a
               target="_blank"
               className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"

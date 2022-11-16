@@ -1,26 +1,31 @@
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../client";
+import Link from "next/link";
 
 export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.mainImage);
 
   return (
-    <div
-      className="w-full h-full  rounded-lg ring-2 ring-blue-300 my-2 flex flex-row items-center bg-white hover:shadow-md hover:shadow-blue-600 hover:ring-blue-500
-    cursor-pointer shadow-sm shadow-white p-2"
+    <Link
+      href={{ pathname: "/slug", query: { keyword: `${post.slug.current}` } }}
     >
-      <img
-        src={imageProps.src}
-        alt="Career Vyas Blogs"
-        className="w-1/2 h-full rounded-md"
-      />
+      <div
+        className="w-full h-full  rounded-lg ring-2 ring-blue-300 my-2 flex flex-row items-center bg-white hover:shadow-md hover:shadow-blue-600 hover:ring-blue-500
+    cursor-pointer shadow-sm shadow-white p-2"
+      >
+        <img
+          src={imageProps.src}
+          alt="Career Vyas Blogs"
+          className="w-1/2 h-full rounded-md"
+        />
 
-      <div className="w-1/2 h-full mx-2">
-        <div className="font-bold text-sm mb-1 my-1">{post.title}</div>
-        <p className="text-gray-700 text-xs">{post.excerpt}</p>
+        <div className="w-1/2 h-full mx-2">
+          <div className="font-bold text-sm mb-1 my-1">{post.title}</div>
+          <p className="text-gray-700 text-xs">{post.excerpt}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function EllipseSide() {
+export default function EllipseSide({className}) {
   return (
     <svg
+      className={className}
       width="63"
       height="126"
       viewBox="0 0 73 146"

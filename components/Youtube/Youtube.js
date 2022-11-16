@@ -3,10 +3,16 @@ import Arrow from "./ELements/Arrow";
 import Ellipse from "./ELements/Ellipse";
 import youtube from "./images/youtube.svg";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 export default function Youtube() {
   return (
     <div className=" w-full h-96 flex flex-row mb-20">
-      <div className="w-7/12 h-full flex flex-row items-center justify-center bg-[#6776FF] border-2 border-blue-800 relative">
+      
+      <motion.div 
+      whileInView={{x: ["-50vw","0vw"]}}
+      transition={{ duration:4}}
+      className="w-7/12 h-full flex flex-row items-center justify-center bg-[#6776FF] border-2 border-blue-800 relative">
         <Arrow />
         <Ellipse />
         <div className="flex flex-col justify-center">
@@ -24,9 +30,12 @@ export default function Youtube() {
             </a>
           </Link>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="h-full w-5/12 object-cover relative">
+      <motion.div 
+      whileInView={{ x:["100%","0%"] }}
+      transition={{ duration:4}}
+      className="h-full w-5/12 object-cover relative">
         <Image
           src={youtube}
           alt="youtube"
@@ -35,7 +44,7 @@ export default function Youtube() {
           objectFit="cover"
           layout="fill"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
