@@ -37,7 +37,7 @@ export default function Carrer() {
   return (
     <div
       className="w-full h-full flex flex-col justify-center items-center my-4
-    relative"
+    relative overflow-hidden"
     >
       <h1 className="text-xl md:text-3xl w-4/5 md:w-5/12 text-center font-semibold relative">
         How <span className="text-blue-700"> Career Vyas </span> is changing the

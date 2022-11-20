@@ -12,7 +12,7 @@ export default function Stat() {
   });
 
   return (
-    <div className="flex flex-col relative h-full w-full">
+    <div className="flex flex-col relative h-full w-full overflow-hidden">
       <Arrow className={"absolute top-0 left-0 md:left-1/4 translate-x-0 lg:translate-x-10"}/>
       <Bolt className={"absolute top-1/4 left-2"}/>
       <Lines className={"absolute top-1/4 right-0 -translate-y-10"}/>

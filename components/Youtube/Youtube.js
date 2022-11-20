@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Youtube() {
   return (
-    <div className=" w-full h-96 flex flex-row mb-20">
+    <div className=" w-full h-96 flex flex-row mb-20 overflow-hidden">
       
       <motion.div 
       whileInView={{x: ["-50vw","0vw"]}}

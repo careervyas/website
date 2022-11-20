@@ -46,7 +46,7 @@ export default function ReachOut() {
   }
   return (
     <div
-      className="w-[100vw] h-full flex flex-col lg:flex-row
+      className="w-full h-full flex flex-col lg:flex-row
     bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2Fcontact%20us%20(1).svg?alt=media&token=8f9ddd8c-1cca-4f8b-bf0e-81fab36bf3df')]
         bg-cover bg-no-repeat"
     >

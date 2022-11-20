@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import PortableText from "react-portable-text";
 import Header from "../components/Blogs/header";
-
+import Head from "next/head.js";
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -21,34 +21,40 @@ export default function SinglePost() {
   const router = useRouter();
   const [postData, setpostData] = useState(null);
   const [author, setauthor] = useState(null);
-  const [read, setread] = useState(null);
-  const [date, setdate] = useState(null);
 
   useEffect(() => {
     const slug = router.query["keyword"];
     const query = groq`*[_type=="post" && slug.current=="${slug}"][0]`;
 
     sanityClient.fetch(query).then((post) => {
+      console.log(post);
+      const authorQuery = groq`*[_type=="author" && _id=="${post?.author._ref}"]`;
+
+      sanityClient.fetch(authorQuery).then((author) => {
+        setauthor(author[0]["name"]);
+      });
       setpostData(post);
     });
 
-    // const authorQuery = groq`*[_type=="author" && _id=="${postData?.author._ref}"]`;
-    // sanityClient.fetch(authorQuery).then((author) => {
-    //   console.log(author[0]);
-    //   // setauthor(author[0].name);
-    // });
-    // setread(postData?.nminutesofread);
-    // setdate(postData?._updatedAt);
   }, [router.query]);
   if (!postData) return <div>Loading...</div>;
 
   return (
     <>
+      <Head>
+        <title>{postData.title}</title>
+        <meta name="description" content={postData?.synonyms} />
+      </Head>      
       <Navbar></Navbar>
       <div className="flex flex-row h-full mx-4 md:mx-24">
         <div className="flex flex-col m-2 p-4 w-full md:w-4/5 border-2 border-black space-y-5">
           <h2 className="m-2 text-4xl font-bold">{postData.title}</h2>
-          {/* <Header author={author} date={date} readtime={read}></Header> */}
+          <Header
+            id={postData._id}
+            author={author}
+            date={postData?._updatedAt}
+            readtime={postData?.nminutesofread}
+          ></Header>
 
           <img
             className="w-full"
