@@ -125,7 +125,7 @@ export default function About() {
           <div className="flex flex-col">
             <img
               className="h-auto md:h-[450px] m-2 md:m-0"
-              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FRectangle%20110.png?alt=media&token=a0705668-abca-486f-8591-085eeef773ec"
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FIMG_20221115_194141.jpg?alt=media&token=136f6f09-5570-4f70-a22e-d30f1924bc3e"
             />
             <img
               className="h-auto md:h-[450px] m-2 md:m-0"
