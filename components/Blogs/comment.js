@@ -144,9 +144,10 @@ export default function Comment({ slug }) {
           <span className="text-2xl font-bold">Recent Comments</span>
         </h1>
 
-        {RecentComment.map((item, index) => {
+        {RecentComment.map((item) => {
           return (
             <div
+              key={item.timestamp}
               className="flex flex-col w-4/5 h-fit my-3
             border-2 border-slate-400 rounded-md p-2"
             >
@@ -192,9 +193,10 @@ export default function Comment({ slug }) {
                   className="relative p-6 flex-auto overflow-y-auto
                   overflow-x-hidden h-[500px] scroll-smooth"
                 >
-                  {commentData.map((item, index) => {
+                  {commentData.map((item) => {
                     return (
                       <div
+                        key={item.timestamp}
                         className="flex flex-col w-7/12 h-fit my-3
                     border-2 border-slate-400 rounded-md p-2"
                       >
