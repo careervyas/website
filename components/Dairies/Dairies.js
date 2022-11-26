@@ -31,11 +31,10 @@ export default function Dairies() {
           });
           console.log(postarr);
 
-          setpostData(postarr);
+          setpostData(postarr.slice(0, 6));
         }
       });
     });
-
   }, []);
 
   return (
@@ -55,14 +54,16 @@ export default function Dairies() {
           <Card key={post._id} post={post} />
         ))}
       </div>
-
-      <button
-        className="mb-8 rounded-md
+      <Link href="/diaries">
+        <button
+          className="mb-8 rounded-md
       text-white h-16 w-44 bg-[#6776FF] hover:bg-blue-700
       my-2"
-      >
-        <Link href="/blog">Read More..</Link>
-      </button>
+        >
+          Read More..
+        </button>
+        
+      </Link>
     </div>
   );
 }

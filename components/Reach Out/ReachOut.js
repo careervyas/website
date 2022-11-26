@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import firebaseConfig from "../Firebase/config";
 import firebase from "firebase/app";
 import 'firebase/firestore';
-import {addDoc, collection} from "firebase/firestore";
 
 export default function ReachOut() {
   useEffect(()=>{

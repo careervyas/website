@@ -6,9 +6,14 @@ import imageUrlBuilder from "@sanity/image-url";
 import groq from "groq";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import Comments from "../components/Blogs/comment";
 import PortableText from "react-portable-text";
 import Header from "../components/Blogs/header";
 import Head from "next/head.js";
+import firebaseConfig from "../components/Firebase/config";
+import firebase from "firebase/app";
+import "firebase/firestore";
+
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -21,8 +26,13 @@ export default function SinglePost() {
   const router = useRouter();
   const [postData, setpostData] = useState(null);
   const [author, setauthor] = useState(null);
+  const [countclap, setcountclap] = useState(0);
 
   useEffect(() => {
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+
     const slug = router.query["keyword"];
     const query = groq`*[_type=="post" && slug.current=="${slug}"][0]`;
 
@@ -31,11 +41,19 @@ export default function SinglePost() {
       const authorQuery = groq`*[_type=="author" && _id=="${post?.author._ref}"]`;
 
       sanityClient.fetch(authorQuery).then((author) => {
-        setauthor(author[0]["name"]);
+        setauthor(author[0]?.name);
       });
       setpostData(post);
     });
 
+    const db = firebase.firestore();
+    const docref = db.collection("comments").doc(slug);
+
+    docref.get().then((doc) => {
+      if (doc.exists) {
+        setcountclap(doc.data().clap);
+      }
+    });
   }, [router.query]);
   if (!postData) return <div>Loading...</div>;
 
@@ -44,16 +62,18 @@ export default function SinglePost() {
       <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData?.synonyms} />
-      </Head>      
+      </Head>
       <Navbar></Navbar>
       <div className="flex flex-row h-full mx-4 md:mx-24">
-        <div className="flex flex-col m-2 p-4 w-full md:w-4/5 border-2 border-black space-y-5">
+        <div className="flex flex-col m-2 p-4 h-full w-full md:w-4/5 border-2 border-black space-y-5">
           <h2 className="m-2 text-4xl font-bold">{postData.title}</h2>
           <Header
             id={postData._id}
             author={author}
             date={postData?._updatedAt}
             readtime={postData?.nminutesofread}
+            countclap={countclap}
+            slug={postData?.slug.current}
           ></Header>
 
           <img
@@ -65,6 +85,7 @@ export default function SinglePost() {
           <PortableText
             content={postData.content}
             serializers={{
+             
               container: (props) => (
                 <div
                   style={{
@@ -208,8 +229,11 @@ export default function SinglePost() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
+          <Comments slug={postData?.slug.current}></Comments>
         </div>
+        
       </div>
+
       <Footer></Footer>
     </>
   );
