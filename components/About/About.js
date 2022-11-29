@@ -125,11 +125,11 @@ export default function About() {
           <div className="flex flex-col">
             <img
               className="h-auto md:h-[450px] m-2 md:m-0"
-              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FIMG_20221115_194141.jpg?alt=media&token=136f6f09-5570-4f70-a22e-d30f1924bc3e"
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2F1.jpeg?alt=media&token=5adf5f61-7ab6-474f-bc03-764bc04a5cea"
             />
             <img
               className="h-auto md:h-[450px] m-2 md:m-0"
-              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FRectangle%20115.png?alt=media&token=e523abdb-1dae-4711-ac73-1e99c50eae55"
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2F3.jpg?alt=media&token=afaac5dc-dd1e-4460-8eb6-f8f0bbe3415a"
             />
           </div>
           <div className="flex flex-col">
@@ -143,7 +143,7 @@ export default function About() {
             />
             <img
               className="h-auto md:h-[400px] m-2 md:m-0"
-              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FRectangle%20115.png?alt=media&token=e523abdb-1dae-4711-ac73-1e99c50eae55"
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FIMG_20221017_130140.jpg?alt=media&token=1420a7a9-bfad-4189-92b5-edeaa826be89"
             />
           </div>
           <div className="flex flex-col ">
@@ -157,7 +157,7 @@ export default function About() {
             />
             <img
               className="h-auto md:h-[300px] m-2 md:m-0"
-              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FRectangle%20110.png?alt=media&token=a0705668-abca-486f-8591-085eeef773ec"
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Team%20Images%2FIMG_20221017_130118.jpg?alt=media&token=17ee9068-d5a8-4799-aa43-f09a51d74e06"
             />
           </div>
         </div>
