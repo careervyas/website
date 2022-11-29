@@ -24,7 +24,7 @@ export default function Comment({ slug }) {
       if (doc.exists) {
         setCommentData(doc.data().comments);
 
-        setRecentComment(doc.data().comments.slice(-3));
+        setRecentComment(doc.data().comments?.slice(-3));
       } else {
         console.log("No such document!");
       }
@@ -144,7 +144,7 @@ export default function Comment({ slug }) {
           <span className="text-2xl font-bold">Recent Comments</span>
         </h1>
 
-        {RecentComment.map((item) => {
+        {RecentComment?.map((item) => {
           return (
             <div
               key={item.timestamp}
@@ -193,7 +193,7 @@ export default function Comment({ slug }) {
                   className="relative p-6 flex-auto overflow-y-auto
                   overflow-x-hidden h-[500px] scroll-smooth"
                 >
-                  {commentData.map((item) => {
+                  {commentData?.map((item) => {
                     return (
                       <div
                         key={item.timestamp}

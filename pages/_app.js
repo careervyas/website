@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Career Vyas</title>
+        <meta name="google-site-verification" content="PCFA08FujTrR6RWGcWqxbCoTNp6zsVT5a2mNBrI0KPo" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"

@@ -24,10 +24,8 @@ export default function Card({ post }) {
         <div className="font-bold text-lg mb-1 my-1 mx-[2px]">{post.title}</div>
         <p className="text-gray-700 text-sm">
           <span className="text-blue-500 font-bold mx-[2px]">
-            {post.PublishedAt.slice(0, 10) +
-              " " +
-              post.PublishedAt.slice(11, 17) +
-              "  "}
+          {new Date(post.PublishedAt).toString().substring(0,16)+","+new Date(post.PublishedAt).toString().substring(16,24)}
+            
           </span>
           <PortableText
             content={post.content}

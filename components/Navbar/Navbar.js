@@ -79,7 +79,7 @@ export default function Navbar({ background }) {
             </a>
           </Link>
           <Link
-            href="https://adityagupta1625.github.io/quizApp/"
+            href="/cat"
             legacyBehavior
           >
             <a
@@ -173,7 +173,7 @@ export default function Navbar({ background }) {
             </a>
           </Link>
           <Link
-            href="https://adityagupta1625.github.io/quizApp/"
+            href="/cat"
             legacyBehavior
           >
             <a

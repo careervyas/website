@@ -3,9 +3,11 @@ import groq from "groq";
 import client from "../client";
 import { useEffect, useState } from "react";
 
+
 async function getPosts() {
+  // sort by _createdAt in descending order
   const posts = await client.fetch(groq`
-    *[_type == "post"]
+    *[_type == "post" ] | order(dateTime(_createdAt) desc) 
   `);
 
   return posts;
@@ -16,6 +18,8 @@ export default function Blog() {
     getPosts().then((posts) => {
       setBlog(posts);
     });
+
+
   }, []);
   return (
     <div className="flex flex-col  items-center w-full h-full mb-5 ">
