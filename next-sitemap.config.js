@@ -1,4 +1,4 @@
-const siteUrl = "https://www.careervyas.com/";
+const siteUrl = "https://www.careervyas.com";
 
 module.exports = {
   siteUrl,
@@ -9,6 +9,5 @@ module.exports = {
       `${siteUrl}/sitemap.xml`,
       `${siteUrl}/server-sitemap.xml`,
     ],
-  },
-  exclude: ["/secret"],
+  }
 };
