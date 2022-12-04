@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import firebaseConfig from "../Firebase/config";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import Router from "next/router";
 
 export default function CAT() {
   const [showModal, setShowModal] = useState(false);
@@ -45,10 +46,10 @@ export default function CAT() {
     console.log("Next Test", nextTest);
 
     if(nextTest === 1){
-       console.log("Next Test is CAT 1");
+       Router.push("/CareerTest");
     }
     else if(nextTest === 2){
-        console.log("Next Test is CAT 2");
+        Router.push("/StreamTest");
     }
     
   };

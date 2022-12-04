@@ -23,7 +23,7 @@ export default function Telegram() {
         FIND PEERS | STAY UPDATED | KEEP LEARNING
       </p>
 
-      <Link href="https://t.me/careervyasops" legacyBehavior>
+      <Link href=" https://t.me/CareerVyaschat" legacyBehavior>
         <a target="_blank">
           <div className="m-5 md:m-10 cursor-pointer">
             <Image

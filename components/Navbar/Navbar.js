@@ -28,16 +28,18 @@ export default function Navbar({ background }) {
         className="flex h-28 justify-between flex-row items-center"
         style={{ background: navback }}
       >
-        <div className="relative h-[150px] w-[100px]">
-          <Image
-            src={logo}
-            alt="Career Vyas logo"
-            width={100}
-            height={200}
-            layout="fill"
-            objectFit="cover"
-          ></Image>
-        </div>
+        <Link href="/">
+          <div className="relative h-[150px] w-[100px]">
+            <Image
+              src={logo}
+              alt="Career Vyas logo"
+              width={100}
+              height={200}
+              layout="fill"
+              objectFit="cover"
+            ></Image>
+          </div>
+        </Link>
 
         <div className="flex items-center  text-black mr-6 hidden md:block">
           <Link href="/">
@@ -78,10 +80,7 @@ export default function Navbar({ background }) {
               Join Us
             </a>
           </Link>
-          <Link
-            href="/cat"
-            legacyBehavior
-          >
+          <Link href="/cat" legacyBehavior>
             <a
               className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
               target="_blank"
@@ -172,10 +171,7 @@ export default function Navbar({ background }) {
               Join Us
             </a>
           </Link>
-          <Link
-            href="/cat"
-            legacyBehavior
-          >
+          <Link href="/cat" legacyBehavior>
             <a
               target="_blank"
               className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"

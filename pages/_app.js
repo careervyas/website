@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Career Vyas</title>
+        <title>Career Vyas- The Perfect Guide</title>
         <meta name="google-site-verification" content="aW-3HTlrNOCU0JrumTViUW1OT4CbnvuNdkWMBtpQD14" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
