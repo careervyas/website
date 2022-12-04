@@ -18,7 +18,7 @@ import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function generalquiz() {
+export default function GeneralQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [title, setTitle] = useState(data.Aptitude[currentQuestion].question);
   const [option1, setOption1] = useState(data.Aptitude[currentQuestion].a);
