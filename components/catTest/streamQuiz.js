@@ -17,15 +17,19 @@ import last from "./images/last.svg";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import whatsapp from "./images/whatsapp.svg";
+import telegram from "./images/telegram.svg";
+import streamSelector from "./images/streamSelector.svg";
 
 export default function GeneralQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [title, setTitle] = useState(data.Aptitude[currentQuestion].question);
-  const [option1, setOption1] = useState(data.Aptitude[currentQuestion].a);
-  const [option2, setOption2] = useState(data.Aptitude[currentQuestion].b);
-  const [option3, setOption3] = useState(data.Aptitude[currentQuestion].c);
-  const [option4, setOption4] = useState(data.Aptitude[currentQuestion].d);
-  const [correct, setCorrect] = useState(data.Aptitude[currentQuestion].ans);
+  const [title, setTitle] = useState(data.Aptitude[0].question);
+  const [option1, setOption1] = useState(data.Aptitude[0].a);
+  const [option2, setOption2] = useState(data.Aptitude[0].b);
+  const [option3, setOption3] = useState(data.Aptitude[0].c);
+  const [option4, setOption4] = useState(data.Aptitude[0].d);
+  const [correct, setCorrect] = useState(data.Aptitude[0].ans);
+
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState("");
   const [selectedbg, setSelectedbg] = useState(0);
@@ -36,11 +40,17 @@ export default function GeneralQuiz() {
   const [ModalText, setModalText] = useState();
   const [ModalTitle, setModalTitle] = useState();
   const [showModal2, setShowModal2] = useState(false);
+  const [stream, setStream] = useState("");
+  const [pcm, setPcm] = useState(0);
+  const [pcb, setPcb] = useState(0);
+  const [commerce, setCommerce] = useState(0);
+  const [arts, setArts] = useState(0);
 
   useEffect(() => {
     window.onclick = function (event) {
       if (event.target == document.getElementById("myModal")) {
         setShowModal(false);
+        setShowModal2(false);
       }
     };
   }, []);
@@ -48,8 +58,23 @@ export default function GeneralQuiz() {
   const handleMark = (e) => {
     e.preventDefault();
     if (selected === "") {
-      alert("Please select an option");
+      toast.error("Please select an option");
       return;
+    } else if (category === "streamSelector") {
+      if (selected === "Yes" || selected === "Yes, Will love to") {
+        if (data[category][currentQuestion].id === "PCM") {
+          setPcm(pcm + 1);
+        } else if (data[category][currentQuestion].id === "PCB") {
+          setPcb(pcb + 1);
+        } else if (data[category][currentQuestion].id === "Commerce") {
+          setCommerce(commerce + 1);
+        } else if (data[category][currentQuestion].id === "humanities") {
+          setArts(arts + 1);
+        } else if (data[category][currentQuestion].id === "PCB,PCM") {
+          setPcm(pcm + 1);
+          setPcb(pcb + 1);
+        }
+      }
     } else if (selected === correct) {
       setScore(score + 1);
     }
@@ -58,6 +83,7 @@ export default function GeneralQuiz() {
       id: currentQuestion,
       selected: selected,
       selectedbg: selectedbg,
+      category: category,
     });
 
     setSelected("");
@@ -96,12 +122,12 @@ export default function GeneralQuiz() {
         if (attempted.length === data[category].length) {
           setCategory("English");
           setCurrentQuestion(0);
-          setTitle(data.English[currentQuestion].question);
-          setOption1(data.English[currentQuestion].a);
-          setOption2(data.English[currentQuestion].b);
-          setOption3(data.English[currentQuestion].c);
-          setOption4(data.English[currentQuestion].d);
-          setCorrect(data.English[currentQuestion].ans);
+          setTitle(data.English[0].question);
+          setOption1(data.English[0].a);
+          setOption2(data.English[0].b);
+          setOption3(data.English[0].c);
+          setOption4(data.English[0].d);
+          setCorrect(data.English[0].ans);
           setSelected("");
           setSelectedbg(0);
 
@@ -116,12 +142,12 @@ export default function GeneralQuiz() {
         if (attempted.length === data[category].length + data.Aptitude.length) {
           setCategory("Science");
           setCurrentQuestion(0);
-          setTitle(data.Science[currentQuestion].question);
-          setOption1(data.Science[currentQuestion].a);
-          setOption2(data.Science[currentQuestion].b);
-          setOption3(data.Science[currentQuestion].c);
-          setOption4(data.Science[currentQuestion].d);
-          setCorrect(data.Science[currentQuestion].ans);
+          setTitle(data.Science[0].question);
+          setOption1(data.Science[0].a);
+          setOption2(data.Science[0].b);
+          setOption3(data.Science[0].c);
+          setOption4(data.Science[0].d);
+          setCorrect(data.Science[0].ans);
           setSelected("");
           setSelectedbg(0);
 
@@ -137,10 +163,53 @@ export default function GeneralQuiz() {
           attempted.length ===
           data[category].length + data.Aptitude.length + data.English.length
         ) {
-          
-          setShowModal2(true);
+          setCategory("streamSelector");
+          setCurrentQuestion(0);
+          setTitle(data.streamSelector[0].question);
+          setOption1(data.streamSelector[0].a);
+          setOption2(data.streamSelector[0].b);
+          setOption3(data.streamSelector[0].c);
+          setOption4(data.streamSelector[0].d);
+          setCorrect(data.streamSelector[0].ans);
+          setSelected("");
+          setSelectedbg(0);
+
+          setModalImage(last);
+          setModalTitle("well done!!");
+          setModalText("You have completed this section");
+          setShowModal(true);
         } else {
           toast.warn("Please attempt all the questions in Science Section");
+        }
+      } else if (category === "streamSelector") {
+        if (
+          attempted.length ===
+          data[category].length +
+            data.Aptitude.length +
+            data.English.length +
+            data.Science.length
+        ) {
+          let max = Math.max(pcm, pcb, commerce, arts);
+          let str = "";
+
+          if (max === pcm) {
+            str += "PCM";
+          }
+          if (max === pcb) {
+            str += "PCB";
+          }
+          if (max === commerce) {
+            str += "Commerce";
+          }
+          if (max === arts) {
+            str += "Humanities";
+          }
+          setStream(str);
+          setShowModal2(true);
+        } else {
+          toast.warn(
+            "Please attempt all the questions in streamSelector Section"
+          );
         }
       }
     } else if (currentQuestion < data[category].length - 1) {
@@ -150,7 +219,10 @@ export default function GeneralQuiz() {
       setSelectedbg(0);
 
       for (let i = 0; i < attempted.length; i++) {
-        if (attempted[i].id === currentQuestion + 1) {
+        if (
+          attempted[i].id === currentQuestion + 1 &&
+          attempted[i].category === category
+        ) {
           setSelected(attempted[i].selected);
           setSelectedbg(attempted[i].selectedbg);
         }
@@ -163,6 +235,8 @@ export default function GeneralQuiz() {
       setOption3(data[category][currentQuestion + 1].c);
       setOption4(data[category][currentQuestion + 1].d);
       setCorrect(data[category][currentQuestion + 1].ans);
+    } else {
+      return;
     }
   };
 
@@ -195,7 +269,6 @@ export default function GeneralQuiz() {
               className="w-28 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer
             mx-2"
-            style={{}}
             >
               <Image src={aptitude} alt="science" width={30} height={30} />
               <p className="text-black text-md">Aptitude</p>
@@ -216,6 +289,13 @@ export default function GeneralQuiz() {
             >
               <Image src={english} alt="English" width={30} height={30} />
               <p className="text-black text-md">English</p>
+            </div>
+            <div
+              className="w-42 flex flex-row items-center h-8 shadow-md
+            shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
+            >
+              <Image src={streamSelector} alt="English" width={30} height={30} />
+              <p className="text-black text-md">Stream Selector</p>
             </div>
           </div>
         </div>
@@ -338,6 +418,7 @@ export default function GeneralQuiz() {
                 style={{
                   backgroundColor: selectedbg == 4 ? "blue" : "white",
                   color: selectedbg == 4 ? "white" : "black",
+                  visibility: option4 === "" ? "hidden" : "visible",
                 }}
               >
                 D.
@@ -422,11 +503,16 @@ export default function GeneralQuiz() {
                 <p className="text-6xl font-semibold mt-1 text-[#6776FF]">
                   {score}
                 </p>
-                <p className="text-xl">
-                  visit our website
-                  <Link href="https://www.careervyas.com/"> careervyas.com</Link>
+                <p className="text-md mt-3">Your Preffered Stream </p>
+                <p className="text-6xl font-semibold mt-1 text-[#6776FF]">
+                  {stream}
                 </p>
-                <p className="text-xl">To reach new heights in your career</p>
+                <div className="flex flex-row justify-end mt-2">
+                  <Image src={whatsapp} alt="whatsapp" width={50} height={50} />
+                  <Image src={telegram} alt="whatsapp" width={50} height={50} />
+                </div>
+
+
               </div>
             </div>
           </div>

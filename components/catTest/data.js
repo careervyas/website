@@ -6,7 +6,7 @@ const Aptitude=[
         b: "0,-3",
         c: "0,3",
         d: "none of these",
-        ans: "ans3"
+        ans: "0,3"
     },
     {
         heading: "Aptitude",
@@ -16,7 +16,7 @@ const Aptitude=[
         b: "15 cm",
         c: "18 cm",
         d: "17 cm",
-        ans: "ans2"
+        ans: "15cm"
     },
     {
         heading: "Aptitude",
@@ -25,7 +25,7 @@ const Aptitude=[
         b: "4km/hr",
         c: "3km/hr",
         d: "7km/hr",
-        ans: "ans1"
+        ans: "6km/hr"
     },
     {
         heading: "Aptitude",
@@ -34,7 +34,7 @@ const Aptitude=[
         b: "exactly n zeroes",
         c: "atmost n zeroes",
         d: "more than n zeroes",
-        ans: "ans2"
+        ans: "exactly n zeroes"
     },
     {
         heading: "Aptitude",
@@ -43,7 +43,7 @@ const Aptitude=[
         b: "4/5",
         c: "2/15",
         d: "1/3",
-        ans: "ans2"
+        ans: "4/5"
     },
     {
         heading: "Aptitude",
@@ -52,7 +52,7 @@ const Aptitude=[
         b: "10",
         c: "12",
         d: "14",
-        ans: "ans4"
+        ans: "14"
     },
     {
         heading: "Aptitude",
@@ -61,7 +61,7 @@ const Aptitude=[
         b: "13",
         c: "132",
         d: "196",
-        ans: "ans1"
+        ans: "66"
     },
     {
         heading: "Aptitude",
@@ -70,7 +70,7 @@ const Aptitude=[
         b: "71.42 cm",
         c: "63.18 cm",
         d: "79.86 cm",
-        ans: "ans1"
+        ans: "78.57"
     },
     {
         heading: "Aptitude",
@@ -79,7 +79,7 @@ const Aptitude=[
         b: "1 : 2",
         c: "3 : 1",
         d: "2 : 1",
-        ans: "ans3"
+        ans: "3:1"
     },
     {
         heading: "Aptitude",
@@ -88,7 +88,7 @@ const Aptitude=[
         b: "–3 < k < 3",
         c: "k > 2",
         d: " k < –2",
-        ans: "ans4"
+        ans: "k<-2"
     }
 ]
 
@@ -100,7 +100,7 @@ const Science=[
         b: "Electric resistance",
         c: "Electric conductance",
         d: "Potential difference",
-        ans: "ans4"
+        ans: "Potential difference"
     },
     {
         heading: "Science",
@@ -109,7 +109,7 @@ const Science=[
         b: "800 Ω",
         c: "0.8 Ω",
         d: "None of these",
-        ans: "ans4"
+        ans: "None of these"
     },
     {
         heading: "Science",
@@ -118,7 +118,7 @@ const Science=[
         b: "Rods",
         c: "Both rods and cones",
         d: "None of these",
-        ans: "ans3"
+        ans: "Both rods and cones"
     },
     {
         heading: "Science",
@@ -127,7 +127,7 @@ const Science=[
         b: "galvanometer",
         c: "ammeter",
         d: "Motor",
-        ans: "ans1"
+        ans: "generator"
     },
     {
         heading: "Science",
@@ -136,7 +136,7 @@ const Science=[
         b: "Wave energy",
         c: "Solar energy",
         d: "Ocean thermal energy",
-        ans: "ans4"
+        ans: "Ocean thermal energy"
     },
     {
         heading: "Science",
@@ -145,7 +145,7 @@ const Science=[
         b: "Ca(OH)2",
         c: "CaCO3",
         d: "CaCl2",
-        ans: "ans2"
+        ans: "Ca(OH)2"
     },
     {
         heading: "Science",
@@ -154,7 +154,7 @@ const Science=[
         b: "ethanol and methanol (50%)",
         c: "ethanol and methanol (5%)",
         d: "methanol only",
-        ans: "ans4"
+        ans: "methanol only"
     },
     {
         heading: "Science",
@@ -163,7 +163,7 @@ const Science=[
         b: "colorless",
         c: "acidic in nature",
         d: "soluble in water",
-        ans: "ans2"
+        ans: "colorless"
     },
     {
         heading: "Science",
@@ -172,7 +172,7 @@ const Science=[
         b: "mud",
         c: "gangue",
         d: "flux",
-        ans: "ans1"
+        ans: "slag"
     },
     {
         heading: "Science",
@@ -181,7 +181,7 @@ const Science=[
         b: "Chromosomes",
         c: "Trait",
         d: "Gene",
-        ans: "ans4"
+        ans: "Gene"
     },
     {
         heading: "Science",
@@ -190,7 +190,7 @@ const Science=[
         b: "10-12",
         c: "12-14",
         d: "14-16",
-        ans: "ans3"
+        ans: "12-14"
     },
     {
         heading: "Science",
@@ -199,7 +199,7 @@ const Science=[
         b: "Group of viruses",
         c: "Group of microorganisms",
         d: "Group of diseases",
-        ans: "ans1"
+        ans:"Group of bacteria"
     },
     {
         heading: "Science",
@@ -208,7 +208,7 @@ const Science=[
         b: "Plastic bags",
         c: "Abiotic constituents",
         d: "All of these",
-        ans: "ans2"
+        ans: "Plastic bags"
     },
     {
         heading: "Science",
@@ -217,7 +217,7 @@ const Science=[
         b: "Cell wall",
         c: "Pseudopodia",
         d: "Cilia",
-        ans: "ans3"
+        ans: "Pseudopodia"
     },
     {
         heading: "Science",
@@ -226,7 +226,7 @@ const Science=[
         b: "Fats",
         c: "Carbohydrates",
         d: "All of these",
-        ans: "ans2"
+        ans: "Fats"
     }
 ]
 
@@ -240,7 +240,7 @@ const English= [
         b: "Since",
         c: "For",
         d: "to",
-        ans: "ans2"
+        ans: "Since"
     },
     {
         heading: "English",
@@ -249,7 +249,7 @@ const English= [
         b: "From",
         c: "Out",
         d: "Of",
-        ans: "ans2"
+        ans: "From"
     },
     {
         heading: "English",
@@ -258,7 +258,7 @@ const English= [
         b: "Cold-blooded",
         c: "Resemble",
         d: "Coldly",
-        ans: "ans3"
+        ans: "Resemble"
     },
     {
         heading: "English",
@@ -267,7 +267,7 @@ const English= [
         b: "any",
         c: "no",
         d: "several",
-        ans: "ans2"
+        ans: "any"
     },
     {
         heading: "English",
@@ -276,7 +276,7 @@ const English= [
         b: "had",
         c: "will",
         d: "have",
-        ans: "ans1"
+        ans: "were"
     },
     {
         heading: "English",
@@ -285,7 +285,7 @@ const English= [
         b: "did, reach",
         c: "did, reached",
         d: "have, reached",
-        ans: "ans2"
+        ans: "did, reach"
     },
     {
         heading: "English",
@@ -294,7 +294,7 @@ const English= [
         b: "PQRS",
         c: "SQPR",
         d: "QSRP",
-        ans: "ans1"
+        ans: "RQSP"
     },
     {
         heading: "English",
@@ -303,7 +303,7 @@ const English= [
         b: "Connected",
         c: "Vicious",
         d: "Capacious",
-        ans: "ans1"
+        ans: "Usual"
     },
     {
         heading: "English",
@@ -312,7 +312,7 @@ const English= [
         b: "Ignorant",
         c: "Stubborn",
         d: "Fat",
-        ans: "ans4"
+        ans: "Fat"
     },
     {
         heading: "English",
@@ -321,7 +321,7 @@ const English= [
         b: "fully",
         c: "more",
         d: "good",
-        ans: "ans3"
+        ans: "more"
     }
 ];
 

@@ -46,10 +46,10 @@ export default function CAT() {
     console.log("Next Test", nextTest);
 
     if(nextTest === 1){
-       Router.push("/CareerTest");
+       Router.push("/StreamTest");
     }
     else if(nextTest === 2){
-        Router.push("/StreamTest");
+        Router.push("/careerTest");
     }
     
   };

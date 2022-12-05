@@ -17,6 +17,8 @@ import last from "./images/last.svg";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import whatsapp from "./images/whatsapp.svg";
+import telegram from "./images/telegram.svg";
 
 export default function GeneralQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -137,7 +139,6 @@ export default function GeneralQuiz() {
           attempted.length ===
           data[category].length + data.Aptitude.length + data.English.length
         ) {
-          
           setShowModal2(true);
         } else {
           toast.warn("Please attempt all the questions in Science Section");
@@ -195,7 +196,7 @@ export default function GeneralQuiz() {
               className="w-28 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer
             mx-2"
-            style={{}}
+              style={{}}
             >
               <Image src={aptitude} alt="science" width={30} height={30} />
               <p className="text-black text-md">Aptitude</p>
@@ -424,9 +425,16 @@ export default function GeneralQuiz() {
                 </p>
                 <p className="text-xl">
                   visit our website
-                  <Link href="https://www.careervyas.com/"> careervyas.com</Link>
+                  <Link href="https://www.careervyas.com/">
+                    {" "}
+                    careervyas.com
+                  </Link>
                 </p>
                 <p className="text-xl">To reach new heights in your career</p>
+              </div>
+              <div className="flex flex-row justify-end mt-2">
+                <Image src={whatsapp} alt="whatsapp" width={50} height={50} />
+                <Image src={telegram} alt="whatsapp" width={50} height={50} />
               </div>
             </div>
           </div>
