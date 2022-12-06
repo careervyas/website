@@ -30,10 +30,10 @@ export default function CAT() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // if(Name==="" || Email==="" || Phone==="" || Hometown==="" || Class===""){
-    //   toast.error("Please Fill All The Fields");
-    //   return;
-    // }
+    if(Name==="" || Email==="" || Phone==="" || Hometown==="" || Class===""){
+      toast.error("Please Fill All The Fields");
+      return;
+    }
 
     const db = firebase.firestore();
     db.collection("CAT").add({
