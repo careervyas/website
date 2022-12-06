@@ -242,7 +242,7 @@ export default function GeneralQuiz() {
 
   return (
     <div
-      className="w-full h-[64vh] flex flex-col items-center
+      className="w-full h-[69vh] flex flex-col items-center
         bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FCAT%20TEST%20(1).svg?alt=media&token=034c87dd-67e9-4e23-9e0f-86aa67ac3719')]
             bg-cover bg-no-repeat mb-10 relative"
     >
@@ -258,11 +258,11 @@ export default function GeneralQuiz() {
         pauseOnHover
         theme="light"
       />
-      <Side className={"absolute top-0 left-0"} />
-      <Bottom className={"absolute  top-full right-0"} />
-      <EllipseRight className={"absolute top-1/4 right-0"} />
-      <EllipseLeft className={"absolute top-3/4 left-0 translate-y-20"} />
-      <div className="w-3/4 h-full flex flex-col">
+      <Side className={"absolute top-0 left-0 "} />
+      <Bottom className={"absolute  top-full right-0  "} />
+      <EllipseRight className={"absolute top-1/4 right-0 hidden md:block"} />
+      <EllipseLeft className={"absolute top-3/4 left-0 translate-y-20 hidden md:block"} />
+      <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center md:items-start">
         <div className="flex flex-col md:flex-row m-5">
           <div className="flex flex-row">
             <div
@@ -282,7 +282,7 @@ export default function GeneralQuiz() {
               <p className="text-black text-md">Science</p>
             </div>
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row my-1 md:m-0">
             <div
               className="w-28 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
@@ -294,14 +294,14 @@ export default function GeneralQuiz() {
               className="w-42 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
             >
-              <Image src={streamSelector} alt="English" width={30} height={30} />
+              <Image src={streamSelector} alt="English" width={20} height={30} />
               <p className="text-black text-md">Stream Selector</p>
             </div>
           </div>
         </div>
         <div
-          className="flex flex-col bg-[#6776FF] border-2 border-black w-full
-        bg-opacity-50 p-6"
+          className="flex flex-col bg-[#6776FF] border-2 border-black
+        bg-opacity-50 p-6 w-full"
         >
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-2xl font-semibold w-3/4">

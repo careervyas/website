@@ -6,6 +6,8 @@ import firebaseConfig from "../Firebase/config";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import Router from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function CAT() {
   const [showModal, setShowModal] = useState(false);
@@ -27,6 +29,12 @@ export default function CAT() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // if(Name==="" || Email==="" || Phone==="" || Hometown==="" || Class===""){
+    //   toast.error("Please Fill All The Fields");
+    //   return;
+    // }
+
     const db = firebase.firestore();
     db.collection("CAT").add({
       Name: Name,
@@ -49,7 +57,7 @@ export default function CAT() {
        Router.push("/StreamTest");
     }
     else if(nextTest === 2){
-        Router.push("/careerTest");
+        Router.push("/CareerTest");
     }
     
   };
@@ -70,6 +78,18 @@ export default function CAT() {
     bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FCAT%20TEST%20(1).svg?alt=media&token=034c87dd-67e9-4e23-9e0f-86aa67ac3719')]
         bg-cover bg-no-repeat mb-10"
     >
+       <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div
         className="hidden md:flex flex-row items-center justify-between mx-12 my-6 w-3/4
       bg-[#6776FF] px-4 lg:px-8 rounded-lg shadow-md h-fit md:h-[230px] bg-opacity-50 py-4 md:py-0 "
