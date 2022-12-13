@@ -62,6 +62,7 @@ export default function SinglePost() {
       <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData?.synonyms} />
+        <meta name="keywords" content={postData?.keywords} />
       </Head>
       <Navbar></Navbar>
       <div className="flex flex-row h-full mx-4 md:mx-24">

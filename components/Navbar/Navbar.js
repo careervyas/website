@@ -80,6 +80,15 @@ export default function Navbar({ background }) {
               Join Us
             </a>
           </Link>
+          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
+          <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
+              target="_blank"
+            >
+              {" "}
+              NewsLetter{" "}
+            </a>
+          </Link>
           <Link href="/cat" legacyBehavior>
             <a
               className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
@@ -89,6 +98,7 @@ export default function Navbar({ background }) {
               CAT Test{" "}
             </a>
           </Link>
+        
         </div>
 
         <div className="flex items-center md:hidden">
@@ -132,6 +142,7 @@ export default function Navbar({ background }) {
         <div
           className="flex flex-col items-center  text-black 
       bg-[#E2FBF5] "
+      style={{ background: navback }}
         >
           <Link href="/">
             <div className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1">
@@ -169,6 +180,15 @@ export default function Navbar({ background }) {
             >
               {" "}
               Join Us
+            </a>
+          </Link>
+          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
+          <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold my-1"
+              target="_blank"
+            >
+    
+              NewsLetter
             </a>
           </Link>
           <Link href="/cat" legacyBehavior>

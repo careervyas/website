@@ -46,7 +46,7 @@ export default function About() {
         </div>
 
         <motion.div
-          whileInView={{ y: ["-20vh", "0vh"] }}
+          animate={{ y: ["-20vh", "0vh"] }}
           transition={{ duration: 2 }}
           className="block md:absolute top-1/2 right-1/4 ring-2 ring-white bg-white 
         rounded-lg m-3 md:m-0"
@@ -68,7 +68,7 @@ export default function About() {
         relative"
         >
           <motion.div
-           whileInView={{ y: ["-30vh", "0vh"] }}
+           animate={{ y: ["-30vh", "0vh"] }}
            transition={{ duration: 2 }}
           >
             <img
@@ -82,7 +82,7 @@ export default function About() {
           <Bolt />
         </div>
         <motion.div 
-        whileInView={{y:["-30vh","0vh"]}}
+        animate={{y:["-30vh","0vh"]}}
         transition={{duration:2}}
         className="grid grid-cols-1 md:grid-cols-2 h-full  gap-4 lg:gap-8 m-2">
           <Card
