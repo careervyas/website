@@ -55,6 +55,30 @@ export default function Navbar({ background }) {
               About Us{" "}
             </a>
           </Link>
+          <Link href="/cat" legacyBehavior>
+            <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
+              target="_blank"
+            >
+              {" "}
+              CAT Test{" "}
+            </a>
+          </Link>
+          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
+          <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
+              target="_blank"
+            >
+              {" "}
+              NewsLetter{" "}
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4">
+              {" "}
+              Blog{" "}
+            </a>
+          </Link>
           <Link href="/team">
             <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4">
               {" "}
@@ -62,12 +86,7 @@ export default function Navbar({ background }) {
             </a>
           </Link>
 
-          <Link href="/blog">
-            <a className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4">
-              {" "}
-              Blog{" "}
-            </a>
-          </Link>
+        
           <Link
             href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true "
             legacyBehavior
@@ -80,24 +99,8 @@ export default function Navbar({ background }) {
               Join Us
             </a>
           </Link>
-          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
-          <a
-              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
-              target="_blank"
-            >
-              {" "}
-              NewsLetter{" "}
-            </a>
-          </Link>
-          <Link href="/cat" legacyBehavior>
-            <a
-              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold py-12 px-4"
-              target="_blank"
-            >
-              {" "}
-              CAT Test{" "}
-            </a>
-          </Link>
+          
+         
         
         </div>
 
@@ -157,6 +160,30 @@ export default function Navbar({ background }) {
               About Us{" "}
             </div>
           </Link>
+          <Link href="/cat" legacyBehavior>
+            <a
+              target="_blank"
+              className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"
+            >
+              {" "}
+              CAT Test{" "}
+            </a>
+          </Link>
+          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
+          <a
+              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold my-1"
+              target="_blank"
+            >
+    
+              NewsLetter
+            </a>
+          </Link>
+          <Link href="/blog">
+            <div className="font text-l cursor-pointer tracking-tight hover:font-bold my-1">
+              {" "}
+              Blog{" "}
+            </div>
+          </Link>
           <Link href="/team">
             <div className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1">
               {" "}
@@ -164,12 +191,7 @@ export default function Navbar({ background }) {
             </div>
           </Link>
 
-          <Link href="/blog">
-            <div className="font text-l cursor-pointer tracking-tight hover:font-bold my-1">
-              {" "}
-              Blog{" "}
-            </div>
-          </Link>
+          
           <Link
             href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true "
             legacyBehavior
@@ -182,24 +204,8 @@ export default function Navbar({ background }) {
               Join Us
             </a>
           </Link>
-          <Link href="https://newsletter.careervyas.com/" legacyBehavior>
-          <a
-              className="font text-l cursor-pointer tracking-tight hover:bg-[#B1C6F9] hover:font-bold my-1"
-              target="_blank"
-            >
-    
-              NewsLetter
-            </a>
-          </Link>
-          <Link href="/cat" legacyBehavior>
-            <a
-              target="_blank"
-              className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"
-            >
-              {" "}
-              CAT Test{" "}
-            </a>
-          </Link>
+          
+          
         </div>
       </div>
     </>

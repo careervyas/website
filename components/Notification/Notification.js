@@ -7,9 +7,11 @@ import React from "react";
 
 
 async function getPosts() {
+  
   const posts = await client.fetch(groq`
-    *[_type == "latestNotification"]
+    *[_type == "latestNotification"] | order(dateTime(_createdAt) desc)
   `);
+  console.log(posts)
   return posts;
 }
 
