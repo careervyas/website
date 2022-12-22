@@ -11,7 +11,7 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 
 export default function Main() {
   const [docs, setdocs] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   async function loadSheet() {
     const SHEET_ID = "1d1c7fCIdPbZL5N6t7G19z4Ca2J7brRcBgzln-wJewcs";
@@ -204,19 +204,20 @@ export default function Main() {
                 className="items-center border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none p-2
               h-full"
               >
-                
                 <div className="h-full w-full relative">
-       
-                  <img src={"https://drive.google.com/uc?id=1Fx04bpey7SqG0znOeLYmkgsez5bCiHve"}
+                  <img
+                    src={
+                      "https://drive.google.com/uc?id=1Fx04bpey7SqG0znOeLYmkgsez5bCiHve"
+                    }
                     alt="ModalImage"
-                    
                     className="absolute top-0 left-0 w-full h-full object-contain border-2 border-blue-400 
-                    rounded-md"/>
+                    rounded-md"
+                  />
                 </div>
                 <Link href="https://sessions-careervyas.typedream.app/">
-                <p className="text-3xl font-semibold mt-5 text-[#6776FF] cursor-pointer mb-5">
-                  Register Now
-                </p>
+                  <p className="text-3xl font-semibold mt-5 text-[#6776FF] cursor-pointer mb-5">
+                    Register Now
+                  </p>
                 </Link>
               </div>
             </div>
