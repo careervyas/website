@@ -37,7 +37,6 @@ export default function SinglePost() {
     const query = groq`*[_type=="post" && slug.current=="${slug}"][0]`;
 
     sanityClient.fetch(query).then((post) => {
-      console.log(post);
       const authorQuery = groq`*[_type=="author" && _id=="${post?.author._ref}"]`;
 
       sanityClient.fetch(authorQuery).then((author) => {
@@ -86,7 +85,6 @@ export default function SinglePost() {
           <PortableText
             content={postData.content}
             serializers={{
-             
               container: (props) => (
                 <div
                   style={{
@@ -232,7 +230,6 @@ export default function SinglePost() {
           ></iframe>
           <Comments slug={postData?.slug.current}></Comments>
         </div>
-        
       </div>
 
       <Footer></Footer>

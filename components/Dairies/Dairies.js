@@ -29,7 +29,6 @@ export default function Dairies() {
               postarr.push(post);
             }
           });
-          console.log(postarr);
 
           setpostData(postarr.slice(0, 6));
         }
@@ -38,31 +37,26 @@ export default function Dairies() {
   }, []);
 
   return (
-    <div
-      className="flex items-center flex-col my-4 bg-[#6776FF80]
-    w-full"
-    >
+    <div className="flex items-center flex-col pt-6 pb-2 bg-[#6776FF80] w-full">
       <h2 className="font-bold text-4xl my-4">College Diaries</h2>
-      <p className="font-semibold text-lg text-white my-3 mx-1 md:mx-0">
+      <p className="grid place-items-center font-semibold text-lg text-white my-3 px-2">
         Get the Proper Package of Information about each and every College 🔥
       </p>
-      <div
-        className="grid grid-cols-1 lg:grid-cols-3  gap-4 mb-4
-        w-11/12"
-      >
+      <div className="grid place-items-center grid-cols-1 900:grid-cols-2 xl:grid-cols-3 grid-rows-3 xl:grid-rows-2 gap-4 mb-4 w-3/4 xl:w-11/12 bg">
+        {postData.map((post) => (
+          <Card key={post._id} post={post} />
+        ))}
+        {postData.map((post) => (
+          <Card key={post._id} post={post} />
+        ))}
         {postData.map((post) => (
           <Card key={post._id} post={post} />
         ))}
       </div>
       <Link href="/diaries">
-        <button
-          className="mb-8 rounded-md
-      text-white h-16 w-44 bg-[#6776FF] hover:bg-blue-700
-      my-2"
-        >
+        <button className="mb-8 rounded-md text-white h-16 w-44 bg-[#6776FF] hover:bg-blue-700 my-2">
           Read More..
         </button>
-        
       </Link>
     </div>
   );

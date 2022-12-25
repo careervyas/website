@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../client";
 import Link from "next/link";
@@ -10,43 +9,22 @@ export default function Card({ post }) {
     <Link
       href={{ pathname: "/slug", query: { keyword: `${post.slug.current}` } }}
     >
-      <div
-        className="w-full h-full  rounded-lg ring-2 ring-blue-300 my-2 flex flex-row items-center bg-white hover:shadow-md hover:shadow-blue-600 hover:ring-blue-500
-    cursor-pointer shadow-sm shadow-white p-2"
-      >
+      <div className="h-[155px] w-[330px] rounded-lg my-2 flex flex-row items-center bg-white hover:shadow-md cursor-pointer shadow-sm shadow-white p-2">
         <img
           src={imageProps.src}
+          layout="fill"
           alt="Career Vyas Blogs"
-          className="w-1/2 h-full rounded-md"
+          className="w-1/3 aspect-[75%] object-contain h-full rounded-md"
         />
 
         <div className="w-1/2 h-full mx-2">
-          <div className="font-bold text-sm mb-1 my-1">{post.title}</div>
-          <p className="text-gray-700 text-xs">{post.excerpt}</p>
+          <div className="font-bold text-sm mb-1 my-1 line-clamp-2">
+            {post.title}
+          </div>
+          <p className="text-gray-700 text-xs line-clamp-4">Class X</p>
+          <p className="text-gray-700 text-xs line-clamp-4">{post.excerpt}</p>
         </div>
       </div>
     </Link>
   );
-}
-
-// md:flex-row md:max-w-sm
-{
-  /* <divclassNameName="flex justify-center h-40 w-4/5">
-<divclassNameName="flex flex-col md:flex-row rounded-lg bg-white shadow-lg">
-  <img
-    
-    src=""
-    alt="servon"
-  />
-  <divclassNameName="flex flex-col justify-start">
-    <h5classNameName="text-blue-700 text-base font-medium m-1">
-      Card title
-    </h5>
-    <pclassNameName="text-gray-700 text-sm mx-2">
-      This is a wider card with supporting text below as a natural lead-in
-      to additional content. This content is a little bit longer.
-    </p>
-  </div>
-</div>
-</div> */
 }

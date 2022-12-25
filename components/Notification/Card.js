@@ -7,25 +7,24 @@ import sanityClient from "../client";
 export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.Image);
   return (
-    <div
-      className="w-80 h-[720px] rounded  ring-2
-         ring-blue-300 shadow-lg my-2 mx-auto
-         relative"
-    >
-      <div className="w-full h-[200px] rounded-t relative">
+    <div className="w-[265px] h-[418px] md:w-[350px] md:h-[489px] rounded-xl overflow-hidden border-4 my-2 mx-auto relative">
+      <div className="w-full h-[145px] md:h-[200px] rounded-t-xl relative shadow-inner">
         <Image
           src={imageProps.src}
           alt={post.title}
           layout="fill"
-          className="rounded"
+          objectFit="contain"
         />
       </div>
+      <div className="font-bold text-lg absolute top-[120px] md:top-44 whitespace-nowrap overflow-hidden text-ellipsis w-full">
+        {post.title}
+      </div>
       <div className="p-2">
-        <div className="font-bold text-lg mb-1 my-1 mx-[2px]">{post.title}</div>
         <p className="text-gray-700 text-sm">
           <span className="text-blue-500 font-bold mx-[2px]">
-          {new Date(post.PublishedAt).toString().substring(0,16)+","+new Date(post.PublishedAt).toString().substring(16,24)}
-            
+            {new Date(post.PublishedAt).toString().substring(0, 16) +
+              "," +
+              new Date(post.PublishedAt).toString().substring(16, 24)}
           </span>
           <PortableText
             content={post.content}
@@ -156,7 +155,6 @@ export default function Card({ post }) {
                     marginLeft: "1rem",
                     marginRight: "1rem",
                     paddingLeft: "1rem",
-                    
                   }}
                   {...props}
                 />

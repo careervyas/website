@@ -27,8 +27,6 @@ export default function Blog() {
               postarr.push(post);
             }
           });
-          console.log(postarr);
-
           setBlog(postarr);
         }
       });
@@ -36,7 +34,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="flex flex-col  items-center w-full h-full mb-5 ">
+    <div className="flex flex-col  items-center w-full h-full mb-5">
       <h3 className="text-2xl text-center md:text-4xl font-semibold mt-7">
         Read Blogs that make you Smart
       </h3>

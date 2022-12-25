@@ -1,0 +1,9 @@
+.slanted:after {
+  content: "";
+  height: 1px;
+  transform: skew(-5deg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

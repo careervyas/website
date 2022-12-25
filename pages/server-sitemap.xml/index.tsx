@@ -1,21 +1,18 @@
 import { GetServerSideProps } from "next";
 import { getServerSideSitemap, ISitemapField } from "next-sitemap";
 import groq from "groq";
-import sanityClient from '@sanity/client'
+import sanityClient from "@sanity/client";
 
-const client= sanityClient({
-    projectId: 'x470jfla', // you can find this in sanity.json
-    dataset: 'production', // or the name you chose in step 1
-    useCdn: true // `false` if you want to ensure fresh data
-  });
+const client = sanityClient({
+  projectId: "x470jfla", // you can find this in sanity.json
+  dataset: "production", // or the name you chose in step 1
+  useCdn: true, // `false` if you want to ensure fresh data
+});
 
-  
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const posts = await client.fetch(groq`
+  const posts = await client.fetch(groq`
     *[_type == "post" ] | order(dateTime(_createdAt) desc) 
   `);
-
-  console.log(posts);
 
   const fields: ISitemapField[] = posts.map((post) => ({
     loc: `https://www.careervyas.com/slug?keyword=${post.slug.current}`,
