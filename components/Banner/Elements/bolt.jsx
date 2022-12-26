@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function bolt({className}) {
+export default function bolt(props) {
   return (
     <svg
-    className={className}
-      width="40"
-      height="80"
+      {...props}
       viewBox="0 0 40 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

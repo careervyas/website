@@ -42,20 +42,20 @@ export default function Dairies() {
       <p className="grid place-items-center font-semibold text-lg text-white my-3 px-2">
         Get the Proper Package of Information about each and every College 🔥
       </p>
-      <div className="grid place-items-center grid-cols-1 900:grid-cols-2 xl:grid-cols-3 grid-rows-3 xl:grid-rows-2 gap-4 mb-4 w-3/4 xl:w-11/12 bg">
-        {postData.map((post) => (
-          <Card key={post._id} post={post} />
-        ))}
-        {postData.map((post) => (
-          <Card key={post._id} post={post} />
-        ))}
+      <div
+        className="grid gap-2 w-full place-items-center justify-center"
+        style={{
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(0, max(350px, 100%/4)))",
+        }}
+      >
         {postData.map((post) => (
           <Card key={post._id} post={post} />
         ))}
       </div>
       <Link href="/diaries">
-        <button className="mb-8 rounded-md text-white h-16 w-44 bg-[#6776FF] hover:bg-blue-700 my-2">
-          Read More..
+        <button className="mb-8 rounded-md text-white h-[4.5rem] w-60 bg-[#2F43FD] hover:bg-blue-700 my-2">
+          VIEW MORE
         </button>
       </Link>
     </div>

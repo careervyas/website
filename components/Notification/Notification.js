@@ -18,15 +18,15 @@ export default function Notification() {
   const carouselRef = useRef(null);
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1282 },
+      breakpoint: { max: 3000, min: 1100 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1282, min: 915 },
+      breakpoint: { max: 1100, min: 650 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 915, min: 0 },
+      breakpoint: { max: 650, min: 0 },
       items: 1,
     },
   };
@@ -45,9 +45,9 @@ export default function Notification() {
         </h1>
       </div>
 
-      <div className="h-full flex flex-row items-center">
+      <div className="h-full flex flex-row items-center justify-center px-2">
         <LeftArrow
-          className="cursor-pointer w-32"
+          className="cursor-pointer w-10"
           onClick={() => {
             carouselRef.current.previous();
           }}
@@ -58,8 +58,8 @@ export default function Notification() {
             responsive={responsive}
             infinite={true}
             focusOnSelect={true}
-            keyBoardControl={true}
             arrows={false}
+            draggable={false}
           >
             {posts.map((post) => (
               <Card key={post._id} post={post} />
@@ -67,7 +67,7 @@ export default function Notification() {
           </Carousel>
         </div>
         <RightArrow
-          className="cursor-pointer w-32"
+          className="cursor-pointer w-10"
           onClick={() => {
             carouselRef.current.next();
           }}

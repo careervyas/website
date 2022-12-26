@@ -22,7 +22,7 @@ export default function Home() {
       <Youtube></Youtube>
       <Carrer></Carrer>
       <Banner></Banner>
-      {/* <Advertisment></Advertisment> */}
+      <Advertisment></Advertisment>
       <Footer></Footer>
     </>
   );

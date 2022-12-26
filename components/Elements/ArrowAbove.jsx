@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function ArrowAbove({ className }) {
+export default function ArrowAbove(props) {
   return (
     <svg
-      className={className}
-      width="50"
-      height="98"
+      {...props}
       viewBox="0 0 50 98"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

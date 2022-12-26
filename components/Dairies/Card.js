@@ -9,7 +9,7 @@ export default function Card({ post }) {
     <Link
       href={{ pathname: "/slug", query: { keyword: `${post.slug.current}` } }}
     >
-      <div className="h-[155px] w-[330px] rounded-lg my-2 flex flex-row items-center bg-white hover:shadow-md cursor-pointer shadow-sm shadow-white p-2">
+      <div className="h-[155px] mobile:w-[330px] w-[270px] rounded-lg my-2 flex flex-row items-center bg-white hover:shadow-md cursor-pointer shadow-sm shadow-white p-2">
         <img
           src={imageProps.src}
           layout="fill"

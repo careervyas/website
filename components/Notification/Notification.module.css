@@ -1,0 +1,10 @@
+.image::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

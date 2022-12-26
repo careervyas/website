@@ -3,29 +3,29 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../client";
 import PortableText from "react-portable-text";
 import sanityClient from "../client";
+import styles from "./Notification.module.css";
 
 export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.Image);
+
   return (
     <div className="w-[265px] h-[418px] md:w-[350px] md:h-[489px] rounded-xl overflow-hidden border-4 my-2 mx-auto relative">
-      <div className="w-full h-[145px] md:h-[200px] rounded-t-xl relative shadow-inner">
+      <div
+        className={`w-full h-[145px] mb-4 md:h-[200px] rounded-t-xl relative ${styles.image}`}
+      >
         <Image
           src={imageProps.src}
           alt={post.title}
           layout="fill"
           objectFit="contain"
         />
+        <div className="font-bold text-white text-lg absolute top-[120px] md:top-40 line-clamp-2 leading-5 w-full z-10">
+          {post.title}
+        </div>
       </div>
-      <div className="font-bold text-lg absolute top-[120px] md:top-44 whitespace-nowrap overflow-hidden text-ellipsis w-full">
-        {post.title}
-      </div>
-      <div className="p-2">
+      <div>
         <p className="text-gray-700 text-sm">
-          <span className="text-blue-500 font-bold mx-[2px]">
-            {new Date(post.PublishedAt).toString().substring(0, 16) +
-              "," +
-              new Date(post.PublishedAt).toString().substring(16, 24)}
-          </span>
+          <span className="text-blue-500 font-bold mx-[2px]">Date</span>
           <PortableText
             content={post.content}
             serializers={{
