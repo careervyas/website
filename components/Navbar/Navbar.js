@@ -9,7 +9,7 @@ export default function Navbar({ background }) {
   const navback = background || "#E2FBF5";
   const desktopNavbarLinks = [
     ["Home", "/"],
-    ["About Us", "/about"],
+    ["About Us", "/about-us"],
     ["Team", "/team"],
     ["CAT Test", "/cat", "bg-[#B1C6F9] font-bold"],
     ["Newsletter", "https://newsletter.careervyas.com/"],
@@ -22,7 +22,7 @@ export default function Navbar({ background }) {
   ];
   const mobileNavbarLinks = [
     ["Home", "/"],
-    ["About Us", "/about"],
+    ["About Us", "/about-us"],
     ["CAT Test", "/cat"],
     ["Newsletter", "https://newsletter.careervyas.com/"],
     ["Blog", "/blog"],
@@ -52,7 +52,7 @@ export default function Navbar({ background }) {
         <span
           className={`px-2 lg:px-4 py-10 text-sm md:text-l cursor-pointer hover:bg-[#B1C6F9] text-[#1A1A1A] ${detailsArray[2]}`}
           style={{
-            textDecoration: isLinkCurrentPage ? "underline" : "",
+            textDecoration: isLinkCurrentPage ? "underline" : "none",
             fontWeight: isLinkCurrentPage ? "bold" : "0",
           }}
         >
@@ -91,24 +91,24 @@ export default function Navbar({ background }) {
           x2="30"
           y2="1"
           stroke="black"
-          stroke-opacity="0.74"
-          stroke-width="2"
+          strokeOpacity="0.74"
+          strokeWidth="2"
         />
         <line
           y1="9"
           x2="30"
           y2="9"
           stroke="black"
-          stroke-opacity="0.74"
-          stroke-width="2"
+          strokeOpacity="0.74"
+          strokeWidth="2"
         />
         <line
           y1="17"
           x2="30"
           y2="17"
           stroke="black"
-          stroke-opacity="0.74"
-          stroke-width="2"
+          strokeOpacity="0.74"
+          strokeWidth="2"
         />
       </svg>
     );
@@ -126,8 +126,8 @@ export default function Navbar({ background }) {
           </div>
         </Link>
         <div className="hidden items-center text-black md:block">
-          {desktopNavbarLinks.map((detailsArray) => (
-            <DesktopNavbarLink detailsArray={detailsArray} />
+          {desktopNavbarLinks.map((detailsArray, index) => (
+            <DesktopNavbarLink key={index} detailsArray={detailsArray} />
           ))}
         </div>
         <div className="flex items-center md:hidden">
@@ -139,8 +139,8 @@ export default function Navbar({ background }) {
           className="flex flex-col items-center text-black bg-[#E2FBF5] "
           style={{ background: navback }}
         >
-          {mobileNavbarLinks.map((detailsArray) => (
-            <MobileNavbarLink detailsArray={detailsArray} />
+          {mobileNavbarLinks.map((detailsArray, index) => (
+            <MobileNavbarLink key={index} detailsArray={detailsArray} />
           ))}
         </div>
       </div>

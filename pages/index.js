@@ -6,7 +6,6 @@ import Stat from "../components/Stats/Stats";
 import Youtube from "../components/Youtube/Youtube";
 import Carrer from "../components/Carrer/Carrer";
 import Banner from "../components/Banner/Banner";
-import Advertisment from "../components/Advertisment/Advertisment";
 import Footer from "../components/Footer/Footer";
 import Telegram from "../components/Telegram/Telegram";
 
@@ -22,7 +21,6 @@ export default function Home() {
       <Youtube></Youtube>
       <Carrer></Carrer>
       <Banner></Banner>
-      <Advertisment></Advertisment>
       <Footer></Footer>
     </>
   );

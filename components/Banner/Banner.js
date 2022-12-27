@@ -1,57 +1,50 @@
 import mobile from "./images/mobile.svg";
 import Image from "next/image";
 import Bolt from "./Elements/bolt";
-import Stars from "./Elements/stars";
-import play from "./images/play.svg";
-import apple from "./images/apple.svg";
+import BlueRipple from "./Elements/blue-ripple";
+import playstore from "./images/play.svg";
+import appstore from "./images/apple.svg";
+
+const DownloadIcon = ({ icon }) => (
+  <div className="cursor-pointer mix-blend-darken">
+    <Image
+      src={icon}
+      alt="app carrer vyas"
+      width={500}
+      height={300}
+      objectFit="cover"
+    />
+  </div>
+);
+
 export default function Banner() {
   return (
-    <div className="flex flex-row bg-[#EEECEC] w-full h-full relative items-center justify-center">
+    <div className="flex flex-col-reverse mobile:flex-row items-center justify-center bg-[#EEECEC] relative">
       <Bolt
         width="50"
-        className="absolute top-0 left-0 translate-x-full translate-y-full lg:block hidden"
+        className="absolute -top-16 left-0 translate-x-full translate-y-full lg:block hidden"
       />
-      <div className="flex items-center flex-col w-1/2 relative">
-        <h1 className="text-slate-700 m-2 font-bold text-md lg:text-6xl md:text-4xl text-center">
+      <div className="grid place-items-center mobile:w-1/2 lg:w-[45%]">
+        <h1 className="ml-7 text-slate-700 mb-2 font-bold text-xl md:text-4xl lg:text-[52px]">
           Get the Best Career Guidance App soon !!
         </h1>
-        <p className="m-4 font-semibold text-sm md:text-xl text-center">
+        <p className="mt-2 ml-7 font-semibold text-sm md:text-2xl">
           Make sure you keep the eye on our App Launch 👀 👀
         </p>
-        <div className="flex flex-row items-center justify-center">
-          <div className="relative cursor-pointer">
-            <Image
-              src={play}
-              alt="app carrer vyas"
-              width={500}
-              height={300}
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative cursor-pointer">
-            <Image
-              src={apple}
-              alt="app carrer vyas"
-              width={500}
-              height={300}
-              objectFit="cover"
-            />
-          </div>
+        <div className="flex">
+          <DownloadIcon icon={playstore} />
+          <DownloadIcon icon={appstore} />
         </div>
       </div>
-      <div className="w-1/2 h-full relative">
-        <div className="m-10 h-[220px] md:h-[450px] lg:h-[600px] relative">
-          <Stars
-            className={"absolute top-10 right-0 lg:right-10 hidden md:block"}
-          ></Stars>
+      <div className="mobile:w-1/2 w-full h-full relative">
+        <div className="m-10 h-[220px] md:h-[450px] lg:h-[600px] relative grid place-items-center">
           <Image
+            className="z-10 block max-w-full h-auto"
             src={mobile}
             alt="student carrer vyas"
-            width={500}
-            height={400}
-            objectFit="cover"
             layout="fill"
           />
+          <BlueRipple className="absolute right-5" />
         </div>
       </div>
     </div>

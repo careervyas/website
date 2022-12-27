@@ -1,8 +1,6 @@
 import tele from "./tele.png";
 import Image from "next/image";
-import Link from "next/link";
 export default function Telegram() {
- 
   return (
     <div
       className="flex flex-col justify-center items-center
@@ -23,18 +21,11 @@ export default function Telegram() {
         FIND PEERS | STAY UPDATED | KEEP LEARNING
       </p>
 
-      <Link href=" https://t.me/CareerVyaschat" legacyBehavior>
-        <a target="_blank">
-          <div className="m-5 md:m-10 cursor-pointer">
-            <Image
-              src={tele}
-              alt="CareerVyas Telegram"
-              width={240}
-              height={50}
-            />
-          </div>
-        </a>
-      </Link>
+      <a href=" https://t.me/CareerVyaschat" legacyBehavior>
+        <div className="m-5 md:m-10 cursor-pointer">
+          <Image src={tele} alt="CareerVyas Telegram" width={240} height={50} />
+        </div>
+      </a>
     </div>
   );
 }

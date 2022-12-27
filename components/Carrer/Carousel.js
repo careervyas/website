@@ -45,6 +45,7 @@ export default function Carousel() {
                   index === current ? "opacity-100" : ""
                 } ${index === current ? "scale-110" : ""}`}
                 style={{ transition: "ease 1s" }}
+                key={index}
               >
                 {index === current && (
                   <Image src={image} alt="Carrer Vyas" layout="fill" />
@@ -52,7 +53,7 @@ export default function Carousel() {
               </div>
             );
           } else {
-            return <div></div>;
+            return <div key={index}></div>;
           }
         })}
       </div>
@@ -63,6 +64,7 @@ export default function Carousel() {
               className={`w-2 h-8 border-2 border-[#6776FF] rounded-md ${
                 index === current ? "bg-[#6776FF]" : ""
               }`}
+              key={index}
             ></div>
           );
         })}

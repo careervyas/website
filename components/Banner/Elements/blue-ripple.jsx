@@ -1,0 +1,20 @@
+import React from "react";
+
+export default function BlueRipple(props) {
+  return (
+    <svg
+      {...props}
+      viewBox="0 0 150 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="75" cy="75" r="67" fill="#6776FF" fillOpacity="0.2" />
+      <circle cx="75" cy="75" r="75" fill="#6776FF" fillOpacity="0.2" />
+      <circle cx="75" cy="75" r="57" fill="#6776FF" fillOpacity="0.3" />
+      <circle cx="75" cy="75" r="48" fill="#6776FF" fillOpacity="0.4" />
+      <circle cx="74.5" cy="75.5" r="37.5" fill="#6776FF" fillOpacity="0.6" />
+      <circle cx="75" cy="75" r="30" fill="#6776FF" fillOpacity="0.8" />
+      <circle cx="75" cy="75" r="22" fill="#6776FF" />
+    </svg>
+  );
+}

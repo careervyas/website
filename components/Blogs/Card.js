@@ -6,8 +6,8 @@ export default function Card({ data }) {
   const imageProps = useNextSanityImage(client, data.mainImage);
 
   return (
-    <div className="w-80 h-full rounded-md overflow-hidden ring-2 ring-slate-300 hover:shadow-lg hover:shadow-blue-400 my-2 mx-4 flex flex-col items-center bg-white">
-      <div className="w-auto h-7/12 relative">
+    <div className="flex flex-col items-center bg-white shadow-2xl w-80 h-full rounded-md my-2 mx-4">
+      <div className="w-auto h-7/12 p-2 relative">
         <Image
           className={"rounded-md"}
           src={imageProps.src}
@@ -18,29 +18,22 @@ export default function Card({ data }) {
           layout="intrinsic"
         />
 
-        <p
-          className="bg-red-700 text-white text-center absolute top-3 left-2 w-12
-        rounded-md"
-        >
+        <p className="bg-red-700 text-white text-center absolute top-5 left-5 w-12 rounded-md">
           New
         </p>
       </div>
-      <div className="p-2 h-[320px]">
-        <div className="font-bold text-xl mb-1 my-1">{data.title}</div>
-        <p className="text-gray-700 text-base">
-          <span className="text-blue-500 font-bold">
-            {new Date(data._createdAt).toString().substring(0,16)+","+new Date(data._createdAt).toString().substring(16,24)}{" "}
-          </span>
-          <br></br>
+      <div className="p-2 h-[300px]">
+        <div className="font-bold text-xl mb-4 line-clamp-2">{data.title}</div>
+        <p className="text-gray-700 text-base line-clamp-[10]">
           {data.excerpt}
         </p>
       </div>
       <Link
         href={{ pathname: "/slug", query: { keyword: `${data.slug.current}` } }}
       >
-        <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mt-2">
+        <div className="bg-[#6776FF] text-white py-2 px-4 rounded-lg mb-4">
           Read More
-        </button>
+        </div>
       </Link>
     </div>
   );

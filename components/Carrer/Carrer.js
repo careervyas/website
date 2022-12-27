@@ -47,19 +47,15 @@ export default function Carrer() {
           className={"absolute top-6 left-[78%] w-24 lg:w-36 -translate-y-1/4"}
         />
         <EllipseSide className="absolute top-20 left-0" width="50" />
-        <motion.div
-          whileInView={{ x: ["50vw", "0vw"] }}
-          transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-          className="lg:w-1/2"
-        >
+        <div className="lg:w-1/2">
           <Carousel />
-        </motion.div>
+        </div>
 
         <div className="w-full lg:w-1/2 flex flex-col md:flex-row  justify-center items-center">
           <motion.div
             whileInView={{ y: [100, 0] }}
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-wrap md:flex-col justify-center items-center"
           >
             <Card title={data[0].title} content={data[0].content} />
             <Card title={data[1].title} content={data[1].content} />
@@ -67,7 +63,7 @@ export default function Carrer() {
           <motion.div
             whileInView={{ y: [-100, 0] }}
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-wrap md:flex-col justify-center items-center"
           >
             <Card title={data[2].title} content={data[2].content} />
             <Card title={data[3].title} content={data[3].content} />

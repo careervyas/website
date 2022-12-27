@@ -13,44 +13,44 @@ export default function EllipseSide(props) {
         cy="73"
         r="14.4"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="1.90735e-06"
         cy="73"
         r="24"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="-9.53674e-05"
         cy="73"
         r="33.6"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="4.95911e-05"
         cy="73"
         r="43.2"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="-4.57764e-05"
         cy="73"
         r="52.8"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="-0.000152588"
         cy="73"
         r="62.4"
         stroke="#6776FF"
-        stroke-width="2"
+        strokeWidth="2"
       />
-      <circle cy="73" r="72" stroke="#6776FF" stroke-width="2" />
+      <circle cy="73" r="72" stroke="#6776FF" strokeWidth="2" />
     </svg>
   );
 }

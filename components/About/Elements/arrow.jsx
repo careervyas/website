@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function Arrow() {
+export default function arrow(props) {
   return (
     <svg
-      className="-translate-y-full"
-      width="92"
-      height="51"
+      {...props}
       viewBox="0 0 92 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +16,7 @@ export default function Arrow() {
         strokeLinecap="round"
       />
       <path
-        d="M72.5085 19.5124C76.4435 19.2126 91.6332 14.6423 88.6031 22.3066C86.9847 26.4004 85.5854 29.1554 85.5854 33.5952"
+        d="M72.5085 19.5126C76.4435 19.2128 91.6332 14.6424 88.6031 22.3068C86.9847 26.4006 85.5854 29.1555 85.5854 33.5953"
         stroke="white"
         strokeOpacity="0.8"
         strokeWidth="5"

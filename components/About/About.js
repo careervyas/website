@@ -2,39 +2,15 @@ import Card from "./Card";
 import Bolt from "./Elements/Bolt";
 import Ellipse from "./Elements/Ellipse";
 import Lines from "./Elements/Lines";
+import Arrow from "./Elements/arrow";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <div className=" w-full h-full flex flex-col relative">
-      <div
-        className="flex flex-col lg:flex-row bg-[#A9B2FF] w-full h-72 
-      mb-24  items-start lg:items-center relative"
-      >
+      <div className="flex flex-col lg:flex-row bg-[#A9B2FF] w-full h-72 mb-24 items-start lg:items-center relative">
         <div className="flex flex-row">
-          <svg
-            className="hidden md:block"
-            width="92"
-            height="51"
-            viewBox="0 0 92 51"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-14 14.4829C-9.81152 12.2516 17.3067 -4.04747 22.6041 6.54734C27.6544 16.648 3.4288 34.8753 16.1774 44.4367C27.1014 52.6297 49.2049 42.9479 59.8787 38.5689C67.0086 35.6438 72.9054 30.8747 79.494 27.1686C79.974 26.8986 83.9573 24.542 82.5677 24.542"
-              stroke="white"
-              stroke-opacity="0.8"
-              stroke-width="5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M72.5085 19.5126C76.4435 19.2128 91.6332 14.6424 88.6031 22.3068C86.9847 26.4006 85.5854 29.1555 85.5854 33.5953"
-              stroke="white"
-              stroke-opacity="0.8"
-              stroke-width="5"
-              stroke-linecap="round"
-            />
-          </svg>
+          <Arrow className="hidden md:block" width="92" height="51" />
 
           <div className="flex flex-col mx-2">
             <h1 className="text-3xl text-white font-semibold">Career Vyas</h1>
@@ -68,8 +44,8 @@ export default function About() {
         relative"
         >
           <motion.div
-           animate={{ y: ["-30vh", "0vh"] }}
-           transition={{ duration: 2 }}
+            animate={{ y: ["-30vh", "0vh"] }}
+            transition={{ duration: 2 }}
           >
             <img
               src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/About%2FRectangle%2016.svg?alt=media&token=f32a2fd7-c99b-41f8-bfb3-15da631179e3"
@@ -81,10 +57,11 @@ export default function About() {
 
           <Bolt />
         </div>
-        <motion.div 
-        animate={{y:["-30vh","0vh"]}}
-        transition={{duration:2}}
-        className="grid grid-cols-1 md:grid-cols-2 h-full  gap-4 lg:gap-8 m-2">
+        <motion.div
+          animate={{ y: ["-30vh", "0vh"] }}
+          transition={{ duration: 2 }}
+          className="grid grid-cols-1 md:grid-cols-2 h-full  gap-4 lg:gap-8 m-2"
+        >
           <Card
             title={"Mission"}
             content={

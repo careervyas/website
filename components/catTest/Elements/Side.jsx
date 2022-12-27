@@ -3,7 +3,7 @@ import React from "react";
 export default function Side({ className }) {
   return (
     <svg
-    className={className}
+      className={className}
       width="234"
       height="400"
       viewBox="0 0 234 400"
@@ -16,7 +16,7 @@ export default function Side({ className }) {
           cy="200"
           r="150"
           fill="url(#paint0_linear_714_3)"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
       </g>
       <defs>

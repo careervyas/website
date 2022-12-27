@@ -65,7 +65,7 @@ export default function Main() {
           <Lines2
             className={"absolute top-6 left-0 w-24 lg:w-36 -translate-y-1/4"}
           />
-          <div class="text-[#333333]">
+          <div className="text-[#333333]">
             <p className="mb-8">😀 Single One Liner</p>
             <h1 className="font-bold text-6xl leading-tight">
               One Stop Solution to all your Career & College Queries

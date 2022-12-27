@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Bottom({className}) {
+export default function Bottom({ className }) {
   return (
     <svg
       className={className}
@@ -16,7 +16,7 @@ export default function Bottom({className}) {
           cy="133"
           r="83"
           fill="url(#paint0_linear_714_19)"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
       </g>
       <defs>
