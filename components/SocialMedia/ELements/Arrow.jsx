@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function Arrow() {
+export default function Arrow(props) {
   return (
     <svg
-      className="-translate-y-full"
-      width="92"
-      height="51"
+      {...props}
       viewBox="0 0 92 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -156,90 +156,92 @@ export default function Footer() {
     }
   };
   return (
-    <div className="flex bg-[#C1FFF0] px-14 py-8">
-      <div className="flex flex-col w-1/2">
-        <div className="flex flex-col items-start">
-          <div className="flex flex-col items-start justify-center">
-            <p className="text-black text-4xl font-bold">Career Vyas</p>
-            <p className="text-3xl text-slate-500 font-semibold mt-3">
-              Strengthening the Vector of Education
-            </p>
+    <>
+      <div className="flex flex-col lg:flex-row bg-[#C1FFF0] px-14 py-8">
+        <div className="flex flex-col lg:w-1/2">
+          <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start justify-center">
+              <p className="text-black text-4xl font-bold">Career Vyas</p>
+              <p className="text-3xl text-slate-500 font-semibold mt-3">
+                Strengthening the Vector of Education
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex">
-          <Image
-            src={logo}
-            alt="career vyas"
-            height={250}
-            width={250}
-            objectFit="cover"
-          />
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Footer%2Fstartupindia%20logo.png?alt=media&token=6e0d6f9f-c071-42f1-a1c9-d81192781759"
-            alt="career vyas"
-            height={150}
-            width={300}
-          />
-        </div>
-        <span className="text-slate-700 text-xs lg:text-sm">
-          © 2022,Career Vyas. All rights reserved.
-        </span>
-      </div>
-      <div className="flex flex-col items-center w-1/2">
-        <div className="grid w-2/3 gap-4 grid-cols-2">
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/">Home</Link>
-          </span>
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/blog">Blogs</Link>
-          </span>
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/">College Diaries</Link>
-          </span>
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/about-us">About us</Link>
-          </span>
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/reachout">Reach Out</Link>
-          </span>
-          <span className="text-sm cursor-pointer tracking-tight">
-            <Link href="/terms">Terms</Link>
-          </span>
-        </div>
-        <div className="bg-white px-4 py-6 mt-4 rounded-lg">
-          <p className="font-semibold text-md text-center">
-            Enter your Email to get the Suprise in your Inbox
-          </p>
-          <div className="flex flex-row justify-center items-center">
-            <input
-              className="m-1 ring-2 ring-slate-400 bg-white rounded-sm p-2 underline-offset-1 w-80"
-              id="userFooterEmailInput"
+          <div className="flex">
+            <Image
+              src={logo}
+              alt="career vyas"
+              height={250}
+              width={250}
+              objectFit="cover"
             />
-            <button
-              onClick={handleClick}
-              className="bg-[#6776FF] w-24 h-11 text-white rounded-lg hover:bg-blue-700"
-            >
-              Submit
-            </button>
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Footer%2Fstartupindia%20logo.png?alt=media&token=6e0d6f9f-c071-42f1-a1c9-d81192781759"
+              alt="career vyas"
+              height={150}
+              width={300}
+            />
           </div>
         </div>
-        <div className="flex flex-col w-2/3 h-full justify-end">
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold text-slate-800">
-              Connect with us
+        <div className="flex gap-4 lg:gap-0 flex-col items-center lg:w-1/2">
+          <div className="grid w-2/3 gap-4 grid-cols-2">
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/">Home</Link>
             </span>
-            <div className="flex flex-row">
-              {socialMediaIcons.map(([link, imageSrc], index) => (
-                <SocialMediaIconLink
-                  key={index}
-                  link={link}
-                  imageSrc={imageSrc}
-                />
-              ))}
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/blog">Blogs</Link>
+            </span>
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/">College Diaries</Link>
+            </span>
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/about-us">About us</Link>
+            </span>
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/reachout">Reach Out</Link>
+            </span>
+            <span className="text-sm cursor-pointer tracking-tight">
+              <Link href="/terms">Terms</Link>
+            </span>
+          </div>
+          <div className="bg-white px-4 py-6 mt-4 rounded-lg">
+            <p className="font-semibold text-md text-center">
+              Enter your Email to get the Suprise in your Inbox
+            </p>
+            <div className="flex flex-col mobile:flex-row justify-center items-center sm:w-80 w-64">
+              <input
+                className="m-1 ring-2 ring-slate-400 bg-white rounded-sm p-2 underline-offset-1"
+                id="userFooterEmailInput"
+              />
+              <button
+                onClick={handleClick}
+                className="bg-[#6776FF] px-6 py-2 text-white rounded-lg hover:bg-blue-700"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col md:w-2/3 h-full justify-end">
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold text-slate-800">
+                Connect with us
+              </span>
+              <div className="flex flex-row">
+                {socialMediaIcons.map(([link, imageSrc], index) => (
+                  <SocialMediaIconLink
+                    key={index}
+                    link={link}
+                    imageSrc={imageSrc}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="text-slate-700 text-xs lg:text-sm bg-[#C1FFF0] pl-12">
+        © 2022,Career Vyas. All rights reserved.
+      </div>
+    </>
   );
 }
