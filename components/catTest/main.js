@@ -30,7 +30,13 @@ export default function CAT() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(Name==="" || Email==="" || Phone==="" || Hometown==="" || Class===""){
+    if (
+      Name === "" ||
+      Email === "" ||
+      Phone === "" ||
+      Hometown === "" ||
+      className === ""
+    ) {
       toast.error("Please Fill All The Fields");
       return;
     }
@@ -50,16 +56,14 @@ export default function CAT() {
     setHometown("");
     setClass("");
     setShowModal(false);
-    
+
     console.log("Next Test", nextTest);
 
-    if(nextTest === 1){
-       Router.push("/StreamTest");
+    if (nextTest === 1) {
+      Router.push("/StreamTest");
+    } else if (nextTest === 2) {
+      Router.push("/CareerTest");
     }
-    else if(nextTest === 2){
-        Router.push("/CareerTest");
-    }
-    
   };
   useEffect(() => {
     if (!firebase.apps.length) {
@@ -78,7 +82,7 @@ export default function CAT() {
     bg-[url('https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Background%2FCAT%20TEST%20(1).svg?alt=media&token=034c87dd-67e9-4e23-9e0f-86aa67ac3719')]
         bg-cover bg-no-repeat mb-10"
     >
-       <ToastContainer
+      <ToastContainer
         position="top-center"
         autoClose={1000}
         hideProgressBar={false}
@@ -105,8 +109,7 @@ export default function CAT() {
             className="bg-[#6776FF] font-semibold h-12 w-24 md:w-48
           text-white mt-5 text-center align-middle rounded-xl
           hover:bg-blue-700 text-sm md:text-md"
-            
-            onClick={handleModal }
+            onClick={handleModal}
           >
             Start Your Test
           </button>
@@ -134,8 +137,7 @@ export default function CAT() {
             className="bg-[#6776FF] font-semibold h-12 w-32 sm:w-48
           text-white mt-5 text-center align-middle rounded-xl
           hover:bg-blue-700 text-sm md:text-md p-2"
-     
-            onClick={handleModal }
+            onClick={handleModal}
           >
             Start Your Test
           </button>
@@ -158,8 +160,7 @@ export default function CAT() {
             className="bg-[#00FFC2] font-semibold h-12 w-24 md:w-48
           text-white mt-5 text-center align-middle rounded-xl
           hover:bg-green-500 text-sm md:text-md"
-       
-            onClick={handleModal1 }
+            onClick={handleModal1}
           >
             Start Your Test
           </button>
@@ -185,7 +186,6 @@ export default function CAT() {
             className="bg-[#00FFC2] font-semibold h-12 w-32 sm:w-48 
           text-white mt-5 text-center align-middle rounded-xl
           hover:bg-green-500 text-sm md:text-md"
-          
             onClick={handleModal1}
           >
             Start Your Test

@@ -46,7 +46,7 @@ export default function OurRockstarMentors() {
         Our Rockstar Mentors
       </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {mentorsData.map((mentorData, index) => (
           <MentorCard mentorData={mentorData} key={index} />
         ))}

@@ -13,7 +13,7 @@ export default function Card({ Name, Position, Pic, LinkedIn, Email }) {
       <h5 className="text-center text-black text-lg mx-5">{Name}</h5>
       <p className="text-center text-black text-xs ">{Position}</p>
       <div className="flex flex-row items-center mt-1">
-        <Link href={Email} legacyBehavior>
+        <Link href={Email}>
           <a target="_blank">
             <img
               className="mx-2 cursor-pointer"
@@ -24,7 +24,7 @@ export default function Card({ Name, Position, Pic, LinkedIn, Email }) {
             />
           </a>
         </Link>
-        <Link href={LinkedIn} legacyBehavior>
+        <Link href={LinkedIn}>
           <a target="_blank">
             <img
               className="mx-2 cursor-pointer"

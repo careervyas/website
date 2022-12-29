@@ -44,7 +44,7 @@ export default function Banner() {
             alt="student carrer vyas"
             layout="fill"
           />
-          <BlueRipple className="absolute right-5" />
+          <BlueRipple className="absolute right-3 md:right-5 w-full" />
         </div>
       </div>
     </div>
