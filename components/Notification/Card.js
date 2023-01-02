@@ -22,9 +22,9 @@ export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.Image);
 
   return (
-    <div className="w-[265px] h-[418px] md:w-[350px] md:h-[489px] rounded-xl overflow-hidden border-4 my-2 mx-auto relative">
+    <div className="w-[280px] h-[680px] mobile:w-[350px] mobile:h-[620px] rounded-xl overflow-hidden border-4 my-2 mx-auto relative">
       <div
-        className={`w-full h-[145px] mb-4 md:h-[200px] rounded-t-xl relative ${styles.image}`}
+        className={`w-full mb-4 h-[200px] rounded-t-xl relative ${styles.image}`}
       >
         <Image
           src={imageProps.src}
@@ -32,7 +32,7 @@ export default function Card({ post }) {
           layout="fill"
           objectFit="contain"
         />
-        <div className="font-bold px-2 text-white text-lg absolute top-[120px] md:top-40 line-clamp-2 leading-5 w-full z-10">
+        <div className="font-bold px-2 text-white text-lg absolute top-40 line-clamp-2 leading-5 w-full z-10">
           {post.title}
         </div>
       </div>

@@ -18,15 +18,15 @@ export default function Notification() {
   const carouselRef = useRef(null);
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1100 },
+      breakpoint: { max: 3000, min: 1150 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1100, min: 650 },
+      breakpoint: { max: 1150, min: 800 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 650, min: 0 },
+      breakpoint: { max: 800, min: 0 },
       items: 1,
     },
   };
@@ -38,7 +38,7 @@ export default function Notification() {
   }, []);
 
   return (
-    <div className="h-[478px] md:h-[570px] my-16">
+    <div className="h-[700px] my-16">
       <div className="grid place-items-center">
         <h1 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-[#333333]">
           Latest Notifications
@@ -52,7 +52,7 @@ export default function Notification() {
             carouselRef.current.previous();
           }}
         />
-        <div className="min-w-[265px] max-w-[1200px] w-[100%]">
+        <div className="min-w-[350px] max-w-[1200px] w-[100%]">
           <Carousel
             ref={carouselRef}
             responsive={responsive}
