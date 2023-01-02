@@ -52,7 +52,7 @@ export default function Notification() {
             carouselRef.current.previous();
           }}
         />
-        <div className="min-w-[265px] w-[100%]">
+        <div className="min-w-[265px] max-w-[1200px] w-[100%]">
           <Carousel
             ref={carouselRef}
             responsive={responsive}

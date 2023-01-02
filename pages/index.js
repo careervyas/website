@@ -10,10 +10,12 @@ import JoinOurTeam from "../components/JoinOurTeam/JoinOurTeam";
 import SocialMedia from "../components/SocialMedia/SocialMedia.js";
 import OurRockstarMentors from "../components/OurRockstarMentors/OurRockstarMentors.js";
 import QueriesAskedByYou from "../components/QueriesAskedByYou/QueriesAskedByYou.js";
+import QuerySolutionat1 from "../components/QuerySolutionat1/QuerySolutionat1.js";
 
 export default function Home() {
   return (
     <>
+      <QuerySolutionat1 />
       <Navbar />
       <Main />
       <Notification />

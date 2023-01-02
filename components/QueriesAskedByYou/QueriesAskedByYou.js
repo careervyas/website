@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import queryData from "./queryData";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -23,7 +23,7 @@ const responsive = {
 
 const QueryComponent = ({ query }) => {
   return (
-    <div className="flex items-center justify-center shadow-lg border-[1px] flex-col w-[270px] lg:w-[360px] h-[300px] 700:mx-4">
+    <div className="flex shadow-lg border-[1px] flex-col w-[270px] lg:w-[360px] h-[300px] 700:mx-4">
       <div className="w-full flex items-center px-6 h-[80px] bg-[#6776FF]">
         <div className="rounded-full h-fit mr-4">{query.askedBy.image}</div>
         <div className="flex flex-col text-2xl w-full text-white">
@@ -46,6 +46,15 @@ const QueryComponent = ({ query }) => {
 
 export default function QueriesAskedByYou() {
   const carouselRef = useRef(null);
+  let intervalId;
+  useEffect(() => {
+    intervalId = setInterval(() => {
+      carouselRef.current.next();
+    }, 2000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <div className="py-12 grid place-items-center text-3xl md:text-5xl font-extrabold overflow-hidden">
@@ -55,7 +64,11 @@ export default function QueriesAskedByYou() {
         <LeftArrow
           className="cursor-pointer w-10"
           onClick={() => {
+            clearInterval(intervalId);
             carouselRef.current.previous();
+            intervalId = setInterval(() => {
+              carouselRef.current.next();
+            }, 2000);
           }}
         />
         <div className="w-[270px] 700:w-[80%] lg:w-[90%]">
@@ -77,7 +90,11 @@ export default function QueriesAskedByYou() {
         <RightArrow
           className="cursor-pointer w-10"
           onClick={() => {
+            clearImmediate(intervalId);
             carouselRef.current.next();
+            intervalId = setInterval(() => {
+              carouselRef.current.next();
+            }, 2000);
           }}
         />
       </div>

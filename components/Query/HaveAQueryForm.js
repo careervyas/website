@@ -50,13 +50,15 @@ export default function HaveAQueryForm() {
   return (
     <div className="flex flex-col justify-center items-center lg:flex-row">
       <div className="flex flex-col lg:w-1/2">
-        <span className="text-[#6776FF] font-extrabold text-2xl">
-          Having Doubt !!
-        </span>
-        <span className="text-lg font-bold text-[#5C5959] mt-4">
-          Don’t Be Sad, Just Fill the Form and We will reply to you on Call or
-          Email with 24 Hours
-        </span>
+        <div className="w-11/12">
+          <div className="text-[#6776FF] font-extrabold text-2xl">
+            Having Doubt !!
+          </div>
+          <div className="text-lg font-bold text-[#5C5959] mt-4">
+            Don’t Be Sad, Just Fill the Form and We will reply to you on Call or
+            Email with 24 Hours
+          </div>
+        </div>
         <div className="w-full">
           <Image src={img} />
         </div>
@@ -66,7 +68,7 @@ export default function HaveAQueryForm() {
           Lets get your Queries Solved !!
         </span>
         <div className="w-full mt-6 z-10 flex flex-col justify-evenly h-4/5">
-          <div>
+          <div className="mb-4">
             <label htmlFor="queryFormUserNameInput">Name</label>
             <input
               id="queryFormUserNameInput"
@@ -75,7 +77,7 @@ export default function HaveAQueryForm() {
               placeholder="Enter your Name"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="queryFormUserEmailInput">Email</label>
             <input
               id="queryFormUserEmailInput"
@@ -84,7 +86,7 @@ export default function HaveAQueryForm() {
               placeholder="Email Address"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="queryFormUserPhoneInput">Mobile No.</label>
             <input
               id="queryFormUserPhoneInput"
@@ -93,7 +95,7 @@ export default function HaveAQueryForm() {
               placeholder="Enter the Mobile No."
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="queryFormUserClassInput">Class</label>
             <input
               id="queryFormUserClassInput"
@@ -102,7 +104,7 @@ export default function HaveAQueryForm() {
               placeholder="Class in which you Study"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="queryFormUserQueryInput">Your Queries</label>
             <textarea
               id="queryFormUserQueryInput"

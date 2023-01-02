@@ -87,18 +87,19 @@ export default function HaveAmentorForm() {
   return (
     <div className="flex flex-col justify-center items-center lg:flex-row">
       <div className="flex flex-col lg:w-1/2">
-        <span className="text-[#6776FF] font-extrabold text-2xl">
-          Get FREE Mentorship Session
-        </span>
-        <span className="text-lg font-bold text-[#5C5959] mt-4">
-          From the Best Mentors from Top IIT’s and AIIMS
-        </span>
+        <div className="w-11/12">
+          <div className="text-[#6776FF] font-extrabold text-2xl mb-4">
+            Get FREE Mentorship Session
+          </div>
+          <div className="text-lg font-bold text-[#5C5959]">
+            From the Best Mentors from Top IIT’s and AIIMS
+          </div>
+        </div>
         <div className="w-full">
           <Image src={img} />
         </div>
-        <div className="mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF]">
+        <div className="shadow-xl mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF]">
           <WhatsAppIcon />
-
           <div className="flex flex-col">
             <span>Having troubles?</span>
             <span>Get in touch with us</span>
@@ -110,7 +111,7 @@ export default function HaveAmentorForm() {
           Grab your FREE Mentorship Session
         </span>
         <div className="w-full mt-6 z-10 flex flex-col justify-evenly h-4/5">
-          <div>
+          <div className="mb-4">
             <label htmlFor="mentorFormUserNameInput">Name</label>
             <input
               id="mentorFormUserNameInput"
@@ -119,7 +120,7 @@ export default function HaveAmentorForm() {
               placeholder="Enter your Name"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="mentorFormUserEmailInput">Email</label>
             <input
               id="mentorFormUserEmailInput"
@@ -128,7 +129,7 @@ export default function HaveAmentorForm() {
               placeholder="Email Address"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="mentorFormUserPhoneInput">Mobile No.</label>
             <input
               id="mentorFormUserPhoneInput"
@@ -137,7 +138,7 @@ export default function HaveAmentorForm() {
               placeholder="Enter the Mobile No."
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="mentorFormUserClassInput">Class</label>
             <input
               id="mentorFormUserClassInput"
@@ -146,7 +147,7 @@ export default function HaveAmentorForm() {
               placeholder="Class in which you Study"
             />
           </div>
-          <div>
+          <div className="mb-4">
             <label htmlFor="mentorFormUserQueryInput">
               Any Specific thing you want to ask?
             </label>

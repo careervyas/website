@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../Modal/Modal";
 import mentorsData from "./data";
+import MentorShipForm from "../Query/MentorShipForm.js";
 
 const MentorCard = ({ mentorData }) => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="my-4 flex flex-col items-center justify-center">
+    <div className="w-[200px] mr-8 h-fit">
+      <div className="w-[200px] my-4 flex flex-col items-center justify-center">
         <div className="w-[120px] h-[120px] rounded-full border-2 border-[#6776FF]">
           <svg
             className="w-[120px] h-[120px]"
@@ -30,7 +32,7 @@ const MentorCard = ({ mentorData }) => {
           <h1 className="text-[#6776FF] font-extrabold">
             {mentorData.college}
           </h1>
-          <h1 className="bg-[#6776FF] text-white px-2 rounded-md">
+          <h1 className="px-2 bg-[#6776FF] text-white rounded-md">
             {mentorData.role}
           </h1>
         </div>
@@ -38,19 +40,81 @@ const MentorCard = ({ mentorData }) => {
     </div>
   );
 };
+const CrossIcon = () => (
+  <svg
+    className="relative float-right"
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.9998 28.3334C22.3636 28.3334 28.3332 22.3639 28.3332 15.0001C28.3332 7.63628 22.3636 1.66675 14.9998 1.66675C7.63604 1.66675 1.6665 7.63628 1.6665 15.0001C1.6665 22.3639 7.63604 28.3334 14.9998 28.3334Z"
+      stroke="#6776FF"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M19 11L11 19"
+      stroke="#6776FF"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M11 11L19 19"
+      stroke="#6776FF"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export default function OurRockstarMentors() {
-  return (
-    <div className="bg-[#C1FFF0] flex flex-col py-12">
-      <h1 className="text-center mb-6 text-[#6776FF] text-4xl md:text-5xl font-extrabold">
-        Our Rockstar Mentors
-      </h1>
+  const [showMentorShipModal, setShowMentorShipModal] = useState(false);
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {mentorsData.map((mentorData, index) => (
-          <MentorCard mentorData={mentorData} key={index} />
-        ))}
+  return (
+    <>
+      <Modal
+        modalState={[showMentorShipModal, setShowMentorShipModal]}
+        className="w-full grid place-items-center"
+      >
+        <div className="z-50 bg-white w-3/4 p-6">
+          <div
+            onClick={() => setShowMentorShipModal(false)}
+            className="cursor-pointer"
+          >
+            <CrossIcon />
+          </div>
+          <MentorShipForm />
+        </div>
+      </Modal>
+      <div className="bg-[#C1FFF0] flex flex-col py-12">
+        <h1 className="text-center mb-6 text-[#6776FF] text-4xl md:text-5xl font-extrabold">
+          Our Rockstar Mentors
+        </h1>
+
+        <div className="overflow-x-scroll flex 2xl:justify-center scrollbar-hide">
+          {mentorsData.map((mentorData, index) => (
+            <MentorCard mentorData={mentorData} key={index} />
+          ))}
+        </div>
+        <div
+          class="cursor-pointer w-full px-4 grid place-items-center mt-8"
+          onClick={(e) => {
+            e.stopPropagation();
+            window.scrollTo(0, 0);
+            setShowMentorShipModal(true);
+          }}
+        >
+          <div className="px-2 py-4 bg-[#FFB11B] w-full mobile:w-2/3 max-w-[650px] text-center font-extrabold">
+            REGISTER YOUR FREE SESSION WITH YOUR ROCKSTAR MENTOR NOW!!
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

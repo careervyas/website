@@ -11,7 +11,7 @@ export default function Navbar({ background }) {
     ["Home", "/"],
     ["About Us", "/about-us"],
     ["Team", "/team"],
-    ["CAT Test", "/cat", "bg-[#B1C6F9] font-bold"],
+    ["CAT Test", "/cat"],
     ["Newsletter", "https://newsletter.careervyas.com/"],
     ["Blog", "/blog"],
     ["Mentorship Program", "/mentorship-program"],
@@ -50,7 +50,7 @@ export default function Navbar({ background }) {
     return (
       <Link href={detailsArray[1]}>
         <span
-          className={`px-2 lg:px-4 py-10 text-sm md:text-l cursor-pointer hover:bg-[#B1C6F9] text-[#1A1A1A] ${detailsArray[2]}`}
+          className={`px-2 lg:px-4 py-9 text-sm md:text-l cursor-pointer hover:bg-[#B1C6F9] text-[#1A1A1A] ${detailsArray[2]}`}
           style={{
             textDecoration: isLinkCurrentPage ? "underline" : "none",
             fontWeight: isLinkCurrentPage ? "bold" : "0",

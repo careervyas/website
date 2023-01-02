@@ -162,8 +162,8 @@ export default function Footer() {
   };
   return (
     <>
-      <div className="flex flex-col lg:flex-row bg-[#C1FFF0] px-14 py-8">
-        <div className="flex flex-col lg:w-1/2">
+      <div className="flex flex-col items-center justify-center lg:flex-row bg-[#C1FFF0] md:px-14 py-8">
+        <div className="flex flex-col lg:w-1/2 mr-6">
           <div className="flex flex-col items-start">
             <div className="flex flex-col items-start justify-center">
               <p className="text-black text-4xl font-bold">Career Vyas</p>
@@ -188,7 +188,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="flex gap-4 lg:gap-0 flex-col items-center lg:w-1/2">
+        <div className="flex gap-4 lg:gap-0 flex-col lg:w-1/2">
           <div className="grid w-2/3 gap-4 grid-cols-2">
             <span className="text-sm cursor-pointer tracking-tight">
               <Link href="/">Home</Link>
@@ -209,18 +209,18 @@ export default function Footer() {
               <Link href="/terms">Terms</Link>
             </span>
           </div>
-          <div className="bg-white px-4 py-6 mt-4 rounded-lg">
+          <div className="bg-white my-4 md:px-4 py-6 mt-4 w-fit rounded-lg">
             <p className="font-semibold text-md text-center">
               Enter your Email to get the Suprise in your Inbox
             </p>
-            <div className="flex flex-col mobile:flex-row justify-center items-center sm:w-80 w-64">
+            <div className="flex flex-col mobile:flex-row justify-center items-center">
               <input
                 className="m-1 ring-2 ring-slate-400 bg-white rounded-sm p-2 underline-offset-1"
                 id="userFooterEmailInput"
               />
               <button
                 onClick={handleClick}
-                className="bg-[#6776FF] px-6 py-2 text-white rounded-lg hover:bg-blue-700"
+                className="bg-[#6776FF] my-2 px-6 py-2 text-white rounded-lg hover:bg-blue-700"
               >
                 Submit
               </button>
