@@ -14,7 +14,7 @@ export default function Card({ Name, Position, Pic, LinkedIn, Email }) {
       <p className="text-center text-black text-xs ">{Position}</p>
       <div className="flex flex-row items-center mt-1">
         <Link href={Email}>
-          <a target="_blank">
+          <a target="_blank" rel="noreferrer">
             <img
               className="mx-2 cursor-pointer"
               src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Social%20Media%2FFrame%20(1).svg?alt=media&token=3c3d94ca-adbc-46cf-b351-67bf4b2273a7"
@@ -25,7 +25,7 @@ export default function Card({ Name, Position, Pic, LinkedIn, Email }) {
           </a>
         </Link>
         <Link href={LinkedIn}>
-          <a target="_blank">
+          <a target="_blank" rel="noreferrer">
             <img
               className="mx-2 cursor-pointer"
               src="https://firebasestorage.googleapis.com/v0/b/carrervyaswebsite.appspot.com/o/Social%20Media%2FFrame.svg?alt=media&token=2ed30161-c07e-4785-b08d-85caf1244a1e"

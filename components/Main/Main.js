@@ -69,6 +69,7 @@ export default function Main() {
             href="https://wa.me/918437399123?text=Hello%20Career%20Vyas%2C%0AAre%20you%20there%20%3F%3F%20I%20have%20a%20query%20to%20solve!!%0A%0A"
             target="_blank"
             className="bg-[#FFB11B] px-2 py-1 rounded-lg text-sm w-fit text-center mx-auto"
+            rel="noreferrer"
           >
             OR CLICK HERE TO GET STARTED
           </a>

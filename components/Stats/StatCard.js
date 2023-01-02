@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useCountUp } from "react-countup";
 
-export default function card({ title, counter, icon }) {
+export default function Card({ title, counter, icon }) {
   const countUpRef = useRef(null);
   const [intersectiong, setIntersectiong] = useState(false);
   const { start, pauseResume, reset, update } = useCountUp({

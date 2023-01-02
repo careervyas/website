@@ -15,6 +15,7 @@ export default function QuerySolutionat1() {
           href={link}
           target="_blank"
           className="bg-[#FFB11B] px-2 py-1 mx-2 rounded-lg text-sm"
+          rel="noreferrer"
         >
           CLICK HERE TO GET STARTED
         </a>
@@ -27,6 +28,7 @@ export default function QuerySolutionat1() {
           href={link}
           target="_blank"
           className="text-center 420:text-lg 420:font-extrabold"
+          rel="noreferrer"
         >
           GET THE SOLUTION OF YOUR QUERIES AT
           <span className="text-[#6776FF] ml-2 text-xl 420:text-3xl">₹1</span>
