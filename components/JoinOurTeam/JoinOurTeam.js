@@ -1,7 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import BackImage from "./main.png";
 
 export default function JoinOurTeam() {
+  const [animate, setAnimate] = useState(false);
+
   return (
     <div className="relative py-12 flex flex-col items-center justify-center font-extrabold bg-[#EBEDFF]">
       <div className="z-10 text-center">
@@ -12,12 +15,19 @@ export default function JoinOurTeam() {
         <button
           href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true"
           className={`w-[200px] md:w-80 bg-[#2F43FD] text-white mt-12 py-4 px-4 rounded-lg text-lg`}
+          onMouseEnter={() => setAnimate(true)}
+          onMouseLeave={() => setAnimate(false)}
         >
           SEE OUR OPENINGS
         </button>
       </div>
-      <div className={`absolute z-30 top-80 w-16 sm:w-32 lg:w-40`}>
+      <div
+        className={`absolute z-30 top-80 md:top-96 w-16 sm:w-32 lg:w-40 ${
+          animate ? "animate-bounce" : ""
+        }`}
+      >
         <svg
+          className="-rotate-45"
           viewBox="0 0 122 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

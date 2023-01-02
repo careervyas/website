@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useRef } from "react";
 import LeftArrow from "./Elements/LeftArrow";
 import RightArrow from "./Elements/RightArrow";
+import Image from "next/image";
 
 const responsive = {
   desktop: {
@@ -25,7 +26,9 @@ const QueryComponent = ({ query }) => {
   return (
     <div className="flex shadow-lg border-[1px] flex-col w-[270px] lg:w-[360px] h-[300px] 700:mx-4">
       <div className="w-full flex items-center px-6 h-[80px] bg-[#6776FF]">
-        <div className="rounded-full h-fit mr-4">{query.askedBy.image}</div>
+        <div className="rounded-full bg-white px-[5px] mr-4">
+          <Image src={query.askedBy.image} width="64px" height="64px" />
+        </div>
         <div className="flex flex-col text-2xl w-full text-white">
           <p className="text-base">{query.askedBy.name}</p>
           <p className="text-xs opacity-80">{query.askedBy.class}</p>

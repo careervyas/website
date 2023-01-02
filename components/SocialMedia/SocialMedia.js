@@ -19,12 +19,12 @@ export default function SocialMedia() {
         <div
           className="absolute w-full h-full"
           style={{
-            filter: "brightness(50%)",
+            filter: "brightness(37%)",
           }}
         >
           <Image src={YouTubeBackImage} layout="fill" />
         </div>
-        <div className="w-4/5 grid gap-8 place-items-center md:place-items-start relative">
+        <div className="w-4/5 grid gap-8 place-items-center md:place-items-start relative font-bold">
           <h1 className="text-bold text-3xl lg:text-5xl text-white">
             Explore the Well Curated Information on our Youtube Channel
           </h1>
@@ -45,7 +45,7 @@ export default function SocialMedia() {
         }}
       >
         <div className="grid gap-8">
-          <h1 className="text-bold text-3xl lg:text-5xl text-center text-white">
+          <h1 className="text-bold text-3xl lg:text-5xl text-center text-white font-bold">
             Join Our Community to get Better Everyday!!
           </h1>
           <h3 className="text-bold text-xl text-center text-white">

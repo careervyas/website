@@ -62,8 +62,13 @@ export default function Main() {
           <div onClick={() => setShowModal(false)} className="cursor-pointer">
             <CrossIcon />
           </div>
-          <div className="w-[500px] h-[500px] relative">
-            <Image layout="fill" src={poster} alt="ModalImage" />
+          <div className="w-[90vw] max-w-[500px] h-[500px] relative">
+            <Image
+              layout="fill"
+              src={poster}
+              alt="ModalImage"
+              objectFit="contain"
+            />
           </div>
           <a
             href="https://wa.me/918437399123?text=Hello%20Career%20Vyas%2C%0AAre%20you%20there%20%3F%3F%20I%20have%20a%20query%20to%20solve!!%0A%0A"

@@ -5,6 +5,19 @@ import PortableText from "react-portable-text";
 import sanityClient from "../client";
 import styles from "./Notification.module.css";
 
+function tConvert(time) {
+  time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [
+    time,
+  ];
+
+  if (time.length > 1) {
+    time = time.slice(1); // Remove full string match value
+    time[5] = +time[0] < 12 ? " AM" : " PM"; // Set AM/PM
+    time[0] = +time[0] % 12 || 12; // Adjust hours
+  }
+  return time.join(""); // return adjusted time or original string
+}
+
 export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.Image);
 
@@ -19,13 +32,27 @@ export default function Card({ post }) {
           layout="fill"
           objectFit="contain"
         />
-        <div className="font-bold text-white text-lg absolute top-[120px] md:top-40 line-clamp-2 leading-5 w-full z-10">
+        <div className="font-bold px-2 text-white text-lg absolute top-[120px] md:top-40 line-clamp-2 leading-5 w-full z-10">
           {post.title}
         </div>
       </div>
       <div>
-        <p className="text-gray-700 text-sm">
-          <span className="text-blue-500 font-bold mx-[2px]">Date</span>
+        <p className="text-gray-700 text-sm px-3 text-justify">
+          <span className="text-[#6776FF] font-bold mx-[2px]">
+            {new Date(post.PublishedAt).toString().substring(7, 10) +
+              " " +
+              new Date(post.PublishedAt)
+                .toString()
+                .substring(4, 7)
+                .toUpperCase() +
+              "," +
+              new Date(post.PublishedAt).toString().substring(11, 15) +
+              " " +
+              tConvert(
+                new Date(post.PublishedAt).toString().substring(16, 21)
+              ) +
+              " : "}
+          </span>
           <PortableText
             content={post.content}
             serializers={{

@@ -121,7 +121,7 @@ export default function Footer() {
               <Link href="/terms">Terms</Link>
             </span>
           </div>
-          <div className="bg-white my-4 md:px-4 py-6 mt-4 w-fit rounded-lg">
+          <div className="bg-white my-4 px-2 md:px-4 py-6 w-fit rounded-lg mt-16">
             <p className="font-semibold text-md text-center">
               Enter your Email to get the Suprise in your Inbox
             </p>

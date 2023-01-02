@@ -1,31 +1,13 @@
+import IconMale from "./icon-male.png";
+import IconFemale from "./icon-female.png";
+
 const queryData = [
   {
     askedBy: {
       name: "Vedika",
       class: "Class IX",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconFemale,
     },
     title:
       " I'm confused... which stream should I choose and should I do +1 +2 or should I do diploma. I have cleared 9th class with 78% and i am thinking of becoming an air hostess?",
@@ -37,28 +19,7 @@ const queryData = [
       name: "Arnav",
       class: "Class X",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "Sir, should I opt for a diploma after 10th or non-medical stream? I want to be an engineer.",
@@ -70,28 +31,7 @@ const queryData = [
       name: "Ravinder",
       class: "Class XII",
       board: "RBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       " Sir, Maine XII k baad drop liya hai JEE mains ki coaching k liye toh offline coaching sahi rhegi ya online bhi kr skte hai.",
@@ -103,28 +43,7 @@ const queryData = [
       name: "Neeraj Trivedi",
       class: "Dropper",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "I had cleared JEE mains2021 in my first attempt but with a low rank and now i am preparing for JEE advance. So do you have any mentors from IITs or NITs who can guide me through this.",
@@ -136,28 +55,7 @@ const queryData = [
       name: "Mehak Fatima",
       class: "Class XI",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconFemale,
     },
     title:
       "I`m a JEE aspirant and Mujhe maths me kaafi dikkat aati hai and isme mera kaafi time bhi chla jata hai and baaki cheeze reh jati hai",
@@ -169,28 +67,7 @@ const queryData = [
       name: "Hemant Joshi",
       class: "Dropper",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "I have appeared in NEET exam twice and i wasn`t able to secure any good medical college, Now i am tired of preparation. Should I opt for any other medical course?",
@@ -202,28 +79,7 @@ const queryData = [
       name: "Gagandeep kaur",
       class: "Class X",
       board: "PSEB",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconFemale,
     },
     title: "What are the options I have after clearing 10th class?",
     query:
@@ -234,28 +90,7 @@ const queryData = [
       name: "Sateesh Tripathi",
       class: "Class XII",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "I am doing coaching in kota and chahe jitni koshish krle homework complete hota hi nhi hai and hum peeche hote jaate hai",
@@ -267,28 +102,7 @@ const queryData = [
       name: "Rohit",
       class: "Class XI",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title: "What are the services Career Vyas is offering",
     query:
@@ -299,28 +113,7 @@ const queryData = [
       name: "Rajat",
       class: "Dropper",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "I had cracked JEE last Year and was facing difficulties in the preference list and I lost my seat in document verification. Do you have any programme assisting in admission after exams?",
@@ -332,28 +125,7 @@ const queryData = [
       name: "Anshul",
       class: "Class XI",
       board: "CBSE",
-      image: (
-        <div className="w-[40px] h-[40px] rounded-full border-2 border-[#6776FF]">
-          <svg
-            className="w-[40px] h-[40px]"
-            viewBox="0 0 40 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M33.0791 78.1605C25.9816 67.928 19.1968 58.1904 12.4521 47.6463C9.23507 42.617 6.00172 36.6463 3 31.4335C9.62656 30.7622 13.2411 31.5158 19.8461 30.7647C19.8487 30.7647 17.1861 14.5973 15.6188 2.97668C25.3275 14.5295 33.1895 34.1752 37 45.2819C32.3399 45.5924 27.5754 45.8247 22.9072 45.6791C26.1801 56.5446 29.6932 67.3484 33.0791 78.1605Z"
-              fill="#F1FFED"
-              stroke="#5D5FEF"
-              strokeWidth="5"
-              strokeMiterlimit="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      ),
+      image: IconMale,
     },
     title:
       "Any other features or services for students of XI class other than mentorship programmes?",
