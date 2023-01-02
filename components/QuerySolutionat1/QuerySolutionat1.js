@@ -6,7 +6,7 @@ const link =
 export default function QuerySolutionat1() {
   return (
     <>
-      <div className="hidden 900:flex bg-white py-1 items-center justify-center mobi">
+      <div className="hidden 900:flex sticky top-0 z-[1000] bg-white py-1 items-center justify-center">
         <div className="text-lg font-extrabold">
           GET THE SOLUTION OF YOUR QUERIES AT
           <span className="text-[#6776FF] ml-2 text-3xl">₹1</span>
@@ -23,7 +23,7 @@ export default function QuerySolutionat1() {
           Just Drop 👋 “Hi” at the WhatsApp Link
         </div>
       </div>
-      <div className="bg-white 900:hidden flex py-1 items-center justify-center mobi">
+      <div className="bg-white sticky top-0 z-[1000] 900:hidden flex py-1 items-center justify-center">
         <a
           href={link}
           target="_blank"

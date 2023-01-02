@@ -94,12 +94,14 @@ const RightArrow = (props) => {
 const MentorCard = ({ mentorData }) => {
   return (
     <div
-      className={`w-[120px] h-[150px] md:w-[360px] md:h-[448px] relative text-center ${styles.mentorCard} rounded-md overflow-hidden mx-2`}
+      className={`w-[120px] h-[150px] 420:w-[180px] 420:h-[250px] 900:w-[350px] 900:h-[489px] relative text-center ${styles.mentorCard} rounded-md mx-auto`}
     >
       <Image src={mentorData.image} layout="fill" />
-      <div className="relative bottom-16">
-        <div>{mentorData.name}</div>
-        <div>{mentorData.college}</div>
+      <div className="absolute bottom-8 left-2 sm:font-extrabold 420:left-7 900:left-[23%] text-white">
+        <div className="lg:text-3xl 420:text-xl">{mentorData.name}</div>
+        <div className="lg:text-2xl 420:text-lg text-[#FFFFFF] opacity-60">
+          {mentorData.college}
+        </div>
       </div>
     </div>
   );
@@ -113,27 +115,27 @@ export default function MeetOurMentors() {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1400, min: 650 },
+      breakpoint: { max: 1400, min: 900 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 650, min: 0 },
-      items: 1,
+      breakpoint: { max: 900, min: 0 },
+      items: 2,
     },
   };
   return (
-    <div className="mt-20 text-white flex items-center justify-center flex-col overflow-hidden px-12">
+    <div className="mt-20 text-white flex items-center justify-center flex-col md:px-12 overflow-hidden">
       <div className="text-3xl sm:text-4xl lg:text-5xl">
         Meet Your <span className="text-[#6766FF]">Mentors</span>
       </div>
-      <div className="h-full flex flex-row items-center justify-center px-2">
+      <div className="h-full flex flex-row items-center justify-center px-2 mt-5 sm:mt-12">
         <LeftArrow
           className="cursor-pointer w-10"
           onClick={() => {
             carouselRef.current.previous();
           }}
         />
-        <div className="min-w-[265px] bg-red-300 max-w-[1200px] w-full">
+        <div className="min-w-[265px] max-w-[1200px] w-screen sm:w-[90vw] px-4">
           <Carousel
             ref={carouselRef}
             responsive={responsive}

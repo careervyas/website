@@ -11,13 +11,13 @@ export default function Main() {
   useEffect(() => {
     let temp = [];
 
-    for (let i = 0; i < data.length - 3; i++) {
+    for (let i = 0; i < data.length - 2; i++) {
       temp.push(data[i]);
     }
     setTeam(temp);
 
     temp = [];
-    for (let i = data.length - 3; i < data.length; i++) {
+    for (let i = data.length - 2; i < data.length; i++) {
       temp.push(data[i]);
     }
     setTeamEnd(temp);

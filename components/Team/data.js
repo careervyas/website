@@ -55,14 +55,6 @@ let data = [
     Position: "Head-Social Media",
   },
   {
-    Name: "Surinder Kaur Chawla",
-    Email: "mailto:inderchawla649@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/surinder-kaur-chawla",
-    Image: "https://drive.google.com/uc?id=1mqHHAIJUm5SBYHhNm1cOVabACfHrOCvE",
-
-    Position: "Head- Community",
-  },
-  {
     Name: "Agniva Dutta Banik",
     Email: "mailto:agniva.5star@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/agniva-dutta-banik-801636201",

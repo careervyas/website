@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Arrow from "./ELements/Arrow";
 import TeleBackImage from "./images/teleBack.png";
 import teleButton from "./images/teleButton.png";
-import YouTubeBackImage from "./images/youtube.png";
+import YouTubeBackImage from "./images/youtube.jpg";
 
 export default function SocialMedia() {
   return (

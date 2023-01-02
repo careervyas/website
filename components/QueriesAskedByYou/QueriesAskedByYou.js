@@ -90,7 +90,7 @@ export default function QueriesAskedByYou() {
         <RightArrow
           className="cursor-pointer w-10"
           onClick={() => {
-            clearImmediate(intervalId);
+            clearInterval(intervalId);
             carouselRef.current.next();
             intervalId = setInterval(() => {
               carouselRef.current.next();

@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from "react";
-import side from "./images/side.svg";
-import mobile from "./images/mobile.svg";
 import Image from "next/image";
+import Image1 from "./images/1.svg";
+import Image2 from "./images/2.svg";
+import Image3 from "./images/3.svg";
+import Image4 from "./images/4.svg";
+import Image5 from "./images/5.svg";
+import Image6 from "./images/6.svg";
 
-const data = [
-  { image: side },
-  { image: mobile },
-  { image: side },
-  { image: mobile },
-  { image: side },
-  { image: mobile },
-  //   { image: side },
-  //   { image: side1 },
-  //   { image: side },
-  //   { image: side1 },
-];
+const data = [Image1, Image2, Image3, Image4, Image5, Image6];
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
@@ -35,9 +28,9 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="flex flex-row-reverse md:flex-row items-center justify-center">
+    <div className="flex flex-row-reverse md:flex-row items-center justify-center mt-12">
       <div className="h-[500px] grid place-items-center w-5/6">
-        {data.map(({ image }, index) => {
+        {data.map((image, index) => {
           if (index === current) {
             return (
               <div
@@ -48,7 +41,14 @@ export default function Carousel() {
                 key={index}
               >
                 {index === current && (
-                  <Image src={image} alt="Carrer Vyas" layout="fill" />
+                  <Image
+                    src={image}
+                    alt="Carrer Vyas"
+                    layout="fill"
+                    width={350}
+                    height={500}
+                    objectFit="contain"
+                  />
                 )}
               </div>
             );
