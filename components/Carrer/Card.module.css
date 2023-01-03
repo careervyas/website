@@ -1,0 +1,16 @@
+.animate:hover {
+  animation: bounceNew 1s infinite ease-in-out;
+}
+
+@keyframes bounceNew {
+  0%,
+  100% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  50% {
+    transform: translateY(max(-10%, -10px));
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}

@@ -19,7 +19,7 @@ const DownloadIcon = ({ icon }) => (
 
 export default function Banner() {
   return (
-    <div className="flex flex-col-reverse mobile:flex-row items-center justify-center bg-[#EEECEC] relative">
+    <div className="flex flex-col-reverse mobile:flex-row items-center justify-center bg-[#EEECEC] relative overflow-hidden">
       <Bolt
         width="50"
         className="absolute -top-16 left-0 translate-x-full translate-y-full lg:block hidden"
@@ -36,15 +36,15 @@ export default function Banner() {
           <DownloadIcon icon={appstore} />
         </div>
       </div>
-      <div className="mobile:w-1/2 w-full h-full relative">
-        <div className="m-10 h-[220px] md:h-[450px] lg:h-[600px] relative grid place-items-center">
+      <div className="mobile:w-1/2 w-full h-full relative right-8 mobile:right-10">
+        <div className="m-10 h-[220px] md:h-[450px] lg:h-[600px] w-full relative grid place-items-center">
           <Image
             className="z-10 block max-w-full h-auto"
             src={mobile}
             alt="student carrer vyas"
             layout="fill"
           />
-          <BlueRipple className="absolute right-3 md:right-5 w-full" />
+          <BlueRipple className="absolute right-[20%] md:right-5 w-2/3 md:w-full" />
         </div>
       </div>
     </div>

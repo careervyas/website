@@ -28,11 +28,11 @@ const MentorCard = ({ mentorData }) => {
           </svg>
         </div>
         <div className="mt-4 flex flex-col items-center justify-center">
-          <h1 className="font-bold">{mentorData.name}</h1>
-          <h1 className="text-[#6776FF] font-extrabold">
-            {mentorData.college}
+          <h1 className="font-semibold text-sm">{mentorData.name}</h1>
+          <h1 className="text-[#6776FF] font-extrabold text-[8px] mb-2">
+            {mentorData.college.toUpperCase()}
           </h1>
-          <h1 className="px-2 bg-[#6776FF] text-white rounded-md">
+          <h1 className="px-2 bg-[#6776FF] text-white text-[8px] rounded-sm">
             {mentorData.role}
           </h1>
         </div>

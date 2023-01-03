@@ -38,7 +38,7 @@ export default function Notification() {
   }, []);
 
   return (
-    <div className="h-[700px] my-16">
+    <div className="h-[700px] my-16 overflow-hidden">
       <div className="grid place-items-center">
         <h1 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-[#333333]">
           Latest Notifications
@@ -47,7 +47,7 @@ export default function Notification() {
 
       <div className="h-full flex flex-row items-center justify-center px-2">
         <LeftArrow
-          className="cursor-pointer w-10"
+          className="cursor-pointer w-10 hidden 420:flex"
           onClick={() => {
             carouselRef.current.previous();
           }}
@@ -67,7 +67,7 @@ export default function Notification() {
           </Carousel>
         </div>
         <RightArrow
-          className="cursor-pointer w-10"
+          className="cursor-pointer w-10 hidden 420:flex"
           onClick={() => {
             carouselRef.current.next();
           }}

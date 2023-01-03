@@ -13,7 +13,12 @@ export default function JoinOurTeam() {
           Help us to bridge the Gap of School to College
         </p>
         <button
-          href="https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true"
+          onClick={() =>
+            window.open(
+              "https://docs.google.com/forms/d/1pl5We-xqOu_8NAkQWVg9QaRsOc5aqYjXZxSLqeZ05s8/viewform?edit_requested=true",
+              "_blank"
+            )
+          }
           className={`w-[200px] md:w-80 bg-[#2F43FD] text-white mt-12 py-4 px-4 rounded-lg text-lg`}
           onMouseEnter={() => setAnimate(true)}
           onMouseLeave={() => setAnimate(false)}

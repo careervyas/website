@@ -119,7 +119,9 @@ export default function Main() {
         />
         <div className="relative w-1/2 pl-6">
           <div className="text-[#333333]">
-            <p className="mb-4 font-bold text-lg">😀 Single One Liner</p>
+            <p className="mb-4 font-bold text-lg">
+              😃 Discover your Path with Us!!
+            </p>
             <h1 className="font-bold text-6xl leading-tight">
               One Stop Solution to all your Career & College Queries
             </h1>
@@ -138,9 +140,10 @@ export default function Main() {
                   e.stopPropagation();
                   setShowQueryModal(true);
                 }}
-                className="hover:animate-bounce shadow-xl rounded-md w-64 py-4 bg-[#2F43FD] text-white font-extrabold"
+                className="shadow-xl rounded-md w-64 py-4 bg-[#2F43FD] text-white font-extrabold"
+                id={styles.animateBounce1}
               >
-                Ask your Query for Free
+                Ask your Query for ₹1
               </button>
               <div className="flex text-lg font-extrabold mt-4">
                 <div class="max-h-[26px] w-[26px] h-[26px]">
@@ -156,6 +159,7 @@ export default function Main() {
                   e.stopPropagation();
                   setShowMentorShipModal(true);
                 }}
+                id={styles.animateBounce2}
               >
                 Book Free Mentorship Session
               </button>
@@ -170,22 +174,22 @@ export default function Main() {
           </div>
         </div>
         <div className="flex relative w-1/2">
-          <div className="absolute -top-16">
-            <Lines className="absolute -top-4 left-full translate-y-[50%] -translate-x-[80px]" />
+          <div className="absolute lg:-top-16 2xl:top-0 lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[600px] 2xl:h-[600px] lg:right-44 xl:right-64 2xl:right-36">
+            <Lines className="absolute top-[12%] z-10 lg:-right-[25%] xl:-right-[10%] 2xl:right-[28%]" />
             <Image src={side1} alt="student carrer vyas" />
-            <div className="bg-white w-fit px-4 py-2 rounded-md absolute top-2/3 -left-20 shadow-md font-extrabold">
+            <div className="bg-white absolute top-[60%] -left-20 min-w-[120px] w-fit px-4 py-2 rounded-md shadow-md font-extrabold">
               1 on 1 Mentorship
             </div>
-            <div className="bg-white w-fit px-4 py-2 rounded-md absolute top-[40%] -right-2 shadow-md font-extrabold">
-              Peer 2 Peer Mentorship
+            <div className="bg-white absolute top-[35%] left-36 min-w-[120px] w-fit px-4 py-2 rounded-md shadow-md font-extrabold">
+              Peer 2 Peer Learning
             </div>
           </div>
-          <div className="absolute 2xl:static 2xl:ml-60 top-20 lg:-right-[92%] xl:-right-[75%] 2xl:-right-[70%] w-[1000px]">
-            <Image src={side2} alt="students carrer vyas" />
-            <div className="bg-white w-fit px-4 py-2 rounded-md absolute top-2/3 left-28 2xl:static shadow-md font-extrabold">
+          <div className="absolute lg:top-32 xl:top-0 lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] right-0">
+            <Image src={side2} alt="students carrer vyas" layout="fill" />
+            <div className="bg-white absolute top-[60%] left-1/3 min-w-[120px] w-fit px-4 py-2 rounded-md shadow-md font-extrabold">
               Get your Doubt Solved
             </div>
-            <div className="bg-white w-fit px-4 py-2 rounded-md absolute bottom-0 left-1/4 2xl:static shadow-md font-extrabold">
+            <div className="bg-white absolute top-[90%] left-2/3 min-w-[120px] w-fit px-4 py-2 rounded-md shadow-md font-extrabold">
               Know Your College
             </div>
           </div>
@@ -202,23 +206,24 @@ export default function Main() {
           <h1 className="m-2 font-bold text-4xl text-center">
             One Stop Solution to all your Career & College Queries
           </h1>
-          <div className="flex items-center py-3 px-7 bg-white h-8 rounded-3xl w-fit">
+          <div className="flex items-center py-3 px-7 h-8 rounded-3xl w-fit">
             <p className="text-sm sm:text-md text-center font-semibold align-middle">
               # Bridging the gap between{" "}
               <span className="text-blue-700">School</span>
               {""} to <span className="text-blue-700"> College </span>{" "}
             </p>
           </div>
-          <div className="absolute z-10 top-44 mobile:top-40 sm:top-32 flex flex-col items-center justify-center pt-6">
+          <div className="absolute z-10 top-52 mobile:top-40 600:top-32 flex flex-col items-center justify-center pt-6">
             <div className="flex flex-col">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowQueryModal(true);
                 }}
-                className="hover:animate-bounce shadow-xl rounded-md py-1 px-2 sm:w-64 sm:py-4 bg-[#2F43FD] text-white font-extrabold"
+                className="shadow-xl rounded-md py-2 px-4 sm:w-64 sm:py-4 bg-[#2F43FD] text-white font-extrabold"
+                id={styles.animateBounce1}
               >
-                Ask your Query for Free
+                Ask your Query for ₹1
               </button>
               <div className="flex text-md font-extrabold mt-1">
                 <CheckIcon />
@@ -232,6 +237,7 @@ export default function Main() {
                   setShowMentorShipModal(true);
                 }}
                 className="hover:animate-bounce shadow-xl rounded-md py-1 px-2 sm:w-64 sm:py-4 bg-[#FFB11B] font-extrabold"
+                id={styles.animateBounce2}
               >
                 Book Free Mentorship Session
               </button>
@@ -242,25 +248,25 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <div className="mt-36 mobile:mt-24 flex flex-row w-full relative top-0">
-          <div className="w-[500px] relative">
+        <div className="relative top-12 mt-36 mobile:mt-24 flex flex-row w-full">
+          <div className="w-[400px] relative">
             <Image src={side1} alt="student carrer vyas" objectFit="cover" />
+            <div className="z-10 absolute top-[25%] 600:top-[50%] left-[80%] bg-white w-[90px] 420:w-[180px] rounded-md shadow-md text-[8px] 420:text-base font-extrabold px-1 420:px-2">
+              1 on 1 Mentorship
+            </div>
+            <div className="z-10 absolute top-[40%] 600:top-[30%] md:top-[35%] left-[60%] bg-white w-[90px] 420:w-[180px] rounded-md shadow-md text-[8px] 420:text-base font-extrabold px-1 420:px-2">
+              Peer 2 Peer Learning
+            </div>
           </div>
 
-          <div className="top-0 mobile:top-8 w-[600px] relative">
+          <div className="w-[500px] relative">
             <Image src={side2} alt="students carrer vyas" objectFit="cover" />
-          </div>
-          <div className="bg-white w-fit px-2 rounded-md absolute top-[60%] left-1/2 shadow-md font-extrabold">
-            1 on 1 Mentorship
-          </div>
-          <div className="bg-white w-fit px-2 rounded-md absolute top-[40%] left-1/3 shadow-md font-extrabold">
-            Peer 2 Peer Mentorship
-          </div>
-          <div className="left-[25%] top-[50%] sm:left-[45%] bg-white w-fit px-2 rounded-md absolute sm:top-[50%] shadow-md font-extrabold">
-            Get your Doubt Solved
-          </div>
-          <div className="bg-white w-fit px-2 rounded-md absolute top-[75%] left-1/4 shadow-md font-extrabold">
-            Know Your College
+            <div className="z-10 absolute top-[55%] 600:top-[65%] md:top-[80%] md:-left-[10%] bg-white w-fit rounded-md shadow-md text-[8px] 420:text-base font-extrabold px-1 420:px-2">
+              Get your Doubt Solved
+            </div>
+            <div className="z-10 absolute top-[70%] 600:top-[40%] md:top-[65%] left-[20%] bg-white w-[90px] 420:w-[180px] rounded-md shadow-md text-[8px] 420:text-base font-extrabold px-1 420:px-2">
+              Know Your College
+            </div>
           </div>
         </div>
       </div>

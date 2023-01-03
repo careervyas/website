@@ -12,23 +12,32 @@
 // import MentorShipForm from "../../components/Query/MentorShipForm";
 // import Questions from "../../components/mentorship-program/home/Questions.jsx";
 // import Footer from "../../components/mentorship-program/Footer.jsx";
+// import Head from "next/head.js";
 // export default function index() {
 //   return (
-//     <div className="bg-black">
-//       <Navbar />
-//       <Hero />
-//       <MeetOurMentors />
-//       <Quiz />
-//       <Benfits />
-//       <Testimonials />
-//       <WhyUs />
-//       <DreamCollege />
-//       <Pricing />
-//       <Demo />
-//       {/* <MentorShipForm /> */}
-//       <Questions />
-//       <Footer />
-//     </div>
+//     <>
+//       <Head>
+//         <style>
+//           @import
+//           url(&apos;https://fonts.googleapis.com/css2?family=Lato&display=swap&apos&apos;);
+//         </style>
+//       </Head>
+//       <div className="bg-black" style={{ fontFamily: "Lato" }}>
+//         <Navbar />
+//         <Hero />
+//         <MeetOurMentors />
+//         <Quiz />
+//         <Benfits />
+//         <Testimonials />
+//         <WhyUs />
+//         <DreamCollege />
+//         <Pricing />
+//         <Demo />
+//         {/* <MentorShipForm /> */}
+//         <Questions />
+//         <Footer />
+//       </div>
+//     </>
 //   );
 // }
 

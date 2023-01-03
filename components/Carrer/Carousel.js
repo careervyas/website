@@ -34,7 +34,7 @@ export default function Carousel() {
           if (index === current) {
             return (
               <div
-                className={`h-[500px] w-[280px] mobile:w-[350px] sm:w-[400px] mb-24 opacity-0 ${
+                className={`h-[500px] w-[280px] mobile:w-[350px] sm:w-[500px] grid place-items-center mb-24 opacity-0 ${
                   index === current ? "opacity-100" : ""
                 } ${index === current ? "scale-110" : ""}`}
                 style={{ transition: "ease 1s" }}
@@ -45,8 +45,6 @@ export default function Carousel() {
                     src={image}
                     alt="Carrer Vyas"
                     layout="fill"
-                    width={350}
-                    height={500}
                     objectFit="contain"
                   />
                 )}

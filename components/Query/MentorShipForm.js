@@ -98,13 +98,18 @@ export default function HaveAmentorForm() {
         <div className="w-full">
           <Image src={img} />
         </div>
-        <div className="shadow-xl mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF]">
+        <a
+          href="https://wa.me/918437399123?text=Hello%20Career%20Vyas%2C%0AAre%20you%20there%20%3F%3F%20I%20have%20a%20query%20to%20solve!!%0A%0A"
+          target="_blank"
+          rel="noreferrer"
+          className="shadow-xl mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF]"
+        >
           <WhatsAppIcon />
           <div className="flex flex-col">
             <span>Having troubles?</span>
             <span>Get in touch with us</span>
           </div>
-        </div>
+        </a>
       </div>
       <div className="flex  flex-col lg:w-1/2">
         <span className="text-[#6776FF] font-extrabold text-2xl">
@@ -162,7 +167,7 @@ export default function HaveAmentorForm() {
             <input
               id="mentorFormUserIsParentInput"
               type="checkbox"
-              className="mr-2 w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500"
+              className="mr-2 w-4 h-4 rounded border-gray-300 accent-white invert checked:invert-0"
             />
             <label htmlFor="mentorFormUserIsParentInput">
               I&apos;m a Parent,filling for my child

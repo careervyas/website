@@ -7,14 +7,14 @@ export default function hero() {
     <div className="flex text-white items-center justify-center mt-16 flex-col-reverse lg:flex-row">
       <div className="lg:w-1/2 flex flex-col justify-center mx-8 mt-7 lg:ml-[138px]">
         <div className="text-2xl mb-4">🚀🚀</div>
-        <div className="text-5xl leading-[58px] mb-7">
+        <div className="text-2xl leading-9 sm:text-5xl sm:leading-[58px] mb-7">
           Skyrocket your <span className="text-[#6766FF]">JEE/NEET</span>{" "}
           preperation with Mentors from{" "}
           <span className="text-[#6766FF]">IITs and AIIMs</span>
         </div>
-        <div className="text-[#979797] leading-7 w-2/3">
+        <div className="text-[#979797] leading-7 sm:w-2/3">
           Bringing you the{" "}
-          <span className="text-white">
+          <span className="text-white mx-2">
             brightest minds from IITs and AIIMS
           </span>{" "}
           to make your dreams true

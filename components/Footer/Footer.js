@@ -74,7 +74,7 @@ export default function Footer() {
   };
   return (
     <>
-      <div className="flex flex-col items-center justify-center lg:flex-row bg-[#C1FFF0] md:px-14 py-8">
+      <div className="flex flex-col items-center justify-center lg:flex-row bg-[#C1FFF0] md:px-14 py-8 mobile:px-2 lg:px-12">
         <div className="flex flex-col lg:w-1/2 mr-6">
           <div className="flex flex-col items-start lg:w-2/3">
             <div className="flex flex-col items-start justify-center">
