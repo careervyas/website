@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { toast } from "react-toastify";
 import img from "./mentorForm.png";
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 
@@ -12,10 +13,10 @@ const WhatsAppIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <circle cx="22" cy="22" r="22" fill="url(#pattern0)" />
+    <circle cx="22" cy="22" r="22" fill="url(#pattern5)" />
     <defs>
       <pattern
-        id="pattern0"
+        id="pattern5"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"
@@ -78,10 +79,9 @@ export default function HaveAmentorForm() {
         isParent: isParent ? "Yes" : "No",
         via: "MentorFormModal",
       });
-      alert("Our Team Will Contact You Soon...");
+      toast.success("Our Team Will Contact You Soon...");
     } catch (e) {
-      console.log(e);
-      alert("Oops Something Went Wrong...");
+      toast.error("Oops Something Went Wrong...");
     }
   };
   return (
@@ -102,7 +102,7 @@ export default function HaveAmentorForm() {
           href="https://wa.me/918437399123?text=Hello%20Career%20Vyas%2C%0AAre%20you%20there%20%3F%3F%20I%20have%20a%20query%20to%20solve!!%0A%0A"
           target="_blank"
           rel="noreferrer"
-          className="shadow-xl mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF]"
+          className="shadow-xl mx-auto max-w-[300px] min-w-[250px] flex items-center justify-evenly bg-[#6776FF] bg-opacity-20 border-2 border-[#6776FF] mb-4"
         >
           <WhatsAppIcon />
           <div className="flex flex-col">

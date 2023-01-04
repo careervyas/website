@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import mentorsData from "./data";
-import MentorShipForm from "../Query/MentorShipForm.js";
+import MentorShipForm from "../Forms/MentorShipForm.js";
 
 const MentorCard = ({ mentorData }) => {
   return (

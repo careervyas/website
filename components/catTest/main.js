@@ -35,7 +35,7 @@ export default function CAT() {
       Email === "" ||
       Phone === "" ||
       Hometown === "" ||
-      className === ""
+      Class === ""
     ) {
       toast.error("Please Fill All The Fields");
       return;
@@ -56,8 +56,6 @@ export default function CAT() {
     setHometown("");
     setClass("");
     setShowModal(false);
-
-    console.log("Next Test", nextTest);
 
     if (nextTest === 1) {
       Router.push("/StreamTest");

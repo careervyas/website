@@ -26,7 +26,7 @@ export default function Comment({ slug }) {
 
         setRecentComment(doc.data().comments?.slice(-3));
       } else {
-        console.log("No such document!");
+        console.error("No such document!");
       }
     });
   }, []);
@@ -51,7 +51,7 @@ export default function Comment({ slug }) {
       const docref = db.collection("comments").doc(slug);
 
       if (Name === "" || Email === "" || Comment === "") {
-        alert("Please fill all the fields");
+        toast.warn("Please fill all the fields");
       } else {
         docref.get().then((doc) => {
           if (doc.exists) {
@@ -83,7 +83,7 @@ export default function Comment({ slug }) {
         setComment("");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
   return (
@@ -203,10 +203,8 @@ export default function Comment({ slug }) {
                         <span className="font-bold text-md">{item.name}</span>
                         <span className="text-sm">{item.comment}</span>
                       </div>
-                      
                     );
                   })}
-                   
                 </div>
               </div>
             </div>

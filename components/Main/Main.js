@@ -7,8 +7,8 @@ import BackImage from "./LandingPage.png";
 import Check from "./check.png";
 import styles from "./Main.module.css";
 import Modal from "../../components/Modal/Modal";
-import HaveAQueryForm from "../Query/HaveAQueryForm";
-import MentorShipForm from "../Query/MentorShipForm.js";
+import HaveAQueryForm from "../Forms/HaveAQueryForm";
+import MentorShipForm from "../Forms/MentorShipForm.js";
 import { useState } from "react";
 import poster from "./poster.png";
 

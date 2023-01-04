@@ -7,6 +7,7 @@ import twitter from "./images/twitter.svg";
 import linkedin from "./images/linkedin.svg";
 import discord from "./images/discord.svg";
 const { GoogleSpreadsheet } = require("google-spreadsheet");
+import { toast, ToastContainer } from "react-toastify";
 
 const socialMediaIcons = [
   ["https://www.facebook.com/people/Career-Vyas/100086391339652/", facebook],
@@ -57,7 +58,7 @@ export default function Footer() {
     try {
       const emailID = document.getElementById("userFooterEmailInput").value;
       if (!validateEmail(emailID)) {
-        alert("Please Enter A Valid Email ID");
+        toast.warn("Please Enter A Valid Email ID");
         return;
       }
       const docs = await loadSheet();
@@ -67,9 +68,11 @@ export default function Footer() {
         timestamp: new Date(),
         email: emailID,
       });
-      alert("Keep Your Eye on the inbox, your surprise is on the way !!!");
+      toast.success(
+        "Keep Your Eye on the inbox, your surprise is on the way !!!"
+      );
     } catch (e) {
-      alert("Oops Something Went Wrong...");
+      toast.error("Oops Something Went Wrong...");
     }
   };
   return (

@@ -14,7 +14,6 @@ import congo from "./images/congo.svg";
 import first from "./images/first.svg";
 import second from "./images/second.svg";
 import last from "./images/last.svg";
-import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import whatsapp from "./images/whatsapp.svg";
@@ -94,8 +93,6 @@ export default function GeneralQuiz() {
 
   const moveleft = () => {
     if (currentQuestion > 0) {
-      console.log("left:", attempted);
-
       setSelected("");
       setSelectedbg(0);
 
@@ -213,8 +210,6 @@ export default function GeneralQuiz() {
         }
       }
     } else if (currentQuestion < data[category].length - 1) {
-      console.log("right:", attempted);
-
       setSelected("");
       setSelectedbg(0);
 
@@ -261,7 +256,9 @@ export default function GeneralQuiz() {
       <Side className={"absolute top-0 left-0 "} />
       <Bottom className={"absolute  top-full right-0  "} />
       <EllipseRight className={"absolute top-1/4 right-0 hidden md:block"} />
-      <EllipseLeft className={"absolute top-3/4 left-0 translate-y-20 hidden md:block"} />
+      <EllipseLeft
+        className={"absolute top-3/4 left-0 translate-y-20 hidden md:block"}
+      />
       <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center md:items-start">
         <div className="flex flex-col md:flex-row m-5">
           <div className="flex flex-row">
@@ -294,7 +291,12 @@ export default function GeneralQuiz() {
               className="w-42 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
             >
-              <Image src={streamSelector} alt="English" width={20} height={30} />
+              <Image
+                src={streamSelector}
+                alt="English"
+                width={20}
+                height={30}
+              />
               <p className="text-black text-md">Stream Selector</p>
             </div>
           </div>
@@ -511,8 +513,6 @@ export default function GeneralQuiz() {
                   <Image src={whatsapp} alt="whatsapp" width={50} height={50} />
                   <Image src={telegram} alt="whatsapp" width={50} height={50} />
                 </div>
-
-
               </div>
             </div>
           </div>

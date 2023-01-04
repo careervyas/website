@@ -1,10 +1,24 @@
 import Head from "next/head";
 import "../styles/globals.css";
 import Script from "next/script";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Head>
         <title>Career Vyas- The Perfect Guide</title>
         <meta

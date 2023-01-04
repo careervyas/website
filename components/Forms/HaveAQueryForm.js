@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { toast } from "react-toastify";
 import img from "./queryform.png";
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 
@@ -42,9 +43,9 @@ export default function HaveAQueryForm() {
         isParent: "-",
         via: "QueryFormModal",
       });
-      alert("Our Team Will Contact You Soon...");
+      toast.success("Our Team Will Contact You Soon...");
     } catch (e) {
-      alert("Oops Something Went Wrong...");
+      toast.error("Oops Something Went Wrong...");
     }
   };
   return (

@@ -4,8 +4,8 @@ import HeroImage from "./Images/HeroImage.png";
 
 export default function hero() {
   return (
-    <div className="flex text-white items-center justify-center mt-16 flex-col-reverse lg:flex-row">
-      <div className="lg:w-1/2 flex flex-col justify-center mx-8 mt-7 lg:ml-[138px]">
+    <div className="flex text-white items-center justify-center mt-16 flex-col-reverse lg:flex-row lg:px-8 xl:px-32">
+      <div className="lg:w-1/2 flex flex-col justify-center mx-8 mt-7">
         <div className="text-2xl mb-4">🚀🚀</div>
         <div className="text-2xl leading-9 sm:text-5xl sm:leading-[58px] mb-7">
           Skyrocket your <span className="text-[#6766FF]">JEE/NEET</span>{" "}

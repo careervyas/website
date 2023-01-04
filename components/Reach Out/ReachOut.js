@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import Lines from "../Elements/Lines";
 import Arrow from "../Elements/Arrow";
+import { toast } from "react-toastify";
 
 const socialMediaIcons = [
   [
@@ -144,7 +145,7 @@ export default function ReachOut() {
       Message.trim() === "" ||
       Phone.trim() === ""
     ) {
-      alert("Invalid Form Data...");
+      toast.warn("Invalid Form Data...");
       return;
     }
     try {
@@ -157,9 +158,9 @@ export default function ReachOut() {
         Message,
         Phone,
       });
-      alert("Our Team Will Contact You Soon...");
+      toast.success("Our Team Will Contact You Soon...");
     } catch (e) {
-      alert("Oops Something Went Wrong...");
+      toast.error("Oops Something Went Wrong...");
     }
   };
   return (

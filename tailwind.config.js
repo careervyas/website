@@ -7,12 +7,13 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      420: "420px",
-      700: "700px",
-      900: "900px",
       mobile: "380px",
+      420: "420px",
+      520: "520px",
       sm: "640px",
+      700: "700px",
       md: "768px",
+      900: "900px",
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",

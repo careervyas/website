@@ -6,7 +6,7 @@ export default function JoinOurTeam() {
   const [animate, setAnimate] = useState(false);
 
   return (
-    <div className="relative py-12 flex flex-col items-center justify-center font-extrabold bg-[#EBEDFF]">
+    <div className="relative pt-12 flex flex-col items-center justify-center font-extrabold bg-[#EBEDFF]">
       <div className="z-10 text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl">Join Our Team 🚀🚀</h1>
         <p className="mt-4 text-xl md:text-3xl lg:text-4xl">
@@ -27,7 +27,7 @@ export default function JoinOurTeam() {
         </button>
       </div>
       <div
-        className={`absolute z-30 top-80 md:top-96 w-16 sm:w-32 lg:w-40 ${
+        className={`absolute z-30 top-80 420:top-72 600:top-80 700:top-[21rem] md:top-96 w-16 600:w-20 700:w-24 lg:w-40 ${
           animate ? "animate-bounce" : ""
         }`}
       >
@@ -59,7 +59,10 @@ export default function JoinOurTeam() {
           />
         </svg>
       </div>
-      <img className="relative 420:-top-6 w-screen" src={BackImage.src} />
+      <img
+        className="relative 420:-top-20 w-screen max-h-[500px]"
+        src={BackImage.src}
+      />
     </div>
   );
 }

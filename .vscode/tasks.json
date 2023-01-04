@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run",
+      "command": "npm run dev",
+      "type": "shell"
+    },
+    {
+      "label": "Commit To Git",
+      "command": "git add .;git commit -m '${input:commitMessage}';",
+      "type": "shell"
+    },
+    {
+      "label": "Ammend Commit To Git",
+      "command": "git add .;git commit --amend -m '${input:commitMessage}';",
+      "type": "shell"
+    },
+    {
+      "label": "Push To Testing",
+      "command": "git push privateorigin main -f",
+      "type": "shell"
+    },
+    {
+      "label": "Push To Production",
+      "command": "git push origin main",
+      "type": "shell"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "description": "Enter The Commit Message",
+      "type": "promptString"
+    }
+  ]
+}

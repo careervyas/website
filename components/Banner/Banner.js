@@ -1,7 +1,7 @@
-import mobile from "./images/mobile.svg";
+import mobile from "./images/mobile.png";
 import Image from "next/image";
 import Bolt from "./Elements/bolt";
-import BlueRipple from "./Elements/blue-ripple";
+import BlueRipple from "./images/blueripple.png";
 import playstore from "./images/play.svg";
 import appstore from "./images/apple.svg";
 
@@ -37,14 +37,19 @@ export default function Banner() {
         </div>
       </div>
       <div className="mobile:w-1/2 w-full h-full relative right-8 mobile:right-10">
-        <div className="m-10 h-[220px] md:h-[450px] lg:h-[600px] w-full relative grid place-items-center">
+        <div
+          className="m-10 h-[220px] md:h-[450px] lg:h-[600px] w-full relative grid place-items-center bg-contain bg-no-repeat bg-center"
+          style={{
+            backgroundImage: `url(${BlueRipple.src})`,
+          }}
+        >
           <Image
             className="z-10 block max-w-full h-auto"
             src={mobile}
             alt="student carrer vyas"
             layout="fill"
+            objectFit="contain"
           />
-          <BlueRipple className="absolute right-[20%] md:right-5 w-2/3 md:w-full" />
         </div>
       </div>
     </div>
