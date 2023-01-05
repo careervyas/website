@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Img from "./Images/WhyUs.jpg";
-
+import data from "./data/whyus.js";
 const CheckOutSVG = (props) => (
   <svg
     {...props}
@@ -42,14 +42,12 @@ const CheckOutSVG = (props) => (
   </svg>
 );
 
-const Card = (cardDetails) => (
+const Card = ({ cardDetails }) => (
   <div className="bg-[#212121] border-[1px] border-[#7A7AFF] w-11/12 xl:w-3/4 max-w-[280px] py-6 px-5 font-semibold">
     <div className="text-2xl leading-8 mb-5 text-[#7A7AFF]">
-      1 on 1 Personal Mentorship
+      {cardDetails.text1}
     </div>
-    <div className="text-base leading-6">
-      Mentors from top IITs, NITs, Medical Colleges
-    </div>
+    <div className="text-base leading-6">{cardDetails.text2}</div>
   </div>
 );
 
@@ -60,11 +58,11 @@ export default function WhyUs() {
       <div className="hidden lg:flex mt-24 text-white">
         <div className="flex w-1/2 bg-[#3F3F3F] h-[580px]">
           <div className="flex flex-col items-center justify-around h-full w-1/2">
-            <Card />
-            <Card />
+            <Card cardDetails={data[0]} />
+            <Card cardDetails={data[2]} />
           </div>
           <div className="flex flex-col items-center justify-center h-full w-1/2">
-            <Card />
+            <Card cardDetails={data[1]} />
           </div>
         </div>
         <div
@@ -105,15 +103,11 @@ export default function WhyUs() {
       {/* For Smaller Screens (screen-size < 1024px) */}
       <div className="flex flex-col-reverse lg:hidden mt-10 text-white">
         <div className="flex flex-col gap-8 bg-[#3F3F3F] py-12 items-center mobile:items-start">
-          <div className="ml-6">
-            <Card />
-          </div>
-          <div className="mobile:self-end ml-6 mobile:m-0">
-            <Card />
-          </div>
-          <div className="ml-6">
-            <Card />
-          </div>
+          {data.map((d, index) => (
+            <div className="ml-6" key={index}>
+              <Card cardDetails={d} />
+            </div>
+          ))}
         </div>
         <div
           className="w-full h-[580px] relative bg-no-repeat bg-center bg-cover mb-8"

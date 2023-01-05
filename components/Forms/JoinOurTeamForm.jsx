@@ -48,6 +48,26 @@ const handleSubmit = async (
       "joinOurTeamFormUserLanguages"
     ).value;
 
+    if (
+      name === "" ||
+      emailID === "" ||
+      phone === "" ||
+      userCollege === "" ||
+      query === "" ||
+      id === "" ||
+      yearOfStudy === "" ||
+      about === "" ||
+      linkedin === "" ||
+      remarks === "" ||
+      rank === "" ||
+      languages === "" ||
+      applyingFor === "" ||
+      motivation === ""
+    ) {
+      toast.warn("Please Fill Up All Details");
+      return;
+    }
+
     const docs = await loadSheet();
     const SHEET_NAME = "Sheet1";
     const sheet = docs.sheetsByTitle[SHEET_NAME];

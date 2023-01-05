@@ -40,6 +40,10 @@ const handleSubmit = async (
       contact: phone,
       class: userClass,
     });
+    if (name === "" || emailID === "" || phone === "" || userClass === "") {
+      toast.warn("Please Fill Up All Details");
+      return;
+    }
 
     const docs = await loadSheet();
     const SHEET_NAME = "Sheet1";

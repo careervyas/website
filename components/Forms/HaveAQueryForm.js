@@ -30,6 +30,18 @@ export default function HaveAQueryForm() {
         "queryFormUserClassInput"
       ).value;
       const query = document.getElementById("queryFormUserQueryInput").value;
+
+      if (
+        name === "" ||
+        emailID === "" ||
+        phone === "" ||
+        userclass === "" ||
+        query === ""
+      ) {
+        toast.warn("Please Fill Up All Details");
+        return;
+      }
+
       const docs = await loadSheet();
       const SHEET_NAME = "Sheet1";
       const sheet = docs.sheetsByTitle[SHEET_NAME];

@@ -66,6 +66,17 @@ export default function HaveAmentorForm() {
         "mentorFormUserIsParentInput"
       ).checked;
 
+      if (
+        name === "" ||
+        emailID === "" ||
+        phone === "" ||
+        userclass === "" ||
+        query === ""
+      ) {
+        toast.warn("Please Fill Up All Details");
+        return;
+      }
+
       const docs = await loadSheet();
       const SHEET_NAME = "Sheet1";
       const sheet = docs.sheetsByTitle[SHEET_NAME];

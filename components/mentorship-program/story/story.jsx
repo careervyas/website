@@ -1,10 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import Img1 from "./data/1.png";
-import Num1 from "./data/1-num.png";
 import Link from "next/link";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import data from "./data/data.js";
 
 const TrophySVG = () => (
   <svg
@@ -120,26 +119,27 @@ export default function Story() {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      verticalLine.style.height = (scroll / total) * 115 + "%";
+      verticalLine.style.height = (scroll / total) * 120 + "%";
     });
   }, []);
 
   return (
-    <div className="my-20 flex flex-col text-white items-center relative">
+    <div className="my-20 flex flex-col text-white items-center relative overflow-x-hidden">
       <div className="text-[#6766FF] mx-4 420:w-[370px] text-2xl lg:text-4xl font-bold text-center mb-48">
         A Story that you all Should Read
       </div>
       <div
         id="fillLine"
-        className="min-w-[50vw] z-40 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#6766FF] max-h-[3830px] lg:max-h-[4290px] xl:max-h-[4350px]"
+        className="w-[2px] z-40 absolute left-1/2 hidden md:block top-10 lg:top-20 border-r-2 border-[#6766FF] max-h-[3830px] lg:max-h-[4050px] xl:max-h-[4350px]"
       ></div>
-      <div className="min-w-[50vw] z-30 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#8E8E8E] h-[3830px] lg:h-[4290px] xl:h-[4350px]"></div>
+      <div className="w-[2px] z-30 absolute left-1/2 hidden md:block top-10 lg:top-20 border-r-2 border-[#8E8E8E] h-[3830px] lg:h-[4050px] xl:h-[4350px]"></div>
       <div
         id="storyContainer"
         className="relative flex flex-col items-center md:items-start w-full px-11 2xl:px-32"
       >
-        {[...Array(6)].map((_, i) => (
-          <div
+        {data.map(({ storyImage, numberImage, chapter, story }, i) => (
+          <motion.div
+            initial="hidden"
             className={`${i % 2 ? "md:self-end" : "md:self-start"} ${
               i !== 5 ? "mb-56" : "mb-28"
             }`}
@@ -148,15 +148,15 @@ export default function Story() {
             transition={{ duration: 0.5 }}
           >
             <StoryCard
-              storyImage={Img1}
-              numberImage={Num1}
-              chapter="Inventory"
-              story="Vaibhav comes to Kota and is allotted the last batch at the Coaching. He meets Meena,who tells him that he should not accept A10. He speaks to Deepak, the Head Manager of Motion but is denied any change. Then, he meets Jeetu Bhaiya, the student Mentor, who tells him dekh tu bheekh toh maang mat, kuch chahiye toh mehnat kar aur cheen le and so gives Vaibhav a challenge to complete it by the next day."
+              storyImage={storyImage}
+              numberImage={numberImage}
+              chapter={chapter}
+              story={story}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
-      <div className="flex items-center mb-14">
+      <div className="flex items-center mb-14 z-50">
         <TrophySVG />
       </div>
       <div className="text-center text-lg sm:text-xl lg:text-3xl px-4 font-bold">
