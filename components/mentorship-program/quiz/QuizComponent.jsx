@@ -55,7 +55,7 @@ const OptionCard = ({ optionNumber, option, clickFunction, selected }) => {
   );
 };
 
-export default function QuizComponent() {
+export default function QuizComponent({ setSubmitted, setScore, onSubmit }) {
   const [questionsState, setQuestionsState] = useState([
     ...Array(questions.length).fill(false),
   ]);
@@ -92,6 +92,9 @@ export default function QuizComponent() {
       }
     }
     toast.success("Submitted");
+    setSubmitted(true);
+    setScore(score);
+    onSubmit(score);
   };
 
   useEffect(() => {

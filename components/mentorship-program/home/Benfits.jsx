@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import benefits from "./data/benefits";
 
@@ -54,33 +55,37 @@ const BenefitBox = ({ benefit }) => {
         </div>
         <div className="text-lg font-[500] leading-7">{description}</div>
       </div>
-      <a className="text-[#14FFEC] mt-6 flex items-center font-bold text-sm leading-7">
-        <span className="underline underline-offset-4">CHECK OUT HOW ? </span>
-        <CheckOutSVG className="ml-2" />
-      </a>
+      <Link href="/mentorship-program/story">
+        <div className="cursor-pointer text-[#14FFEC] mt-6 flex items-center font-bold text-sm leading-7">
+          <span className="underline underline-offset-4">CHECK OUT HOW ? </span>
+          <CheckOutSVG className="ml-2" />
+        </div>
+      </Link>
     </div>
   );
 };
 
 const LinkButton = () => (
-  <>
-    <div
-      className="hidden sm:block px-24 py-3 mt-[4.5rem] w-fit"
-      style={{
-        background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-      }}
-    >
-      <a>REGISTER FOR THIS MENTORSHIP PROGRAM NOW</a>
+  <Link href="/mentorship-program#pricing">
+    <div className="cursor-pointer">
+      <div
+        className="hidden sm:block px-24 py-3 mt-[4.5rem] w-fit"
+        style={{
+          background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+        }}
+      >
+        <a>REGISTER FOR THIS MENTORSHIP PROGRAM NOW</a>
+      </div>
+      <div
+        className="sm:hidden block px-2 mobile:px-6 420:px-12 py-3 mt-[4.5rem] w-fit"
+        style={{
+          background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+        }}
+      >
+        <a>Register Now to get your Mentor 🚀🚀</a>
+      </div>
     </div>
-    <div
-      className="sm:hidden block px-2 mobile:px-6 420:px-12 py-3 mt-[4.5rem] w-fit"
-      style={{
-        background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-      }}
-    >
-      <a>Register Now to get your Mentor 🚀🚀</a>
-    </div>
-  </>
+  </Link>
 );
 
 export default function Benfits() {

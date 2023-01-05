@@ -1,7 +1,9 @@
+import Link from "next/link";
 import React from "react";
 import { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import data from "./data/testimonial.js";
 
 const QuoteSVG = (props) => (
   <svg
@@ -126,13 +128,9 @@ const TestimonialCard = ({ mentorData }) => {
     >
       <QuoteSVG className="w-[10px] lg:w-[60px]" />
       <p className="text-[8px] lg:text-lg mt-2 lg:mt-4 text-white lg:px-4 leading-4 italic lg:leading-8">
-        &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis
-        donec amet proin auctor nec in diam aenean viverra. Risus eget morbi a
-        commodo fringilla vestibulum.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Turpis donec amet proin auctor nec in diam aenean
-        viverra.&quot;
+        &quot;{mentorData.testimonial}&quot;
       </p>
-      <div className="flex mt-2 lg:mt-4 lg:px-4">
+      <div className="flex mt-2 lg:mt-4 lg:px-4 absolute bottom-4">
         <HumanSVG className="w-6 lg:w-12" />
         <div className="ml-4 leading-3">
           <div
@@ -144,9 +142,11 @@ const TestimonialCard = ({ mentorData }) => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Tanish Nagpal
+            {mentorData.name}
           </div>
-          <div className="text-[8px] lg:text-lg text-white">NIT Jalandhar</div>
+          <div className="text-[8px] lg:text-lg text-white">
+            {mentorData.college}
+          </div>
         </div>
       </div>
     </div>
@@ -179,10 +179,9 @@ export default function Testimonials() {
             infinite={true}
             arrows={false}
           >
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
+            {data.map((mentorData, index) => (
+              <TestimonialCard mentorData={mentorData} key={index} />
+            ))}
           </Carousel>
         </div>
         <RightArrow
@@ -198,9 +197,11 @@ export default function Testimonials() {
           <div className="text-[#FFFFFF] font-bold text-base sm:text-2xl md:text-5xl leading-4 sm:leading-[60px] my-2">
             Hear from our Mentees
           </div>
-          <a className="cursor-pointer flex items-center text-center sm:w-2/3 max-w-[250px] bg-white text-[#8585FF] p-2 sm:py-4 sm:px-8 sm:leading-7 text-[6px] 420:text-sm font-bold underline underline-offset-2 rounded-lg">
-            WANT TO HEAR MORE? <CheckOutSVG className="sm:ml-2" />
-          </a>
+          <Link href="/mentorship-program/story">
+            <div className="cursor-pointer flex items-center text-center sm:w-2/3 max-w-[250px] bg-white text-[#8585FF] p-2 sm:py-4 sm:px-8 sm:leading-7 text-[6px] 420:text-sm font-bold underline underline-offset-2 rounded-lg">
+              WANT TO HEAR MORE? <CheckOutSVG className="sm:ml-2" />
+            </div>
+          </Link>
         </div>
       </div>
       <div

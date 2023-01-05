@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Script from "next/script";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Cookies from "../components/Cookies";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -56,6 +57,7 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <Component {...pageProps} />
+      <Cookies />
     </>
   );
 }

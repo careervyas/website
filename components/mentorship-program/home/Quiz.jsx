@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import GirlImage from "./Images/GirlPointing.png";
+import Link from "next/link";
 
 const ThumbSVG = (props) => (
   <svg
@@ -52,15 +53,17 @@ export default function Quiz() {
           </div>
           <div className="mt-8">
             <div className="text-[#14FFEC] mb-2">ABSOLUTELY FREE 😀</div>
-            <button
-              className="420:w-2/5 rounded-xl py-3 min-w-[200px]"
-              style={{
-                background:
-                  "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-              }}
-            >
-              Start Quiz Now
-            </button>
+            <Link href="/mentorship-program/quiz">
+              <div
+                className="420:w-2/5 rounded-xl py-3 min-w-[200px] text-center cursor-pointer"
+                style={{
+                  background:
+                    "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+                }}
+              >
+                Start Quiz Now
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -81,12 +84,14 @@ export default function Quiz() {
         </div>
         <div className="flex flex-row-reverse md:flex-row justify-center items-center">
           <ThumbSVG className="hidden 420:block scale-x-[-1] md:scale-x-[1] mx-4" />
-          <button
-            className="mt-6 420:m-0 bg-white h-fit py-4 text-[#6766FF] px-6 rounded-xl"
-            style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1);" }}
-          >
-            START YOUR TEST
-          </button>
+          <Link href="/mentorship-program/quiz">
+            <div
+              className="cursor-pointer text-center mt-6 420:m-0 bg-white h-fit py-4 text-[#6766FF] px-6 rounded-xl"
+              style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1);" }}
+            >
+              START YOUR TEST
+            </div>
+          </Link>
         </div>
       </div>
     </div>

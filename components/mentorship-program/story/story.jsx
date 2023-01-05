@@ -17,11 +17,11 @@ const TrophySVG = () => (
   >
     <path
       d="M0 0.146484L202.101 0.146484V189.673H0L0 0.146484Z"
-      fill="url(#pattern5)"
+      fill="url(#pattern6)"
     />
     <defs>
       <pattern
-        id="pattern5"
+        id="pattern6"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"
@@ -38,7 +38,7 @@ const TrophySVG = () => (
   </svg>
 );
 const StoryCard = ({ storyImage, numberImage, chapter, story }) => (
-  <div className="w-[270px] xl:w-[484px] relative flex flex-col">
+  <div className="w-[270px] xl:w-[484px] relative flex flex-col z-50">
     <div className="w-4/5 absolute -top-[22%] xl:-top-[30%] left-[12%] xl:left-[20%]">
       <Image src={numberImage} />
     </div>
@@ -47,8 +47,8 @@ const StoryCard = ({ storyImage, numberImage, chapter, story }) => (
     </div>
     <h2 className="text-[#6766FF] text-lg my-1 sm:my-4">{chapter}</h2>
     <p className="text-[8px] sm:text-xs lg:text-sm">{story}</p>
-    <Link href="/">
-      <div className="bg-[#6766FF] rounded w-fit px-8 py-2 mt-4">
+    <Link href="/mentorship-program/story#book-mentor">
+      <div className="cursor-pointer bg-[#6766FF] rounded w-fit px-8 py-2 mt-4">
         Enroll Now
       </div>
     </Link>
@@ -87,24 +87,26 @@ const ThumbSVG = (props) => (
   </svg>
 );
 const LinkButton = () => (
-  <>
-    <div
-      className="hidden sm:block px-24 py-3 mt-[4.5rem] w-fit"
-      style={{
-        background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-      }}
-    >
-      <a>REGISTER FOR THIS MENTORSHIP PROGRAM NOW</a>
+  <Link href="/mentorship-program/story#book-mentor">
+    <div className="cursor-pointer">
+      <div
+        className="hidden sm:block px-24 py-3 mt-[4.5rem] w-fit"
+        style={{
+          background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+        }}
+      >
+        <a>REGISTER FOR THIS MENTORSHIP PROGRAM NOW</a>
+      </div>
+      <div
+        className="sm:hidden block px-2 mobile:px-6 420:px-12 py-3 mt-[4.5rem] w-fit"
+        style={{
+          background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+        }}
+      >
+        <a>Register Now to get your Mentor 🚀🚀</a>
+      </div>
     </div>
-    <div
-      className="sm:hidden block px-2 mobile:px-6 420:px-12 py-3 mt-[4.5rem] w-fit"
-      style={{
-        background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-      }}
-    >
-      <a>Register Now to get your Mentor 🚀🚀</a>
-    </div>
-  </>
+  </Link>
 );
 
 export default function Story() {
@@ -118,7 +120,7 @@ export default function Story() {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      verticalLine.style.height = (scroll / total) * 100 + "%";
+      verticalLine.style.height = (scroll / total) * 115 + "%";
     });
   }, []);
 
@@ -129,15 +131,15 @@ export default function Story() {
       </div>
       <div
         id="fillLine"
-        className="min-w-[50vw] z-50 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#6766FF] max-h-[3830px] lg:max-h-[4290px] xl:max-h-[4350px]"
+        className="min-w-[50vw] z-40 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#6766FF] max-h-[3830px] lg:max-h-[4290px] xl:max-h-[4350px]"
       ></div>
-      <div className="min-w-[50vw] z-40 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#8E8E8E] h-[3830px] lg:h-[4290px] xl:h-[4350px]"></div>
+      <div className="min-w-[50vw] z-30 absolute left-0 hidden md:block top-10 lg:top-20 border-r-2 border-[#8E8E8E] h-[3830px] lg:h-[4290px] xl:h-[4350px]"></div>
       <div
         id="storyContainer"
         className="relative flex flex-col items-center md:items-start w-full px-11 2xl:px-32"
       >
         {[...Array(6)].map((_, i) => (
-          <motion.div
+          <div
             className={`${i % 2 ? "md:self-end" : "md:self-start"} ${
               i !== 5 ? "mb-56" : "mb-28"
             }`}
@@ -151,7 +153,7 @@ export default function Story() {
               chapter="Inventory"
               story="Vaibhav comes to Kota and is allotted the last batch at the Coaching. He meets Meena,who tells him that he should not accept A10. He speaks to Deepak, the Head Manager of Motion but is denied any change. Then, he meets Jeetu Bhaiya, the student Mentor, who tells him dekh tu bheekh toh maang mat, kuch chahiye toh mehnat kar aur cheen le and so gives Vaibhav a challenge to complete it by the next day."
             />
-          </motion.div>
+          </div>
         ))}
       </div>
       <div className="flex items-center mb-14">
@@ -190,12 +192,14 @@ export default function Story() {
         </div>
         <div className="flex flex-row-reverse md:flex-row justify-center items-center">
           <ThumbSVG className="hidden 420:block scale-x-[-1] md:scale-x-[1] mx-4" />
-          <button
-            className="mt-6 420:m-0 bg-white h-fit py-4 text-[#6766FF] px-6 rounded-xl"
-            style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1);" }}
-          >
-            START YOUR TEST
-          </button>
+          <Link href="/mentorship-program/quiz">
+            <div
+              className="cursor-pointer text-center mt-6 420:m-0 bg-white h-fit py-4 text-[#6766FF] px-6 rounded-xl"
+              style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1);" }}
+            >
+              START YOUR TEST
+            </div>
+          </Link>
         </div>
       </div>
     </div>

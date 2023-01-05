@@ -103,7 +103,7 @@ export default function OurRockstarMentors() {
           ))}
         </div>
         <div
-          class="cursor-pointer w-full px-4 grid place-items-center mt-8"
+          className="cursor-pointer w-full px-4 grid place-items-center mt-8"
           onClick={(e) => {
             e.stopPropagation();
             window.scrollTo(0, 0);

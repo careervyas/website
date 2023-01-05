@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import HeroImage from "./Images/HeroImage.png";
 
@@ -20,14 +21,17 @@ export default function hero() {
           to make your dreams true
         </div>
         <div className="text-[#14FFEC] mt-12 mb-2">ABSOLUTELY FREE 😊</div>
-        <button
-          className="420:w-1/2 rounded-xl py-3"
-          style={{
-            background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-          }}
-        >
-          Book Your Session Now
-        </button>
+        <Link href="#book-mentor">
+          <div
+            className="420:w-1/2 rounded-xl py-3 text-center cursor-pointer"
+            style={{
+              background:
+                "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+            }}
+          >
+            Book Your Session Now
+          </div>
+        </Link>
       </div>
       <div className="lg:w-1/2 px-8 lg:px-14 flex items-center justify-center">
         <Image src={HeroImage} />

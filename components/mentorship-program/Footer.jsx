@@ -618,8 +618,7 @@ export default function Footer() {
         </div>
         <ConnectWithUs />
         <div className="mt-7 text-[#D9D9D9]">
-          © 2021, All rights reserved by CAN Communication Analyst Institue
-          Private Limited
+          All Rights reserved by Career Vyas
         </div>
       </div>
     </div>

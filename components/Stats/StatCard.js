@@ -28,7 +28,7 @@ export default function Card({ title, counter, icon }) {
   }, [intersectiong]);
 
   return (
-    <div className="group flex justify-center m-2 cursor-pointer">
+    <div className="group flex justify-center my-2 cursor-pointer">
       <div className="flex flex-row h-28 w-72 mx-3 border-2 rounded-lg bg-white shadow-lg shadow-slate-300">
         <div className="bg-[#6776FF] w-1/3 h-full flex items-center justify-center rounded-l-lg">
           <div className="group-hover:animate-bounce">{icon}</div>

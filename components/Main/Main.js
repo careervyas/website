@@ -146,7 +146,7 @@ export default function Main() {
                 Ask your Query for ₹1
               </button>
               <div className="flex text-lg font-extrabold mt-4">
-                <div class="max-h-[26px] w-[26px] h-[26px]">
+                <div className="max-h-[26px] w-[26px] h-[26px]">
                   <CheckIcon />
                 </div>
                 <span className="ml-4 text-2xl mr-2">300+ </span>Doubts Solved
@@ -164,7 +164,7 @@ export default function Main() {
                 Book Free Mentorship Session
               </button>
               <div className="flex text-lg font-extrabold mt-4">
-                <div class="max-h-[26px] w-[26px] h-[26px]">
+                <div className="max-h-[26px] w-[26px] h-[26px]">
                   <CheckIcon />
                 </div>
                 <span className="ml-4 text-2xl mr-2">50+ </span>Mentorship

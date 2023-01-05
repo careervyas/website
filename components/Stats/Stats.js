@@ -27,7 +27,7 @@ export default function Stat() {
           className="grid m-5 w-full h-full justify-center"
           style={{
             gridTemplateColumns:
-              "repeat(auto-fit, minmax(0, max(300px, 100%/4)))",
+              "repeat(auto-fit, minmax(0, max(250px, 100%/4)))",
           }}
         >
           {cardData.map((item, index) => {

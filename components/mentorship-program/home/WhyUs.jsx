@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Img from "./Images/WhyUs.jpg";
 
@@ -90,12 +91,14 @@ export default function WhyUs() {
               We are here to help you align parallel in the direction of your
               dreams.
             </div>
-            <a className="text-[#14FFEC] flex items-center font-bold text-sm leading-7">
-              <span className="underline underline-offset-4">
-                CHECK OUT HOW ?{" "}
-              </span>
-              <CheckOutSVG />
-            </a>
+            <Link href="/mentorship-program/story">
+              <div className="cursor-pointer text-[#14FFEC] flex items-center font-bold text-sm leading-7">
+                <span className="underline underline-offset-4">
+                  CHECK OUT HOW ?{" "}
+                </span>
+                <CheckOutSVG />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -136,33 +139,38 @@ export default function WhyUs() {
               We are here to help you align parallel in the direction of your
               dreams.
             </div>
-            <a className="text-[#14FFEC] flex items-center font-bold text-sm leading-7">
-              <span className="underline underline-offset-4">
-                CHECK OUT HOW ?{" "}
-              </span>
-              <CheckOutSVG />
-            </a>
+            <Link href="/mentorship-program/story">
+              <div className="cursor-pointer text-[#14FFEC] flex items-center font-bold text-sm leading-7">
+                <span className="underline underline-offset-4">
+                  CHECK OUT HOW ?{" "}
+                </span>
+                <CheckOutSVG />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Register Button - All Screens Same */}
-      <div className="flex text-white items-center justify-center m-6 sm:m-12">
-        <button
-          className="w-full max-w-[974px] p-4 font-bold"
-          style={{
-            background: "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
-          }}
-        >
-          <span className="hidden md:block text-xl">
-            Register Now to get your Mentor from Top IIT’s, NIT’s and Medical
-            Colleges 🚀🚀
-          </span>
-          <span className="md:hidden block text-md mobile:text-lg">
-            Register Now to get your Mentor 🚀🚀
-          </span>
-        </button>
-      </div>
+      <Link href="/mentorship-program#book-mentor">
+        <div className="cursor-pointer text-center flex text-white items-center justify-center m-6 sm:m-12">
+          <div
+            className="w-full max-w-[974px] p-4 font-bold"
+            style={{
+              background:
+                "linear-gradient(92.43deg, #6766FF 0%, #908FFF 97.66%)",
+            }}
+          >
+            <span className="hidden md:block text-xl">
+              Register Now to get your Mentor from Top IIT’s, NIT’s and Medical
+              Colleges 🚀🚀
+            </span>
+            <span className="md:hidden block text-md mobile:text-lg">
+              Register Now to get your Mentor 🚀🚀
+            </span>
+          </div>
+        </div>
+      </Link>
     </>
   );
 }

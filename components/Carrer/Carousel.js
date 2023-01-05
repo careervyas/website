@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Image1 from "./images/1.svg";
-import Image2 from "./images/2.svg";
-import Image3 from "./images/3.svg";
-import Image4 from "./images/4.svg";
-import Image5 from "./images/5.svg";
-import Image6 from "./images/6.svg";
+import Image1 from "./images/1.png";
+import Image2 from "./images/2.png";
+import Image3 from "./images/3.png";
+import Image4 from "./images/4.png";
+import Image5 from "./images/5.png";
+import Image6 from "./images/6.png";
 
 const data = [Image1, Image2, Image3, Image4, Image5, Image6];
 
@@ -21,32 +21,27 @@ export default function Carousel() {
         return current + 1;
       });
     };
-    const id = setInterval(func, 1500);
+    const id = setInterval(func, 2000);
     return () => {
       clearInterval(id);
     };
   }, []);
 
   return (
-    <div className="flex flex-row-reverse md:flex-row items-center justify-center mt-12">
-      <div className="h-[500px] grid place-items-center w-5/6">
+    <div className="flex gap-4 lg:gap-0 xl:gap-8 flex-row-reverse md:flex-row items-center justify-center my-12">
+      <div className="h-[260px] mobile:h-[300px] 600:h-[400px] lg:h-[500px] grid place-items-center">
         {data.map((image, index) => {
           if (index === current) {
             return (
               <div
-                className={`h-[500px] w-[280px] mobile:w-[350px] sm:w-[500px] grid place-items-center mb-24 opacity-0 ${
+                className={`w-[260px] h-[260px] mobile:w-[300px] mobile:h-[300px] 600:w-[400px] 600:h-[400px] lg:w-[500px] lg:h-[500px] grid place-items-center mb-24 opacity-0 ${
                   index === current ? "opacity-100" : ""
-                } ${index === current ? "scale-110" : ""}`}
+                } ${index === current ? "scale-90" : ""}`}
                 style={{ transition: "ease 1s" }}
                 key={index}
               >
                 {index === current && (
-                  <Image
-                    src={image}
-                    alt="Carrer Vyas"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                  <Image src={image} alt="Carrer Vyas" objectFit="contain" />
                 )}
               </div>
             );

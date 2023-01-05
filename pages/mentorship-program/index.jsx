@@ -31,9 +31,14 @@ export default function index() {
         <Testimonials />
         <WhyUs />
         <DreamCollege />
-        <Pricing />
+        <div id="pricing">
+          <Pricing />
+        </div>
         <Demo />
-        <div className="bg-white mx-4 420:mx-12 sm:mx-24 md:mx-48 my-20 sm:my-44 p-6 420:p-12">
+        <div
+          id="book-mentor"
+          className="bg-white mx-4 420:mx-12 sm:mx-24 md:mx-48 my-20 sm:my-44 p-6 420:p-12"
+        >
           <MentorShipForm />
         </div>
         <Questions />

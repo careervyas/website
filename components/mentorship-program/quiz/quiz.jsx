@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import QuizComponent from "./QuizComponent.jsx";
+import QuizResults from "./QuizResults.jsx";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import GirlImage from "./girl.png";
@@ -21,13 +22,24 @@ async function loadSheet() {
   await doc.loadInfo();
   return doc;
 }
-const handleSubmit = async (e, examTargeting, setQuizStarted) => {
+const handleSubmit = async (
+  e,
+  examTargeting,
+  setQuizStarted,
+  setUserDetails
+) => {
   e.preventDefault();
   try {
     const name = document.getElementById("joinOurTeamFormUsername").value;
     const emailID = document.getElementById("joinOurTeamFormUseremail").value;
     const phone = document.getElementById("joinOurTeamFormUserphone").value;
     const userClass = document.getElementById("joinOurTeamFormUserclass").value;
+    setUserDetails({
+      name: name,
+      email: emailID,
+      contact: phone,
+      class: userClass,
+    });
 
     const docs = await loadSheet();
     const SHEET_NAME = "Sheet1";
@@ -91,7 +103,29 @@ const FormField = ({ id, label, inputType, inputPlaceHolder }) => {
 
 export default function Quiz() {
   const [examTargeting, setExamTargeting] = useState("");
-  const [quizStarted, setQuizStarted] = useState(true);
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
+  const [userDetails, setUserDetails] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    class: "",
+  });
+  const onSubmitScore = async (score) => {
+    const docs = await loadSheet();
+    const SHEET_NAME = "Sheet2";
+    const sheet = docs.sheetsByTitle[SHEET_NAME];
+    sheet.addRow({
+      Name: userDetails.name,
+      Email: userDetails.email,
+      Contact: userDetails.contact,
+      Class: userDetails.class,
+      ExamTargeting: examTargeting,
+      score: score,
+    });
+  };
+
   if (!quizStarted) {
     return (
       <div className="text-white flex flex-col md:flex-row items-center justify-center">
@@ -130,7 +164,7 @@ export default function Quiz() {
                     className="bg-white border-2 mr-2 rounded-md accent-white invert checked:invert-1"
                     onClick={(e) => {
                       if (e.target.checked) {
-                        setApplyingFor("NEET");
+                        setExamTargeting("NEET");
                       }
                     }}
                   />
@@ -142,7 +176,12 @@ export default function Quiz() {
                 <button
                   className="bg-[#6776FF] px-12 py-2 text-white"
                   onClick={(e) =>
-                    handleSubmit(e, examTargeting, setQuizStarted)
+                    handleSubmit(
+                      e,
+                      examTargeting,
+                      setQuizStarted,
+                      setUserDetails
+                    )
                   }
                 >
                   SUBMIT
@@ -154,6 +193,15 @@ export default function Quiz() {
       </div>
     );
   }
+  if (submitted) {
+    return <QuizResults score={score} />;
+  }
 
-  return <QuizComponent />;
+  return (
+    <QuizComponent
+      setSubmitted={setSubmitted}
+      setScore={setScore}
+      onSubmit={onSubmitScore}
+    />
+  );
 }

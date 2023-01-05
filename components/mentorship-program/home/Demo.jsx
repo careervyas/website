@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import MacBook from "./Images/MacBookPro.jpg";
 
@@ -129,9 +130,11 @@ export default function Demo() {
           <ListItem title="Basic Study Planner" />
           <ListItem title="Instant Query Answering" />
         </ul>
-        <a className="cursor-pointer flex items-center w-fit px-12 py-4 text-center bg-white text-[#8585FF] text-[8px] 420:text-sm font-bold underline underline-offset-2 rounded-lg">
-          WANT TO HEAR MORE? <CheckOutSVG className="sm:ml-2" />
-        </a>
+        <Link href="/mentorship-program/story">
+          <div className="cursor-pointer flex items-center w-fit px-12 py-4 text-center bg-white text-[#8585FF] text-[8px] 420:text-sm font-bold underline underline-offset-2 rounded-lg">
+            WANT TO HEAR MORE? <CheckOutSVG className="sm:ml-2" />
+          </div>
+        </Link>
       </div>
       <div className="hidden lg:grid lg:w-2/5 xl:w-3/5 place-items-center">
         <Image src={MacBook} />

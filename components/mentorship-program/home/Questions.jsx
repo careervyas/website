@@ -1,5 +1,5 @@
 import React from "react";
-
+import questions from "./data/questions.js";
 const PlusSVG = () => (
   <svg
     width="30"
@@ -90,18 +90,18 @@ const PlusSVG = () => (
   </svg>
 );
 
-const AccordionItem = ({ index }) => (
-  <li class="bg-[#313131] accordionItem w-4/5 px-6 rounded-lg">
+const AccordionItem = ({ question, answer, index }) => (
+  <li className="bg-[#313131] accordionItem w-4/5 px-6 rounded-lg">
     <input
       type="checkbox"
       id={"faq" + index.toString()}
-      class="peer appearance-none"
+      className="peer appearance-none"
     />
-    <label for={"faq" + index.toString()} class="py-4 cursor-pointer grow">
-      <p>What is your name?</p>
+    <label for={"faq" + index.toString()} className="py-4 cursor-pointer grow">
+      <p>{question}</p>
     </label>
-    <div class="accordionContent">
-      <p>My name is Manas Madan</p>
+    <div className="accordionContent">
+      <p>{answer}</p>
     </div>
     <div
       className="absolute right-[12%] cursor-pointer"
@@ -133,9 +133,9 @@ export default function Questions() {
         that you might have
       </div>
       <div className="text-white">
-        <ul class="w-full flex flex-col items-center justify-center gap-6">
-          {[...Array(6)].map((_, index) => (
-            <AccordionItem index={index} key={index} />
+        <ul className="w-full flex flex-col items-center justify-center gap-6">
+          {questions.map((ques, index) => (
+            <AccordionItem {...ques} index={index} key={index} />
           ))}
         </ul>
       </div>
