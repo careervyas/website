@@ -17,12 +17,14 @@ export default function index() {
   return (
     <>
       <Head>
-        <style>
-          @import
-          url(&apos;https://fonts.googleapis.com/css2?family=Lato&display=swap&apos&apos;);
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <div className="bg-black" style={{ fontFamily: "Lato" }}>
+      <div className="bg-black" style={{ fontFamily: "'Lato', sans-serif" }}>
         <Navbar />
         <Hero />
         <MeetOurMentors />

@@ -172,7 +172,7 @@ export default function Testimonials() {
   return (
     <div className="my-24 py-14 relative">
       <div className="flex justify-between w-full items-center z-10 px-2 sm:px-12">
-        <div className="sm:max-w-[360px] xl:max-w-none w-[70%] sm:w-[60%] lg:w-[80%] xl:w-[90%] max-w-[1100px] overflow-hidden z-10">
+        <div className="relative sm:max-w-[360px] xl:max-w-none w-[70%] sm:w-[60%] lg:w-[80%] xl:w-[90%] max-w-[1100px] overflow-hidden z-10">
           <Carousel
             ref={carouselRef}
             responsive={responsive}
@@ -185,7 +185,7 @@ export default function Testimonials() {
           </Carousel>
         </div>
         <RightArrow
-          className="cursor-pointer w-4 sm:w-10 z-10 mr-2"
+          className="cursor-pointer absolute left-[60%] mobile:left-[55%] 420:left-1/2 sm:left-[40%] md:left-1/3 lg:left-1/2 xl:left-1/3 w-4 sm:w-10 z-10 mr-2"
           onClick={() => {
             carouselRef.current.next();
           }}

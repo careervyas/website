@@ -252,35 +252,6 @@ const PricingCard = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <svg
-                width="26"
-                height="25"
-                viewBox="0 0 26 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_425_951)">
-                  <circle
-                    cx="13"
-                    cy="12.5"
-                    r="12"
-                    fill="#908FFF"
-                    fill-opacity="0.26"
-                    stroke="#6776FF"
-                  />
-                  <circle cx="13" cy="12.5" r="7.5" fill="#6766FF" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_425_951">
-                    <rect
-                      width="25"
-                      height="25"
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
               <div className="flex flex-col text-[#6F6C90]">
                 <div className="font-bold">3 Monthly</div>
                 <div className="text-sm">Pay for 3 Months</div>
@@ -349,38 +320,9 @@ const PricingCard = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <svg
-                width="26"
-                height="25"
-                viewBox="0 0 26 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_425_951)">
-                  <circle
-                    cx="13"
-                    cy="12.5"
-                    r="12"
-                    fill="#908FFF"
-                    fill-opacity="0.26"
-                    stroke="#6776FF"
-                  />
-                  <circle cx="13" cy="12.5" r="7.5" fill="#6766FF" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_425_951">
-                    <rect
-                      width="25"
-                      height="25"
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
               <div className="flex flex-col text-[#6F6C90]">
-                <div className="font-bold">3 Monthly</div>
-                <div className="text-sm">Pay for 3 Months</div>
+                <div className="font-bold">6 Monthly</div>
+                <div className="text-sm">Pay for 6 Months</div>
               </div>
               <div className="flex flex-col relative">
                 <svg
@@ -668,36 +610,6 @@ const PopularPricingCard = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <svg
-                width="26"
-                height="25"
-                viewBox="0 0 26 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_425_1320)">
-                  <circle
-                    cx="13"
-                    cy="12.5"
-                    r="12"
-                    fill="white"
-                    fill-opacity="0.2"
-                    stroke="white"
-                  />
-                  <circle cx="13" cy="12.5" r="7.5" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_425_1320">
-                    <rect
-                      width="25"
-                      height="25"
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-
               <div className="flex flex-col text-[#D9D9D9]">
                 <div className="font-bold">3 Monthly</div>
                 <div className="text-sm">Pay for 3 Months</div>
@@ -750,36 +662,6 @@ const PopularPricingCard = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <svg
-                width="26"
-                height="25"
-                viewBox="0 0 26 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_425_1320)">
-                  <circle
-                    cx="13"
-                    cy="12.5"
-                    r="12"
-                    fill="white"
-                    fill-opacity="0.2"
-                    stroke="white"
-                  />
-                  <circle cx="13" cy="12.5" r="7.5" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_425_1320">
-                    <rect
-                      width="25"
-                      height="25"
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-
               <div className="flex flex-col text-[#D9D9D9]">
                 <div className="font-bold">6 Monthly</div>
                 <div className="text-sm">Pay for 6 Months</div>
@@ -822,7 +704,7 @@ const PopularPricingCard = ({
 
 export default function Pricing() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center overflow-x-hidden">
       <div className="mb-11 text-[#6766FF] font-bold text-center text-3xl sm:text-5xl">
         Let&apos;s make it your Best Investment
       </div>

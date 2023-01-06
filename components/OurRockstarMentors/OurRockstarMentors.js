@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import mentorsData from "./data";
 import MentorShipForm from "../Forms/MentorShipForm.js";
+import Link from "next/link";
 
 const MentorCard = ({ mentorData }) => {
   return (
@@ -102,18 +103,20 @@ export default function OurRockstarMentors() {
             <MentorCard mentorData={mentorData} key={index} />
           ))}
         </div>
-        <div
-          className="cursor-pointer w-full px-4 grid place-items-center mt-8"
-          onClick={(e) => {
-            e.stopPropagation();
-            window.scrollTo(0, 0);
-            setShowMentorShipModal(true);
-          }}
-        >
-          <div className="px-2 py-4 bg-[#FFB11B] w-full mobile:w-2/3 max-w-[650px] text-center font-extrabold">
-            REGISTER YOUR FREE SESSION WITH YOUR ROCKSTAR MENTOR NOW!!
+        <Link href="/mentorship-program/story#book-mentor">
+          <div
+            className="cursor-pointer w-full px-4 grid place-items-center mt-8"
+            // onClick={(e) => {
+            // e.stopPropagation();
+            // window.scrollTo(0, 0);
+            // setShowMentorShipModal(true);
+            // }}
+          >
+            <div className="px-2 py-4 bg-[#FFB11B] w-full mobile:w-2/3 max-w-[650px] text-center font-extrabold">
+              REGISTER YOUR FREE SESSION WITH YOUR ROCKSTAR MENTOR NOW!!
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

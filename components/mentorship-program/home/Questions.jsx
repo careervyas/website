@@ -91,16 +91,19 @@ const PlusSVG = () => (
 );
 
 const AccordionItem = ({ question, answer, index }) => (
-  <li className="bg-[#313131] accordionItem w-4/5 px-6 rounded-lg">
+  <li className="bg-[#313131] accordionItem w-4/5 px-6 py-1 rounded-lg">
     <input
       type="checkbox"
       id={"faq" + index.toString()}
       className="peer appearance-none"
     />
-    <label for={"faq" + index.toString()} className="py-4 cursor-pointer grow">
+    <label
+      for={"faq" + index.toString()}
+      className="text-lg py-4 cursor-pointer grow"
+    >
       <p>{question}</p>
     </label>
-    <div className="accordionContent">
+    <div className="text-lg accordionContent">
       <p>{answer}</p>
     </div>
     <div

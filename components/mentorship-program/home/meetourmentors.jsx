@@ -64,7 +64,7 @@ const MentorCard = ({ mentorData }) => {
       className={`w-[120px] h-[150px] 420:w-[180px] 420:h-[250px] 900:w-[350px] 900:h-[489px] relative text-center ${styles.mentorCard} rounded-md mx-auto`}
     >
       <Image src={mentorData.image} layout="fill" />
-      <div className="absolute bottom-8 left-2 sm:font-extrabold 420:left-7 900:left-[23%] text-white">
+      <div className="z-10 absolute bottom-8 left-2 sm:font-extrabold 420:left-7 900:left-[23%] text-white">
         <div className="lg:text-3xl 420:text-xl">{mentorData.name}</div>
         <div className="lg:text-2xl 420:text-lg text-[#FFFFFF] opacity-60">
           {mentorData.college}

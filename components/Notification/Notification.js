@@ -38,7 +38,7 @@ export default function Notification() {
   }, []);
 
   return (
-    <div className="h-[700px] my-16 overflow-hidden">
+    <div className="my-16 overflow-hidden">
       <div className="grid place-items-center">
         <h1 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-[#333333]">
           Latest Notifications

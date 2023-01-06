@@ -6,7 +6,10 @@ export default function Cookies() {
   return (
     <div
       className="transition-all text-xs mobile:text-sm sticky w-full bg-white py-2 max-h-[50px] z-[100] flex items-center justify-center px-4 border-t-2"
-      style={{ bottom: !cookies ? "0px" : "-50px" }}
+      style={{
+        bottom: !cookies ? "0px" : "-50px",
+        display: cookies ? "none" : "",
+      }}
     >
       Our Website Uses Cookies to enhance you experience
       <button

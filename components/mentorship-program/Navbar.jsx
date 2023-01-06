@@ -5,7 +5,7 @@ import Logo from "./Logo.jsx";
 export default function Navbar() {
   return (
     <div className="bg-[#212121] h-24 flex items-center justify-between px-6 900:px-12 text-white">
-      <Link href="/mentorship-program">
+      <Link href="/">
         <Logo className="cursor-pointer bg-white rounded-full w-[80px] h-[80px]" />
       </Link>
       <div>
